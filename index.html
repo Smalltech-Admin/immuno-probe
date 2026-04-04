@@ -73,26 +73,24 @@ ul{list-style:none}
 .mobile-overlay.open{display:block}
 
 /* ===== Hero Slideshow ===== */
-.hero{position:relative;min-height:92vh;overflow:hidden;background:#0d2137}
+.hero{position:relative;height:70vh;min-height:480px;overflow:hidden;background:#0d2137}
 .hero-slide{position:absolute;inset:0;opacity:0;transition:opacity 1.5s ease-in-out}
 .hero-slide.active{opacity:1}
-.hero-slide-img{position:absolute;inset:0;background-size:cover;background-position:center;animation:slowZoom 12s ease-in-out infinite alternate}
-.hero-slide:nth-child(1) .hero-slide-img{background-image:url('3914293_m.jpg')}
-.hero-slide:nth-child(2) .hero-slide-img{background-image:url('https://images.unsplash.com/photo-1555252333-9f8e92e65df9?w=1600&q=80')}
-.hero-slide:nth-child(1) .hero-slide-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(13,33,55,.35) 0%,rgba(26,58,92,.25) 50%,rgba(0,0,0,.15) 100%)}
-.hero-slide:nth-child(2) .hero-slide-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.45) 0%,rgba(0,0,0,.1) 40%,transparent 70%)}
-@keyframes slowZoom{0%{transform:scale(1)}100%{transform:scale(1.06)}}
-.hero-indicators{position:absolute;bottom:36px;left:50%;transform:translateX(-50%);display:flex;gap:10px;z-index:5}
+.hero-slide-img{position:absolute;inset:0;background-size:cover;background-position:center}
+.hero-slide:nth-child(1) .hero-slide-img{background-image:url('https://images.unsplash.com/photo-1555252333-9f8e92e65df9?w=1600&q=80')}
+.hero-slide:nth-child(2) .hero-slide-img{background-image:url('3914293_m.jpg')}
+.hero-slide:nth-child(1) .hero-slide-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.45) 0%,rgba(0,0,0,.1) 40%,transparent 70%)}
+.hero-slide:nth-child(2) .hero-slide-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(13,33,55,.35) 0%,rgba(26,58,92,.25) 50%,rgba(0,0,0,.15) 100%)}
+.hero-indicators{position:absolute;bottom:28px;left:50%;transform:translateX(-50%);display:flex;gap:10px;z-index:5}
 .hero-indicator{width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,.3);cursor:pointer;transition:all .3s;border:none}
 .hero-indicator.active{background:#fff;transform:scale(1.2)}
-/* Slide 1 content: bottom-left */
-.hero-content-1{position:absolute;bottom:80px;left:60px;z-index:3;opacity:0;transition:opacity 1.2s ease .3s}
+/* Slide content: center-left */
+.hero-content-1{position:absolute;inset:0;z-index:3;display:flex;align-items:center;padding:0 8%;opacity:0;transition:opacity 1.2s ease .3s}
 .hero-content-1.active{opacity:1}
-.hero-content-1 h1{font-family:'Noto Serif JP',serif;font-size:2.4rem;font-weight:700;color:#fff;letter-spacing:.08em;line-height:1.6;text-shadow:0 2px 16px rgba(0,0,0,.5)}
-/* Slide 2 content: bottom-left */
-.hero-content-2{position:absolute;bottom:80px;left:60px;z-index:3;opacity:0;transition:opacity 1.2s ease .3s}
+.hero-content-1 p{font-family:'Noto Serif JP',serif;font-size:3rem;font-weight:600;color:#fff;letter-spacing:.08em;line-height:1.6;text-shadow:0 2px 20px rgba(0,0,0,.5)}
+.hero-content-2{position:absolute;inset:0;z-index:3;display:flex;align-items:center;padding:0 8%;opacity:0;transition:opacity 1.2s ease .3s}
 .hero-content-2.active{opacity:1}
-.hero-content-2 p{font-family:'Noto Serif JP',serif;font-size:2.4rem;font-weight:600;color:#fff;letter-spacing:.08em;line-height:1.6;text-shadow:0 2px 16px rgba(0,0,0,.5)}
+.hero-content-2 h1{font-family:'Noto Serif JP',serif;font-size:3rem;font-weight:700;color:#fff;letter-spacing:.08em;line-height:1.6;text-shadow:0 2px 20px rgba(0,0,0,.5)}
 .btn{display:inline-flex;align-items:center;gap:8px;padding:14px 36px;border-radius:4px;font-size:.92rem;font-weight:500;transition:all .3s ease;cursor:pointer;border:none;font-family:'Noto Sans JP',sans-serif}
 .btn-primary{background:#2E7BAE;color:#fff}
 .btn-primary:hover{background:#256a98;transform:translateY(-2px);box-shadow:0 4px 16px rgba(46,123,174,.3)}
@@ -150,8 +148,8 @@ ul{list-style:none}
 
 /* Featured Product */
 .featured-product{background:#fff;border:1px solid #D8E4ED;border-radius:8px;padding:48px;margin-top:48px;display:flex;gap:48px;align-items:center}
-.featured-product-img{flex:0 0 280px;height:200px;background:linear-gradient(135deg,#e8f4fd,#dff0e8);border-radius:8px;display:flex;align-items:center;justify-content:center}
-.featured-product-img i{font-size:4rem;color:#2E7BAE;opacity:.5}
+.featured-product-img{flex:0 0 280px;height:200px;border-radius:8px;overflow:hidden}
+.featured-product-img img{width:100%;height:100%;object-fit:cover}
 .featured-product-body{flex:1}
 .featured-product-badge{display:inline-block;background:#e74c3c;color:#fff;font-size:.7rem;font-weight:700;padding:4px 12px;border-radius:3px;margin-bottom:12px;letter-spacing:.05em}
 .featured-product-body h3{font-family:'Noto Serif JP',serif;font-size:1.3rem;font-weight:600;color:#1A3A5C;margin-bottom:12px}
@@ -230,9 +228,9 @@ ul{list-style:none}
   .header-nav,.lang-switch{display:none}
   .hamburger{display:flex}
   .mobile-nav{display:block}
-  .hero{min-height:75vh}
-  .hero-content-1,.hero-content-2{bottom:60px;left:32px}
-  .hero-content-1 h1,.hero-content-2 p{font-size:1.8rem}
+  .hero{height:60vh;min-height:400px}
+  .hero-content-1,.hero-content-2{padding:0 6%}
+  .hero-content-1 p,.hero-content-2 h1{font-size:2.2rem}
   .purpose-grid{grid-template-columns:repeat(2,1fr)!important}
   .concept-grid,.tech-grid,.products-grid{grid-template-columns:1fr}
   .concept-grid{gap:20px}
@@ -250,8 +248,9 @@ ul{list-style:none}
 @media(max-width:600px){
   .purpose-grid{grid-template-columns:1fr!important}
   .header{height:60px}
-  .hero-content-1,.hero-content-2{bottom:40px;left:20px}
-  .hero-content-1 h1,.hero-content-2 p{font-size:1.3rem}
+  .hero{height:50vh;min-height:320px}
+  .hero-content-1,.hero-content-2{padding:0 5%}
+  .hero-content-1 p,.hero-content-2 h1{font-size:1.5rem}
   .btn{padding:12px 28px;font-size:.85rem}
   .section-title{font-size:1.5rem}
   .section-padding{padding:64px 0}
@@ -330,23 +329,23 @@ ul{list-style:none}
 
 <!-- ===== Hero Slideshow ===== -->
 <section class="hero" id="hero">
-  <!-- Slide 1: ラボ（試験管・技術） -->
+  <!-- Slide 1: 赤ちゃん・子ども（健康・未来） -->
   <div class="hero-slide active">
     <div class="hero-slide-img"></div>
     <div class="hero-slide-overlay"></div>
   </div>
-  <!-- Slide 2: 赤ちゃん・子ども（健康・未来） -->
+  <!-- Slide 2: ラボ（試験管・技術） -->
   <div class="hero-slide">
     <div class="hero-slide-img"></div>
     <div class="hero-slide-overlay"></div>
   </div>
-  <!-- Slide 1 Content: centered message -->
+  <!-- Slide 1 Content: 赤ちゃん -->
   <div class="hero-content-1 active">
-    <h1>原料から診断薬まで<br>新しい検査薬を創ります</h1>
-  </div>
-  <!-- Slide 2 Content: bottom-left message -->
-  <div class="hero-content-2">
     <p>明日の皆の「健康」のために</p>
+  </div>
+  <!-- Slide 2 Content: ラボ -->
+  <div class="hero-content-2">
+    <h1>原料から診断薬まで<br>新しい検査薬を創ります</h1>
   </div>
   <!-- Slide Indicators -->
   <div class="hero-indicators">
@@ -472,7 +471,7 @@ ul{list-style:none}
     <!-- Featured Product -->
     <div class="featured-product fade-in">
       <div class="featured-product-img">
-        <i class="fas fa-box-open"></i>
+        <img src="https://static.wixstatic.com/media/da0d79_c70293bd48054f80b6cab054e7dbafe8~mv2.jpg/v1/fill/w_431,h_268,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/da0d79_c70293bd48054f80b6cab054e7dbafe8~mv2.jpg" alt="IPライン デゥオ ノロ・ロタ">
       </div>
       <div class="featured-product-body">
         <span class="featured-product-badge">注目製品</span>
@@ -618,7 +617,7 @@ function goSlide(n){
   indicators[currentSlide].classList.add('active');
   contents[currentSlide].classList.add('active');
 }
-setInterval(()=>{goSlide((currentSlide+1)%slides.length)},6000);
+setInterval(()=>{goSlide((currentSlide+1)%slides.length)},4000);
 
 const obs=new IntersectionObserver(entries=>{
   entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')});
