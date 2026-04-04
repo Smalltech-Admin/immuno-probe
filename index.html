@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>株式会社イムノ・プローブ | 抗体・診断薬の製造・受託開発</title>
+<meta name="description" content="原料から診断薬まで一気通貫。抗体製造・体外診断用医薬品・研究用試薬の製造・販売・受託開発。ISO13485認証取得。埼玉県嵐山町。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+/* ===== Reset & Base ===== */
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:'Noto Sans JP',sans-serif;color:#2C2C2C;background:#F7F9FB;line-height:1.8;overflow-x:hidden}
+img{max-width:100%;height:auto;display:block}
+a{text-decoration:none;color:inherit}
+ul{list-style:none}
+
+/* ===== Utility ===== */
+.container{max-width:1140px;margin:0 auto;padding:0 24px}
+.section-title{font-family:'Noto Serif JP',serif;font-size:2rem;font-weight:600;color:#1A3A5C;text-align:center;margin-bottom:12px;letter-spacing:.05em}
+.section-title-en{font-family:'Inter',sans-serif;font-size:.8rem;color:#2E7BAE;text-align:center;letter-spacing:.15em;text-transform:uppercase;margin-bottom:48px;font-weight:400}
+.section-padding{padding:100px 0}
+.section-bg-white{background:#fff}
+.section-bg-light{background:#F7F9FB}
+.fade-in{opacity:0;transform:translateY(30px);transition:opacity .8s ease,transform .8s ease}
+.fade-in.visible{opacity:1;transform:translateY(0)}
+
+/* ===== Top Bar ===== */
+.top-bar{background:#1A3A5C;color:rgba(255,255,255,.85);font-size:.75rem;padding:6px 0;position:relative;z-index:1001}
+.top-bar-inner{display:flex;justify-content:space-between;align-items:center;max-width:1140px;margin:0 auto;padding:0 24px}
+.top-bar-contact{display:flex;gap:20px;align-items:center}
+.top-bar-contact span{display:flex;align-items:center;gap:6px}
+.top-bar-contact i{font-size:.7rem}
+.top-bar-hours{opacity:.7}
+
+/* ===== Header ===== */
+.header{position:sticky;top:0;left:0;width:100%;z-index:1000;padding:0 40px;height:76px;display:flex;align-items:center;justify-content:space-between;background:#fff;transition:box-shadow .4s ease;border-bottom:1px solid #e8eef3}
+.header.scrolled{box-shadow:0 2px 16px rgba(0,0,0,.08)}
+.header-logo{display:flex;align-items:center;gap:14px}
+.header-logo-mark{display:flex;flex-direction:column;align-items:center;line-height:1}
+.header-logo-mark .en{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:700;color:#1A3A5C;letter-spacing:.02em}
+.header-logo-mark .bar{width:100%;height:2px;background:linear-gradient(90deg,#1A3A5C,#2E7BAE,#4A9B7F);margin:3px 0}
+.header-logo-mark .jp{font-family:'Noto Serif JP',serif;font-size:.7rem;font-weight:600;color:#1A3A5C;letter-spacing:.12em}
+.header-right{display:flex;align-items:center;gap:28px}
+.header-nav{display:flex;gap:24px}
+.header-nav a{font-size:.82rem;font-weight:500;color:#1A3A5C;position:relative;transition:color .3s;padding:4px 0}
+.header-nav a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:2px;background:#2E7BAE;transition:width .3s}
+.header-nav a:hover{color:#2E7BAE}
+.header-nav a:hover::after{width:100%}
+.header-nav a.active{color:#2E7BAE}
+.header-nav a.active::after{width:100%}
+.lang-switch{display:flex;gap:4px}
+.lang-switch button{background:none;border:1px solid #D8E4ED;border-radius:3px;padding:3px 7px;font-size:.68rem;font-weight:500;color:#1A3A5C;cursor:pointer;transition:all .3s}
+.lang-switch button.active{background:#1A3A5C;color:#fff;border-color:#1A3A5C}
+.lang-switch button:hover{border-color:#2E7BAE;color:#2E7BAE}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;z-index:1100}
+.hamburger span{display:block;width:24px;height:2px;background:#1A3A5C;transition:all .3s}
+.hamburger.open span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
+.hamburger.open span:nth-child(2){opacity:0}
+.hamburger.open span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
+
+/* Mobile Nav */
+.mobile-nav{display:none;position:fixed;top:0;right:-100%;width:300px;height:100vh;background:#fff;z-index:1050;padding:100px 32px 40px;transition:right .3s ease;box-shadow:-4px 0 20px rgba(0,0,0,.1);overflow-y:auto}
+.mobile-nav.open{right:0}
+.mobile-nav a{display:block;padding:14px 0;font-size:.92rem;font-weight:500;color:#1A3A5C;border-bottom:1px solid #D8E4ED}
+.mobile-nav a.active{color:#2E7BAE}
+.mobile-nav .mobile-lang{margin-top:24px;display:flex;gap:8px}
+.mobile-nav .mobile-lang button{background:none;border:1px solid #D8E4ED;border-radius:4px;padding:6px 12px;font-size:.8rem;cursor:pointer;color:#1A3A5C}
+.mobile-overlay{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.3);z-index:1040}
+.mobile-overlay.open{display:block}
+
+/* ===== Hero Slideshow ===== */
+.hero{position:relative;min-height:92vh;overflow:hidden;background:#0d2137}
+.hero-slide{position:absolute;inset:0;opacity:0;transition:opacity 1.5s ease-in-out}
+.hero-slide.active{opacity:1}
+.hero-slide-img{position:absolute;inset:0;background-size:cover;background-position:center;animation:slowZoom 12s ease-in-out infinite alternate}
+.hero-slide:nth-child(1) .hero-slide-img{background-image:url('3914293_m.jpg')}
+.hero-slide:nth-child(2) .hero-slide-img{background-image:url('https://images.unsplash.com/photo-1555252333-9f8e92e65df9?w=1600&q=80')}
+.hero-slide:nth-child(1) .hero-slide-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(13,33,55,.35) 0%,rgba(26,58,92,.25) 50%,rgba(0,0,0,.15) 100%)}
+.hero-slide:nth-child(2) .hero-slide-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.45) 0%,rgba(0,0,0,.1) 40%,transparent 70%)}
+@keyframes slowZoom{0%{transform:scale(1)}100%{transform:scale(1.06)}}
+.hero-indicators{position:absolute;bottom:36px;left:50%;transform:translateX(-50%);display:flex;gap:10px;z-index:5}
+.hero-indicator{width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,.3);cursor:pointer;transition:all .3s;border:none}
+.hero-indicator.active{background:#fff;transform:scale(1.2)}
+/* Slide 1 content: bottom-left */
+.hero-content-1{position:absolute;bottom:80px;left:60px;z-index:3;opacity:0;transition:opacity 1.2s ease .3s}
+.hero-content-1.active{opacity:1}
+.hero-content-1 h1{font-family:'Noto Serif JP',serif;font-size:2.4rem;font-weight:700;color:#fff;letter-spacing:.08em;line-height:1.6;text-shadow:0 2px 16px rgba(0,0,0,.5)}
+/* Slide 2 content: bottom-left */
+.hero-content-2{position:absolute;bottom:80px;left:60px;z-index:3;opacity:0;transition:opacity 1.2s ease .3s}
+.hero-content-2.active{opacity:1}
+.hero-content-2 p{font-family:'Noto Serif JP',serif;font-size:2.4rem;font-weight:600;color:#fff;letter-spacing:.08em;line-height:1.6;text-shadow:0 2px 16px rgba(0,0,0,.5)}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 36px;border-radius:4px;font-size:.92rem;font-weight:500;transition:all .3s ease;cursor:pointer;border:none;font-family:'Noto Sans JP',sans-serif}
+.btn-primary{background:#2E7BAE;color:#fff}
+.btn-primary:hover{background:#256a98;transform:translateY(-2px);box-shadow:0 4px 16px rgba(46,123,174,.3)}
+.btn-outline{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.5)}
+.btn-outline:hover{background:rgba(255,255,255,.1);border-color:#fff}
+
+/* ===== Certification Banner ===== */
+.cert-banner{background:#fff;border-bottom:1px solid #D8E4ED;padding:40px 0}
+.cert-inner{display:flex;justify-content:center;align-items:center;gap:40px;flex-wrap:wrap;max-width:900px;margin:0 auto}
+.cert-logo-img{height:140px;width:auto}
+.cert-text-block{text-align:left}
+.cert-desc{font-size:.82rem;color:#555;line-height:1.8;margin-bottom:10px}
+.cert-licenses{font-size:.78rem;color:#666;line-height:1.9}
+.cert-licenses span{display:block}
+
+/* ===== Concept ===== */
+.concept-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:40px}
+.concept-card{text-align:center;padding:48px 28px;border-radius:8px;transition:all .4s ease;border:1px solid transparent;background:#fff}
+.concept-card:hover{border-color:#D8E4ED;box-shadow:0 8px 32px rgba(26,58,92,.06);transform:translateY(-4px)}
+.concept-icon{width:72px;height:72px;margin:0 auto 24px;background:linear-gradient(135deg,#e8f4fd,#e0f2ec);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.5rem;color:#1A3A5C}
+.concept-card h3{font-family:'Noto Serif JP',serif;font-size:1.15rem;font-weight:600;color:#1A3A5C;margin-bottom:16px}
+.concept-card p{font-size:.88rem;color:#555;line-height:1.9;margin-bottom:16px}
+.concept-link{font-size:.85rem;color:#2E7BAE;font-weight:500;display:inline-flex;align-items:center;gap:6px;transition:gap .3s}
+.concept-link:hover{gap:10px}
+
+/* ===== Technology ===== */
+.tech-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.tech-card{background:#fff;border:1px solid #D8E4ED;border-radius:8px;padding:32px 24px;text-align:center;transition:all .4s ease;position:relative;overflow:hidden}
+.tech-card::before{content:'';position:absolute;top:0;left:0;width:100%;height:3px;background:linear-gradient(90deg,#1A3A5C,#2E7BAE);transform:scaleX(0);transition:transform .4s ease;transform-origin:left}
+.tech-card:hover::before{transform:scaleX(1)}
+.tech-card:hover{box-shadow:0 8px 24px rgba(26,58,92,.08);transform:translateY(-3px)}
+.tech-card-icon{font-size:2rem;color:#2E7BAE;margin-bottom:16px}
+.tech-card h3{font-family:'Noto Serif JP',serif;font-size:1rem;font-weight:600;color:#1A3A5C;margin-bottom:10px}
+.tech-card p{font-size:.82rem;color:#666;line-height:1.8}
+.tech-more{text-align:center;margin-top:36px}
+.tech-more a{font-size:.88rem;color:#2E7BAE;font-weight:500;display:inline-flex;align-items:center;gap:6px}
+.tech-more a:hover{gap:10px}
+
+/* ===== Products ===== */
+.products-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
+.product-card{background:#fff;border-radius:8px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,.04);transition:all .4s ease;border:1px solid #D8E4ED}
+.product-card:hover{transform:translateY(-4px);box-shadow:0 12px 36px rgba(26,58,92,.1)}
+.product-card-img{height:200px;overflow:hidden;position:relative}
+.product-card-img img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
+.product-card:hover .product-card-img img{transform:scale(1.05)}
+.product-card-img .overlay{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:3rem;color:rgba(255,255,255,.9)}
+.product-card:nth-child(1) .product-card-img{background:linear-gradient(135deg,#1A3A5C,#2E7BAE)}
+.product-card:nth-child(2) .product-card-img{background:linear-gradient(135deg,#2E7BAE,#4A9B7F)}
+.product-card:nth-child(3) .product-card-img{background:linear-gradient(135deg,#4A9B7F,#1A3A5C)}
+.product-card-body{padding:28px}
+.product-card-body h3{font-family:'Noto Serif JP',serif;font-size:1.05rem;font-weight:600;color:#1A3A5C;margin-bottom:12px}
+.product-card-body p{font-size:.85rem;color:#666;margin-bottom:20px;line-height:1.8}
+.product-link{font-size:.85rem;color:#2E7BAE;font-weight:500;display:inline-flex;align-items:center;gap:6px;transition:gap .3s}
+.product-link:hover{gap:10px}
+
+/* Featured Product */
+.featured-product{background:#fff;border:1px solid #D8E4ED;border-radius:8px;padding:48px;margin-top:48px;display:flex;gap:48px;align-items:center}
+.featured-product-img{flex:0 0 280px;height:200px;background:linear-gradient(135deg,#e8f4fd,#dff0e8);border-radius:8px;display:flex;align-items:center;justify-content:center}
+.featured-product-img i{font-size:4rem;color:#2E7BAE;opacity:.5}
+.featured-product-body{flex:1}
+.featured-product-badge{display:inline-block;background:#e74c3c;color:#fff;font-size:.7rem;font-weight:700;padding:4px 12px;border-radius:3px;margin-bottom:12px;letter-spacing:.05em}
+.featured-product-body h3{font-family:'Noto Serif JP',serif;font-size:1.3rem;font-weight:600;color:#1A3A5C;margin-bottom:12px}
+.featured-product-body p{font-size:.88rem;color:#555;line-height:1.9;margin-bottom:16px}
+.featured-product-list{font-size:.85rem;color:#555}
+.featured-product-list li{padding:4px 0;display:flex;align-items:flex-start;gap:8px}
+.featured-product-list li i{color:#2E7BAE;margin-top:4px;font-size:.7rem}
+
+/* ===== Strengths ===== */
+.strength-list{max-width:920px;margin:0 auto}
+.strength-item{display:flex;align-items:center;gap:48px;padding:48px 0;border-bottom:1px solid #D8E4ED}
+.strength-item:last-child{border-bottom:none}
+.strength-item:nth-child(even){flex-direction:row-reverse}
+.strength-number{min-width:200px;text-align:center}
+.strength-number .num{font-family:'Inter',sans-serif;font-size:3.5rem;font-weight:700;color:#1A3A5C;line-height:1}
+.strength-number .label{font-size:.8rem;color:#2E7BAE;margin-top:4px;font-weight:500}
+.strength-text h3{font-family:'Noto Serif JP',serif;font-size:1.15rem;font-weight:600;color:#1A3A5C;margin-bottom:8px}
+.strength-text p{font-size:.88rem;color:#555;line-height:1.9}
+
+/* ===== News ===== */
+.news-list{max-width:800px;margin:0 auto}
+.news-item{display:flex;gap:20px;padding:20px 0;border-bottom:1px solid #D8E4ED;align-items:baseline;transition:background .3s}
+.news-item:hover{background:rgba(46,123,174,.02)}
+.news-date{flex:0 0 110px;font-family:'Inter',sans-serif;font-size:.85rem;color:#2E7BAE;font-weight:600}
+.news-cat{flex:0 0 auto;display:inline-block;font-size:.68rem;font-weight:500;padding:2px 10px;border-radius:3px;border:1px solid #D8E4ED;color:#1A3A5C}
+.news-title{flex:1;font-size:.88rem;color:#2C2C2C}
+.news-title a:hover{color:#2E7BAE}
+.news-more{text-align:center;margin-top:36px}
+.news-more a{font-size:.88rem;color:#2E7BAE;font-weight:500;display:inline-flex;align-items:center;gap:6px}
+.news-more a:hover{gap:10px}
+
+/* ===== Recruit Banner ===== */
+.recruit-banner{background:linear-gradient(135deg,#f0f7fc,#e8f5f0);padding:64px 0;text-align:center}
+.recruit-banner h2{font-family:'Noto Serif JP',serif;font-size:1.6rem;color:#1A3A5C;margin-bottom:8px}
+.recruit-banner .en{font-family:'Inter',sans-serif;font-size:.78rem;color:#2E7BAE;letter-spacing:.15em;text-transform:uppercase;margin-bottom:20px;font-weight:400}
+.recruit-banner p{font-size:.9rem;color:#555;margin-bottom:28px;line-height:1.8}
+.btn-recruit{background:#1A3A5C;color:#fff;padding:14px 40px;border-radius:4px;font-size:.9rem;font-weight:500;display:inline-flex;align-items:center;gap:8px;transition:all .3s;border:none;cursor:pointer;font-family:'Noto Sans JP',sans-serif}
+.btn-recruit:hover{background:#0d2a45;transform:translateY(-2px);box-shadow:0 4px 16px rgba(26,58,92,.2)}
+
+/* ===== Contact ===== */
+.contact{background:linear-gradient(135deg,#1A3A5C 0%,#1e4f7a 100%);color:#fff}
+.contact .section-title{color:#fff}
+.contact .section-title-en{color:rgba(255,255,255,.5)}
+.contact-sub{text-align:center;font-size:.92rem;color:rgba(255,255,255,.8);margin-bottom:48px;margin-top:-32px}
+.contact-methods{display:flex;gap:32px;justify-content:center;margin-bottom:48px;flex-wrap:wrap}
+.contact-method{text-align:center;padding:24px 32px;border:1px solid rgba(255,255,255,.15);border-radius:8px;min-width:200px;transition:all .3s}
+.contact-method:hover{border-color:rgba(255,255,255,.3);background:rgba(255,255,255,.05)}
+.contact-method i{font-size:1.4rem;color:#4A9B7F;margin-bottom:8px}
+.contact-method .label{font-size:.75rem;color:rgba(255,255,255,.6);margin-bottom:4px}
+.contact-method .value{font-size:1.1rem;font-weight:600;letter-spacing:.03em}
+.contact-cta-btn{text-align:center;margin-top:32px}
+.contact-cta-btn a{display:inline-flex;align-items:center;gap:8px;padding:14px 40px;background:#fff;color:#1A3A5C;border-radius:4px;font-size:.92rem;font-weight:600;transition:all .3s;font-family:'Noto Sans JP',sans-serif}
+.contact-cta-btn a:hover{background:#e8f4fd;transform:translateY(-2px);box-shadow:0 4px 16px rgba(0,0,0,.2)}
+
+/* ===== Footer ===== */
+.footer{background:#0d1f30;color:rgba(255,255,255,.7);padding:60px 0 28px}
+.footer-inner{display:grid;grid-template-columns:1fr 1fr 1fr;gap:48px;margin-bottom:48px}
+.footer-col h4{font-family:'Noto Serif JP',serif;font-size:.9rem;color:#fff;margin-bottom:16px;font-weight:600}
+.footer-logo-text{font-family:'Noto Serif JP',serif;font-size:1.05rem;color:#fff;font-weight:600;margin-bottom:4px}
+.footer-logo-en{font-family:'Inter',sans-serif;font-size:.72rem;color:rgba(255,255,255,.4);letter-spacing:.06em;margin-bottom:16px;font-weight:400}
+.footer-info{font-size:.8rem;line-height:2}
+.footer-info i{color:#2E7BAE;width:16px;display:inline-block;text-align:center;margin-right:4px}
+.footer-nav-list a{display:block;padding:6px 0;font-size:.8rem;color:rgba(255,255,255,.55);transition:color .3s}
+.footer-nav-list a:hover{color:#fff}
+.footer-nav-list a i{width:16px;display:inline-block;text-align:center;margin-right:6px;font-size:.7rem}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.08);padding-top:20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.footer-copy{font-size:.72rem;color:rgba(255,255,255,.35)}
+.footer-lang{display:flex;gap:6px}
+.footer-lang button{background:none;border:1px solid rgba(255,255,255,.15);border-radius:3px;padding:3px 8px;font-size:.65rem;color:rgba(255,255,255,.4);cursor:pointer;transition:all .3s}
+.footer-lang button:hover{border-color:rgba(255,255,255,.4);color:#fff}
+
+/* ===== Responsive ===== */
+@media(max-width:960px){
+  .top-bar-inner{flex-direction:column;gap:4px;text-align:center}
+  .header{padding:0 20px}
+  .header-nav,.lang-switch{display:none}
+  .hamburger{display:flex}
+  .mobile-nav{display:block}
+  .hero{min-height:75vh}
+  .hero-content-1,.hero-content-2{bottom:60px;left:32px}
+  .hero-content-1 h1,.hero-content-2 p{font-size:1.8rem}
+  .purpose-grid{grid-template-columns:repeat(2,1fr)!important}
+  .concept-grid,.tech-grid,.products-grid{grid-template-columns:1fr}
+  .concept-grid{gap:20px}
+  .tech-grid{gap:16px}
+  .featured-product{flex-direction:column;padding:32px}
+  .featured-product-img{flex:none;width:100%;height:160px}
+  .strength-item{flex-direction:column!important;text-align:center;gap:24px}
+  .strength-number{min-width:auto}
+  .news-item{flex-direction:column;gap:8px}
+  .news-date{flex:none}
+  .footer-inner{grid-template-columns:1fr;gap:32px}
+  .footer-bottom{flex-direction:column;text-align:center}
+  .contact-methods{flex-direction:column;align-items:center}
+}
+@media(max-width:600px){
+  .purpose-grid{grid-template-columns:1fr!important}
+  .header{height:60px}
+  .hero-content-1,.hero-content-2{bottom:40px;left:20px}
+  .hero-content-1 h1,.hero-content-2 p{font-size:1.3rem}
+  .btn{padding:12px 28px;font-size:.85rem}
+  .section-title{font-size:1.5rem}
+  .section-padding{padding:64px 0}
+  .strength-number .num{font-size:2.5rem}
+  .cert-inner{flex-direction:column;gap:20px;text-align:center}
+  .cert-text-block{text-align:center}
+}
+</style>
+</head>
+<body>
+
+<!-- ===== Top Bar ===== -->
+<div class="top-bar">
+  <div class="top-bar-inner">
+    <div class="top-bar-contact">
+      <span><i class="fas fa-phone"></i> フリーダイヤル: <a href="tel:0120626923" style="color:inherit;"><strong>0120-626-923</strong></a></span>
+      <span><i class="fas fa-phone-alt"></i> TEL: <a href="tel:0493626923" style="color:inherit;">0493-62-6923</a></span>
+      <span><i class="fas fa-fax"></i> FAX: 0493-62-9477</span>
+    </div>
+    <span class="top-bar-hours"><i class="far fa-clock"></i> 受付時間 平日 9:00〜17:30</span>
+  </div>
+</div>
+
+<!-- ===== Header ===== -->
+<header class="header" id="header">
+  <a href="index.html" class="header-logo">
+    <div class="header-logo-mark">
+      <span class="en">Immuno Probe</span>
+      <span class="bar"></span>
+      <span class="jp">イムノ・プローブ</span>
+    </div>
+  </a>
+  <div class="header-right">
+    <nav class="header-nav">
+      <a href="index.html" class="active">ホーム</a>
+      <a href="about.html">会社概要</a>
+      <a href="technology.html">基盤技術</a>
+      <a href="products.html">製品・サービス</a>
+      <a href="oem.html">受託開発</a>
+      <a href="faq.html">FAQ</a>
+      <a href="info.html">学術情報</a>
+      <a href="career.html">採用情報</a>
+      <a href="contact.html">お問い合わせ</a>
+    </nav>
+    <div class="lang-switch">
+      <button class="active" onclick="handleLang('JP')">JP</button>
+      <button onclick="handleLang('EN')">EN</button>
+      <button onclick="handleLang('CN')">CN</button>
+      <button onclick="handleLang('IN')">IN</button>
+    </div>
+    <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile Nav -->
+<div class="mobile-overlay" id="mobileOverlay" onclick="toggleMenu()"></div>
+<nav class="mobile-nav" id="mobileNav">
+  <a href="index.html" class="active" onclick="toggleMenu()">ホーム</a>
+  <a href="about.html" onclick="toggleMenu()">会社概要</a>
+  <a href="technology.html" onclick="toggleMenu()">基盤技術</a>
+  <a href="products.html" onclick="toggleMenu()">製品・サービス</a>
+  <a href="oem.html" onclick="toggleMenu()">受託開発</a>
+  <a href="faq.html" onclick="toggleMenu()">FAQ</a>
+  <a href="info.html" onclick="toggleMenu()">学術情報</a>
+  <a href="career.html" onclick="toggleMenu()">採用情報</a>
+  <a href="contact.html" onclick="toggleMenu()">お問い合わせ</a>
+  <div class="mobile-lang">
+    <button class="active" onclick="handleLang('JP')">JP</button>
+    <button onclick="handleLang('EN')">EN</button>
+    <button onclick="handleLang('CN')">CN</button>
+    <button onclick="handleLang('IN')">IN</button>
+  </div>
+</nav>
+
+<!-- ===== Hero Slideshow ===== -->
+<section class="hero" id="hero">
+  <!-- Slide 1: ラボ（試験管・技術） -->
+  <div class="hero-slide active">
+    <div class="hero-slide-img"></div>
+    <div class="hero-slide-overlay"></div>
+  </div>
+  <!-- Slide 2: 赤ちゃん・子ども（健康・未来） -->
+  <div class="hero-slide">
+    <div class="hero-slide-img"></div>
+    <div class="hero-slide-overlay"></div>
+  </div>
+  <!-- Slide 1 Content: centered message -->
+  <div class="hero-content-1 active">
+    <h1>原料から診断薬まで<br>新しい検査薬を創ります</h1>
+  </div>
+  <!-- Slide 2 Content: bottom-left message -->
+  <div class="hero-content-2">
+    <p>明日の皆の「健康」のために</p>
+  </div>
+  <!-- Slide Indicators -->
+  <div class="hero-indicators">
+    <button class="hero-indicator active" onclick="goSlide(0)"></button>
+    <button class="hero-indicator" onclick="goSlide(1)"></button>
+  </div>
+</section>
+
+<!-- ===== Certification Banner ===== -->
+<div class="cert-banner">
+  <div class="cert-inner">
+    <img src="iso_logo.avif" alt="ISO 13485:2016 MD501189 BSI UKAS認証ロゴ" class="cert-logo-img">
+    <div class="cert-text-block">
+      <div class="cert-desc">
+        株式会社イムノ・プローブは、<br>
+        品質システムの国際規格 <strong>ISO 13485</strong> を取得しています
+      </div>
+      <div class="cert-licenses">
+        <span>体外診断用医薬品製造販売業許可（許可番号：11E1X80008）</span>
+        <span>体外診断用医薬品製造業登録（登録番号：11EZ280059）</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== Purpose Navigation ===== -->
+<section style="background:#fff;padding:64px 0;border-bottom:1px solid #D8E4ED;" id="purpose-nav">
+  <div class="container">
+    <h2 class="section-title fade-in">目的から探す</h2>
+    <p class="section-title-en fade-in">Find What You Need</p>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:20px;max-width:960px;margin:0 auto;" class="purpose-grid">
+      <a href="products.html" class="fade-in" style="display:flex;flex-direction:column;align-items:center;text-align:center;padding:32px 16px;border:1px solid #D8E4ED;border-radius:8px;transition:all .3s;background:#fff;">
+        <div style="width:56px;height:56px;background:linear-gradient(135deg,#e8f4fd,#e0f2ec);border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:16px;font-size:1.3rem;color:#1A3A5C;"><i class="fas fa-flask"></i></div>
+        <div style="font-family:'Noto Serif JP',serif;font-size:.95rem;font-weight:600;color:#1A3A5C;margin-bottom:8px;">製品をお探しの方</div>
+        <div style="font-size:.78rem;color:#888;">研究機関・医療関係者向け</div>
+      </a>
+      <a href="oem.html" class="fade-in" style="display:flex;flex-direction:column;align-items:center;text-align:center;padding:32px 16px;border:1px solid #D8E4ED;border-radius:8px;transition:all .3s;background:#fff;">
+        <div style="width:56px;height:56px;background:linear-gradient(135deg,#e8f4fd,#e0f2ec);border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:16px;font-size:1.3rem;color:#1A3A5C;"><i class="fas fa-handshake"></i></div>
+        <div style="font-family:'Noto Serif JP',serif;font-size:.95rem;font-weight:600;color:#1A3A5C;margin-bottom:8px;">受託開発をご検討の方</div>
+        <div style="font-size:.78rem;color:#888;">共同研究・受託先向け</div>
+      </a>
+      <a href="about.html" class="fade-in" style="display:flex;flex-direction:column;align-items:center;text-align:center;padding:32px 16px;border:1px solid #D8E4ED;border-radius:8px;transition:all .3s;background:#fff;">
+        <div style="width:56px;height:56px;background:linear-gradient(135deg,#e8f4fd,#e0f2ec);border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:16px;font-size:1.3rem;color:#1A3A5C;"><i class="fas fa-building"></i></div>
+        <div style="font-family:'Noto Serif JP',serif;font-size:.95rem;font-weight:600;color:#1A3A5C;margin-bottom:8px;">企業情報を知りたい方</div>
+        <div style="font-size:.78rem;color:#888;">銀行・行政・一般の方向け</div>
+      </a>
+      <a href="career.html" class="fade-in" style="display:flex;flex-direction:column;align-items:center;text-align:center;padding:32px 16px;border:1px solid #D8E4ED;border-radius:8px;transition:all .3s;background:#fff;">
+        <div style="width:56px;height:56px;background:linear-gradient(135deg,#e8f4fd,#e0f2ec);border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:16px;font-size:1.3rem;color:#1A3A5C;"><i class="fas fa-user-plus"></i></div>
+        <div style="font-family:'Noto Serif JP',serif;font-size:.95rem;font-weight:600;color:#1A3A5C;margin-bottom:8px;">採用情報をお探しの方</div>
+        <div style="font-size:.78rem;color:#888;">就職希望者向け</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Concept ===== -->
+<section class="section-padding section-bg-light" id="concept">
+  <div class="container">
+    <h2 class="section-title fade-in">私たちが目指すもの</h2>
+    <p class="section-title-en fade-in">Our Vision</p>
+    <p style="text-align:center;font-size:1rem;color:#555;margin-bottom:48px;margin-top:-32px;">「明日の皆の「健康」のために」— それが私たちの原動力です。</p>
+    <div class="concept-grid">
+      <div class="concept-card fade-in">
+        <div class="concept-icon"><i class="fas fa-microscope"></i></div>
+        <h3>一貫した技術力</h3>
+        <p>原料調達から診断薬の製造まで、自社一貫対応。30年以上にわたる技術の蓄積で、高品質な製品を安定供給します。</p>
+        <a href="technology.html" class="concept-link">詳しくはこちら <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div class="concept-card fade-in">
+        <div class="concept-icon"><i class="fas fa-handshake"></i></div>
+        <h3>パートナーシップ</h3>
+        <p>「一緒に薬品を開発する」をモットーに、共同研究・受託開発を通じてお客様の研究開発を力強くサポートします。</p>
+        <a href="oem.html" class="concept-link">詳しくはこちら <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div class="concept-card fade-in">
+        <div class="concept-icon"><i class="fas fa-award"></i></div>
+        <h3>品質の信頼性</h3>
+        <p>ISO 13485:2016認証を取得し、国際水準の品質マネジメントシステムのもとで製品を製造・管理しています。</p>
+        <a href="about.html" class="concept-link">詳しくはこちら <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Products ===== -->
+<section class="section-padding section-bg-light" id="products">
+  <div class="container">
+    <h2 class="section-title fade-in">製品・サービス</h2>
+    <p class="section-title-en fade-in">Products &amp; Services</p>
+    <div class="products-grid">
+      <div class="product-card fade-in">
+        <div class="product-card-img">
+          <img src="https://images.unsplash.com/photo-1582719471384-894fbb16e074?w=400&h=250&fit=crop&q=80" alt="体外診断用医薬品" onerror="this.style.display='none'">
+        </div>
+        <div class="product-card-body">
+          <h3>体外診断用医薬品（POCT）</h3>
+          <p>ノロウイルス・ロタウイルス検出キット等、イムノクロマト法を活用した迅速検査薬を開発・製造しています。</p>
+          <a href="products.html" class="product-link">詳しく見る <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+      <div class="product-card fade-in">
+        <div class="product-card-img">
+          <img src="https://images.unsplash.com/photo-1576086213369-97a306d36557?w=400&h=250&fit=crop&q=80" alt="研究用試薬" onerror="this.style.display='none'">
+        </div>
+        <div class="product-card-body">
+          <h3>研究用試薬</h3>
+          <p>高純度モノクローナル抗体・ポリクローナル抗体・精製抗原を提供。多様な研究ニーズに対応します。</p>
+          <a href="products.html" class="product-link">詳しく見る <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+      <div class="product-card fade-in">
+        <div class="product-card-img">
+          <img src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=400&h=250&fit=crop&q=80" alt="受託開発・製造" onerror="this.style.display='none'">
+        </div>
+        <div class="product-card-body">
+          <h3>受託開発・製造</h3>
+          <p>抗体受託製造・診断薬受託開発・試験受託サービス。お客様の開発をワンストップでサポートします。</p>
+          <a href="oem.html" class="product-link">詳しく見る <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Featured Product -->
+    <div class="featured-product fade-in">
+      <div class="featured-product-img">
+        <i class="fas fa-box-open"></i>
+      </div>
+      <div class="featured-product-body">
+        <span class="featured-product-badge">注目製品</span>
+        <h3>IPライン&reg; デゥオ「ノロ・ロタ」</h3>
+        <p>1ステップのイムノクロマト法で、15分で判定。遺伝子検査法との一致率も高く、糞便中のノロウイルス抗原及びロタウイルスを2項目同時検出できる迅速診断検査試薬です。</p>
+        <ul class="featured-product-list">
+          <li><i class="fas fa-check-circle"></i> ノロウイルスとロタウイルスを同時に検出</li>
+          <li><i class="fas fa-check-circle"></i> 反応時間は15分（陽性は5分から検出可能）</li>
+          <li><i class="fas fa-check-circle"></i> 直腸から採取された便が測定可能</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== News ===== -->
+<section class="section-padding section-bg-light" id="news">
+  <div class="container">
+    <h2 class="section-title fade-in">お知らせ</h2>
+    <p class="section-title-en fade-in">News &amp; Information</p>
+    <div class="news-list fade-in">
+      <div class="news-item">
+        <span class="news-date">2026.05.01</span>
+        <span class="news-cat">お知らせ</span>
+        <span class="news-title"><a href="news-001.html">ホームページをリニューアルしました。</a></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Recruit Banner ===== -->
+<section class="recruit-banner" id="recruit">
+  <div class="container fade-in">
+    <h2>採用情報</h2>
+    <p class="en">Recruit</p>
+    <p>イムノ・プローブでは、抗体製造・診断薬開発に情熱を持つ仲間を募集しています。<br>「原料から診断薬まで」を共に実現しませんか。</p>
+    <a href="career.html" class="btn-recruit"><i class="fas fa-user-plus"></i> 採用情報を見る</a>
+  </div>
+</section>
+
+<!-- ===== Contact ===== -->
+<section class="contact section-padding" id="contact">
+  <div class="container">
+    <h2 class="section-title fade-in">お気軽にお問い合わせください</h2>
+    <p class="section-title-en fade-in">Contact Us</p>
+    <p class="contact-sub fade-in">共同研究・受託開発のご相談、製品に関するお問い合わせを承ります。</p>
+    <div class="contact-methods fade-in">
+      <div class="contact-method">
+        <i class="fas fa-phone-volume"></i>
+        <div class="label">フリーダイヤル</div>
+        <div class="value">0120-626-923</div>
+      </div>
+      <div class="contact-method">
+        <i class="fas fa-phone-alt"></i>
+        <div class="label">TEL</div>
+        <div class="value">0493-62-6923</div>
+      </div>
+      <div class="contact-method">
+        <i class="fas fa-envelope"></i>
+        <div class="label">E-mail</div>
+        <div class="value"><a href="mailto:info@immuno-probe.com" style="color:inherit;">info@immuno-probe.com</a></div>
+      </div>
+    </div>
+    <div class="contact-cta-btn fade-in">
+      <a href="contact.html"><i class="fas fa-paper-plane"></i> お問い合わせフォームへ</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Footer ===== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-col">
+        <div class="footer-logo-text">株式会社イムノ・プローブ</div>
+        <div style="font-size:.78rem;color:rgba(255,255,255,.45);margin:4px 0 2px;">明日の皆の「健康」のために</div>
+        <div class="footer-logo-en">Immuno Probe Co., Ltd.</div>
+        <div class="footer-info">
+          <div><i class="fas fa-map-marker-alt"></i> 〒355-0225 埼玉県比企郡嵐山町鎌形1331-3</div>
+          <div><i class="fas fa-phone-volume"></i> フリーダイヤル: 0120-626-923</div>
+          <div><i class="fas fa-phone-alt"></i> TEL: 0493-62-6923</div>
+          <div><i class="fas fa-fax"></i> FAX: 0493-62-9477</div>
+          <div><i class="far fa-clock"></i> 受付時間: 平日 9:00〜17:30</div>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>サイトマップ</h4>
+        <div class="footer-nav-list">
+          <a href="index.html"><i class="fas fa-chevron-right"></i>ホーム</a>
+          <a href="technology.html"><i class="fas fa-chevron-right"></i>基盤技術</a>
+          <a href="products.html"><i class="fas fa-chevron-right"></i>製品・サービス</a>
+          <a href="oem.html"><i class="fas fa-chevron-right"></i>受託開発</a>
+          <a href="about.html"><i class="fas fa-chevron-right"></i>会社概要</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>お役立ち情報</h4>
+        <div class="footer-nav-list">
+          <a href="info.html"><i class="fas fa-chevron-right"></i>学術情報</a>
+          <a href="faq.html"><i class="fas fa-chevron-right"></i>よくあるご質問（FAQ）</a>
+          <a href="career.html"><i class="fas fa-chevron-right"></i>採用情報</a>
+          <a href="access.html"><i class="fas fa-chevron-right"></i>アクセス</a>
+          <a href="privacy.html"><i class="fas fa-chevron-right"></i>プライバシーポリシー</a>
+          <a href="ethics.html"><i class="fas fa-chevron-right"></i>動物実験方針</a>
+          <a href="contact.html"><i class="fas fa-chevron-right"></i>お問い合わせ</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">Copyright &copy; 2025 株式会社イムノ・プローブ All Rights Reserved.</p>
+      <div class="footer-lang">
+        <button onclick="handleLang('JP')">JP</button>
+        <button onclick="handleLang('EN')">EN</button>
+        <button onclick="handleLang('CN')">CN</button>
+        <button onclick="handleLang('IN')">IN</button>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+const header=document.getElementById('header');
+window.addEventListener('scroll',()=>{header.classList.toggle('scrolled',window.scrollY>10)});
+function toggleMenu(){
+  document.getElementById('hamburger').classList.toggle('open');
+  document.getElementById('mobileNav').classList.toggle('open');
+  document.getElementById('mobileOverlay').classList.toggle('open');
+  document.body.style.overflow=document.getElementById('mobileNav').classList.contains('open')?'hidden':'';
+}
+function handleLang(l){if(l!=='JP')alert('多言語対応は現在開発中です');}
+
+// Hero Slideshow
+let currentSlide=0;
+const slides=document.querySelectorAll('.hero-slide');
+const indicators=document.querySelectorAll('.hero-indicator');
+const contents=document.querySelectorAll('.hero-content-1,.hero-content-2');
+function goSlide(n){
+  slides[currentSlide].classList.remove('active');
+  indicators[currentSlide].classList.remove('active');
+  contents[currentSlide].classList.remove('active');
+  currentSlide=n;
+  slides[currentSlide].classList.add('active');
+  indicators[currentSlide].classList.add('active');
+  contents[currentSlide].classList.add('active');
+}
+setInterval(()=>{goSlide((currentSlide+1)%slides.length)},6000);
+
+const obs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')});
+},{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.fade-in').forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>
