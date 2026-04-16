@@ -85,7 +85,7 @@ ul{list-style:none}
 .footer-logo-text{font-family:'Noto Serif JP',serif;font-size:1.05rem;color:#fff;font-weight:600;margin-bottom:4px}
 .footer-logo-en{font-family:'Inter',sans-serif;font-size:.72rem;color:rgba(255,255,255,.4);letter-spacing:.06em;margin-bottom:16px}
 .footer-info{font-size:.8rem;line-height:2}
-.footer-info i{color:#AE7B2E;width:16px;display:inline-block;text-align:center;margin-right:4px}
+.footer-info i{color:#fff;width:16px;display:inline-block;text-align:center;margin-right:4px}
 .footer-nav-list a{display:block;padding:6px 0;font-size:.8rem;color:rgba(255,255,255,.55);transition:color .3s}
 .footer-nav-list a:hover{color:#fff}
 .footer-nav-list a i{width:16px;display:inline-block;text-align:center;margin-right:6px;font-size:.7rem}
@@ -96,7 +96,8 @@ ul{list-style:none}
 .footer-lang select:focus{outline:none;border-color:rgba(255,255,255,.5)}
 .footer-lang select option{color:#2C2C2C;background:#fff}
 @media(max-width:960px){
-  .top-bar-inner{flex-direction:column;gap:4px;text-align:center}
+  .top-bar-inner{flex-direction:row;justify-content:space-between;align-items:center}
+  .top-bar-contact span:nth-child(2),.top-bar-contact span:nth-child(3){display:none}
   .header{padding:0 20px}
   .header-nav,.lang-switch{display:none}
   .hamburger{display:flex}
