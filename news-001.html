@@ -118,30 +118,30 @@ ul{list-style:none}
 <div class="top-bar">
   <div class="top-bar-inner">
     <div class="top-bar-contact">
-      <span><i class="fas fa-phone"></i> フリーダイヤル: <a href="tel:0120626923" style="color:inherit;"><strong>0120-626-923</strong></a></span>
-      <span><i class="fas fa-phone-alt"></i> TEL: <a href="tel:0493626923" style="color:inherit;">0493-62-6923</a></span>
-      <span><i class="fas fa-fax"></i> FAX: 0493-62-9477</span>
+      <span><i class="fas fa-phone"></i> <span data-i18n="common.freedial">フリーダイヤル:</span> <a href="tel:0120626923" style="color:inherit;"><strong>0120-626-923</strong></a></span>
+      <span><i class="fas fa-phone-alt"></i> <span data-i18n="common.tel">TEL:</span> <a href="tel:0493626923" style="color:inherit;">0493-62-6923</a></span>
+      <span><i class="fas fa-fax"></i> <span data-i18n="common.fax">FAX: 0493-62-9477</span></span>
     </div>
-    <span class="top-bar-hours"><i class="far fa-clock"></i> 受付時間 平日 9:00〜17:30</span>
+    <span class="top-bar-hours"><i class="far fa-clock"></i> <span data-i18n="common.hours">受付時間 平日 9:00〜17:30</span></span>
   </div>
 </div>
 
 <header class="header" id="header">
   <a href="index.html" class="header-logo">
     <img src="images/logo.avif" alt="株式会社イムノ・プローブ">
-    <span class="header-logo-name">株式会社イムノ・プローブ</span>
+    <span class="header-logo-name" data-i18n="common.header.company">株式会社イムノ・プローブ</span>
   </a>
   <div class="header-right">
     <nav class="header-nav">
-      <a href="index.html">ホーム</a>
-      <a href="about.html">会社概要</a>
-      <a href="technology.html">基盤技術</a>
-      <a href="products.html">製品・サービス</a>
-      <a href="oem.html">受託開発</a>
-      <a href="faq.html">FAQ</a>
-      <a href="info.html">学術情報</a>
-      <a href="career.html">採用情報</a>
-      <a href="contact.html">お問い合わせ</a>
+      <a href="index.html" data-i18n="common.nav.home">ホーム</a>
+      <a href="about.html" data-i18n="common.nav.about">会社概要</a>
+      <a href="technology.html" data-i18n="common.nav.technology">基盤技術</a>
+      <a href="products.html" data-i18n="common.nav.products">製品・サービス</a>
+      <a href="oem.html" data-i18n="common.nav.oem">受託開発</a>
+      <a href="faq.html" data-i18n="common.nav.faq">FAQ</a>
+      <a href="info.html" data-i18n="common.nav.info">学術情報</a>
+      <a href="career.html" data-i18n="common.nav.career">採用情報</a>
+      <a href="contact.html" data-i18n="common.nav.contact">お問い合わせ</a>
     </nav>
     <div class="lang-switch">
       <select id="langSelect" onchange="handleLang(this.value)">
@@ -158,15 +158,15 @@ ul{list-style:none}
 </header>
 <div class="mobile-overlay" id="mobileOverlay" onclick="toggleMenu()"></div>
 <nav class="mobile-nav" id="mobileNav">
-  <a href="index.html" onclick="toggleMenu()">ホーム</a>
-  <a href="about.html" onclick="toggleMenu()">会社概要</a>
-  <a href="technology.html" onclick="toggleMenu()">基盤技術</a>
-  <a href="products.html" onclick="toggleMenu()">製品・サービス</a>
-  <a href="oem.html" onclick="toggleMenu()">受託開発</a>
-  <a href="faq.html" onclick="toggleMenu()">FAQ</a>
-  <a href="info.html" onclick="toggleMenu()">学術情報</a>
-  <a href="career.html" onclick="toggleMenu()">採用情報</a>
-  <a href="contact.html" onclick="toggleMenu()">お問い合わせ</a>
+  <a href="index.html" onclick="toggleMenu()" data-i18n="common.nav.home">ホーム</a>
+  <a href="about.html" onclick="toggleMenu()" data-i18n="common.nav.about">会社概要</a>
+  <a href="technology.html" onclick="toggleMenu()" data-i18n="common.nav.technology">基盤技術</a>
+  <a href="products.html" onclick="toggleMenu()" data-i18n="common.nav.products">製品・サービス</a>
+  <a href="oem.html" onclick="toggleMenu()" data-i18n="common.nav.oem">受託開発</a>
+  <a href="faq.html" onclick="toggleMenu()" data-i18n="common.nav.faq">FAQ</a>
+  <a href="info.html" onclick="toggleMenu()" data-i18n="common.nav.info">学術情報</a>
+  <a href="career.html" onclick="toggleMenu()" data-i18n="common.nav.career">採用情報</a>
+  <a href="contact.html" onclick="toggleMenu()" data-i18n="common.nav.contact">お問い合わせ</a>
   <div class="mobile-lang">
     <select id="langSelectMobile" onchange="handleLang(this.value)" style="width:100%;padding:10px;border:1px solid #EDE4D8;border-radius:4px;font-size:.88rem;color:#5C3A1A;font-family:'Noto Sans JP',sans-serif;">
       <option value="ja">日本語</option>
@@ -179,14 +179,14 @@ ul{list-style:none}
 
 <section class="page-hero">
   <div class="container">
-    <h1>お知らせ</h1>
-    <p class="en">News</p>
+    <h1 data-i18n="news001.hero.title">お知らせ</h1>
+    <p class="en" data-i18n="news001.hero.en">News</p>
   </div>
 </section>
 
 <div class="breadcrumb">
   <div class="container">
-    <a href="index.html">ホーム</a><span>&gt;</span><a href="index.html#news">お知らせ</a><span>&gt;</span>ホームページをリニューアルしました
+    <a href="index.html" data-i18n="common.nav.home">ホーム</a><span>&gt;</span><a href="index.html#news" data-i18n="news001.breadcrumb.news">お知らせ</a><span>&gt;</span><span data-i18n="news001.breadcrumb.title">ホームページをリニューアルしました</span>
   </div>
 </div>
 
@@ -197,32 +197,32 @@ ul{list-style:none}
       <div class="news-article-header">
         <div class="news-article-meta">
           <span class="news-article-date">2026.05.01</span>
-          <span class="news-article-cat">お知らせ</span>
+          <span class="news-article-cat" data-i18n="news001.cat">お知らせ</span>
         </div>
-        <h2 class="news-article-title">ホームページをリニューアルしました</h2>
+        <h2 class="news-article-title" data-i18n="news001.title">ホームページをリニューアルしました</h2>
       </div>
 
       <div class="news-article-body">
-        <p>平素より株式会社イムノ・プローブのホームページをご利用いただき、誠にありがとうございます。</p>
+        <p data-i18n="news001.p1">平素より株式会社イムノ・プローブのホームページをご利用いただき、誠にありがとうございます。</p>
 
-        <p>この度、より多くの皆様に弊社の事業内容や製品・サービスをわかりやすくお伝えするため、ホームページを全面的にリニューアルいたしました。</p>
+        <p data-i18n="news001.p2">この度、より多くの皆様に弊社の事業内容や製品・サービスをわかりやすくお伝えするため、ホームページを全面的にリニューアルいたしました。</p>
 
-        <p>今回のリニューアルでは、以下の点を改善しております。</p>
+        <p data-i18n="news001.p3">今回のリニューアルでは、以下の点を改善しております。</p>
 
         <ul style="padding-left:20px;margin-bottom:20px;">
-          <li style="list-style:disc;padding:4px 0;">デザインを一新し、見やすく・探しやすいサイト構成に変更</li>
-          <li style="list-style:disc;padding:4px 0;">スマートフォン・タブレットに対応したレスポンシブデザインの採用</li>
-          <li style="list-style:disc;padding:4px 0;">製品情報・受託開発・学術情報など各コンテンツの充実</li>
-          <li style="list-style:disc;padding:4px 0;">多言語対応の準備（日本語・英語・中国語・インド言語）</li>
+          <li style="list-style:disc;padding:4px 0;" data-i18n="news001.li1">デザインを一新し、見やすく・探しやすいサイト構成に変更</li>
+          <li style="list-style:disc;padding:4px 0;" data-i18n="news001.li2">スマートフォン・タブレットに対応したレスポンシブデザインの採用</li>
+          <li style="list-style:disc;padding:4px 0;" data-i18n="news001.li3">製品情報・受託開発・学術情報など各コンテンツの充実</li>
+          <li style="list-style:disc;padding:4px 0;" data-i18n="news001.li4">多言語対応の準備（日本語・英語・中国語・インド言語）</li>
         </ul>
 
-        <p>今後とも、「明日の皆の健康のために」をモットーに、お客様により良い情報とサービスを提供してまいります。</p>
+        <p data-i18n="news001.p4">今後とも、「明日の皆の健康のために」をモットーに、お客様により良い情報とサービスを提供してまいります。</p>
 
-        <p>引き続き、株式会社イムノ・プローブをよろしくお願い申し上げます。</p>
+        <p data-i18n="news001.p5">引き続き、株式会社イムノ・プローブをよろしくお願い申し上げます。</p>
 
       </div>
 
-      <a href="index.html#news" class="back-link"><i class="fas fa-arrow-left"></i> お知らせ一覧へ戻る</a>
+      <a href="index.html#news" class="back-link"><i class="fas fa-arrow-left"></i data-i18n="news001.back"> お知らせ一覧へ戻る</a>
 
     </div>
   </div>
@@ -232,42 +232,42 @@ ul{list-style:none}
   <div class="container">
     <div class="footer-inner">
       <div class="footer-col">
-        <div class="footer-logo-text">株式会社イムノ・プローブ</div>
-        <div style="font-size:.78rem;color:rgba(255,255,255,.45);margin:4px 0 2px;">明日の皆の「健康」のために</div>
-        <div class="footer-logo-en">Immuno Probe Co., Ltd.</div>
+        <div class="footer-logo-text" data-i18n="common.footer.company">株式会社イムノ・プローブ</div>
+        <div style="font-size:.78rem;color:rgba(255,255,255,.45);margin:4px 0 2px;" data-i18n="common.footer.tagline">明日の皆の「健康」のために</div>
+        <div class="footer-logo-en" data-i18n="common.footer.company.en">Immuno Probe Co., Ltd.</div>
         <div class="footer-info">
-          <div><i class="fas fa-map-marker-alt"></i> 〒355-0225 埼玉県比企郡嵐山町鎌形1331-3</div>
-          <div><i class="fas fa-phone-volume"></i> フリーダイヤル: 0120-626-923</div>
-          <div><i class="fas fa-phone-alt"></i> TEL: 0493-62-6923</div>
-          <div><i class="fas fa-fax"></i> FAX: 0493-62-9477</div>
-          <div><i class="far fa-clock"></i> 受付時間: 平日 9:00〜17:30</div>
+          <div><i class="fas fa-map-marker-alt"></i> <span data-i18n="common.footer.address">〒355-0225 埼玉県比企郡嵐山町鎌形1331-3</span></div>
+          <div><i class="fas fa-phone-volume"></i> <span data-i18n="common.footer.freedial">フリーダイヤル: 0120-626-923</span></div>
+          <div><i class="fas fa-phone-alt"></i> <span data-i18n="common.footer.tel">TEL: 0493-62-6923</span></div>
+          <div><i class="fas fa-fax"></i> <span data-i18n="common.footer.fax">FAX: 0493-62-9477</span></div>
+          <div><i class="far fa-clock"></i> <span data-i18n="common.footer.hours">受付時間: 平日 9:00〜17:30</span></div>
         </div>
       </div>
       <div class="footer-col">
-        <h4>サイトマップ</h4>
+        <h4 data-i18n="common.footer.sitemap">サイトマップ</h4>
         <div class="footer-nav-list">
-          <a href="index.html"><i class="fas fa-chevron-right"></i>ホーム</a>
-          <a href="technology.html"><i class="fas fa-chevron-right"></i>基盤技術</a>
-          <a href="products.html"><i class="fas fa-chevron-right"></i>製品・サービス</a>
-          <a href="oem.html"><i class="fas fa-chevron-right"></i>受託開発</a>
-          <a href="about.html"><i class="fas fa-chevron-right"></i>会社概要</a>
+          <a href="index.html" data-i18n="common.footer.nav.home"><i class="fas fa-chevron-right"></i>ホーム</a>
+          <a href="technology.html" data-i18n="common.footer.nav.technology"><i class="fas fa-chevron-right"></i>基盤技術</a>
+          <a href="products.html" data-i18n="common.footer.nav.products"><i class="fas fa-chevron-right"></i>製品・サービス</a>
+          <a href="oem.html" data-i18n="common.footer.nav.oem"><i class="fas fa-chevron-right"></i>受託開発</a>
+          <a href="about.html" data-i18n="common.footer.nav.about"><i class="fas fa-chevron-right"></i>会社概要</a>
         </div>
       </div>
       <div class="footer-col">
-        <h4>お役立ち情報</h4>
+        <h4 data-i18n="common.footer.useful">お役立ち情報</h4>
         <div class="footer-nav-list">
-          <a href="info.html"><i class="fas fa-chevron-right"></i>学術情報</a>
-          <a href="faq.html"><i class="fas fa-chevron-right"></i>よくあるご質問（FAQ）</a>
-          <a href="career.html"><i class="fas fa-chevron-right"></i>採用情報</a>
-          <a href="access.html"><i class="fas fa-chevron-right"></i>アクセス</a>
-          <a href="privacy.html"><i class="fas fa-chevron-right"></i>プライバシーポリシー</a>
-          <a href="ethics.html"><i class="fas fa-chevron-right"></i>動物実験方針</a>
-          <a href="contact.html"><i class="fas fa-chevron-right"></i>お問い合わせ</a>
+          <a href="info.html" data-i18n="common.footer.nav.info"><i class="fas fa-chevron-right"></i>学術情報</a>
+          <a href="faq.html" data-i18n="common.footer.nav.faq"><i class="fas fa-chevron-right"></i>よくあるご質問（FAQ）</a>
+          <a href="career.html" data-i18n="common.footer.nav.career"><i class="fas fa-chevron-right"></i>採用情報</a>
+          <a href="access.html" data-i18n="common.footer.nav.access"><i class="fas fa-chevron-right"></i>アクセス</a>
+          <a href="privacy.html" data-i18n="common.footer.nav.privacy"><i class="fas fa-chevron-right"></i>プライバシーポリシー</a>
+          <a href="ethics.html" data-i18n="common.footer.nav.ethics"><i class="fas fa-chevron-right"></i>動物実験方針</a>
+          <a href="contact.html" data-i18n="common.footer.nav.contact"><i class="fas fa-chevron-right"></i>お問い合わせ</a>
         </div>
       </div>
     </div>
     <div class="footer-bottom">
-      <p class="footer-copy">Copyright &copy; 2025 株式会社イムノ・プローブ All Rights Reserved.</p>
+      <p class="footer-copy" data-i18n="common.footer.copyright">Copyright &copy; 2025 株式会社イムノ・プローブ All Rights Reserved.</p>
       <div class="footer-lang">
         <select id="langSelectFooter" onchange="handleLang(this.value)">
           <option value="ja">日本語</option>
@@ -280,6 +280,8 @@ ul{list-style:none}
   </div>
 </footer>
 
+<script src="js/translations.js"></script>
+<script src="js/i18n.js"></script>
 <script>
 const header=document.getElementById('header');
 window.addEventListener('scroll',()=>{header.classList.toggle('scrolled',window.scrollY>10)});
@@ -289,18 +291,6 @@ function toggleMenu(){
   document.getElementById('mobileOverlay').classList.toggle('open');
   document.body.style.overflow=document.getElementById('mobileNav').classList.contains('open')?'hidden':'';
 }
-function handleLang(lang){
-  localStorage.setItem('immunoprobe-lang',lang);
-  syncLangSelects(lang);
-  if(lang!=='ja')alert('多言語対応は現在準備中です');
-}
-function syncLangSelects(lang){
-  document.querySelectorAll('#langSelect,#langSelectMobile,#langSelectFooter').forEach(s=>{if(s)s.value=lang});
-}
-(function(){
-  const saved=localStorage.getItem('immunoprobe-lang')||'ja';
-  syncLangSelects(saved);
-})();
 const obs=new IntersectionObserver(entries=>{
   entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')});
 },{threshold:.12,rootMargin:'0px 0px -40px 0px'});

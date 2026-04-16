@@ -169,30 +169,30 @@ ul{list-style:none}
 <div class="top-bar">
   <div class="top-bar-inner">
     <div class="top-bar-contact">
-      <span><i class="fas fa-phone"></i> フリーダイヤル: <a href="tel:0120626923" style="color:inherit;"><strong>0120-626-923</strong></a></span>
-      <span><i class="fas fa-phone-alt"></i> TEL: <a href="tel:0493626923" style="color:inherit;">0493-62-6923</a></span>
-      <span><i class="fas fa-fax"></i> FAX: 0493-62-9477</span>
+      <span><i class="fas fa-phone"></i> <span data-i18n="common.freedial">フリーダイヤル:</span> <a href="tel:0120626923" style="color:inherit;"><strong>0120-626-923</strong></a></span>
+      <span><i class="fas fa-phone-alt"></i> <span data-i18n="common.tel">TEL:</span> <a href="tel:0493626923" style="color:inherit;">0493-62-6923</a></span>
+      <span><i class="fas fa-fax"></i> <span data-i18n="common.fax">FAX: 0493-62-9477</span></span>
     </div>
-    <span class="top-bar-hours"><i class="far fa-clock"></i> 受付時間 平日 9:00〜17:30</span>
+    <span class="top-bar-hours"><i class="far fa-clock"></i> <span data-i18n="common.hours">受付時間 平日 9:00〜17:30</span></span>
   </div>
 </div>
 
 <header class="header" id="header">
   <a href="index.html" class="header-logo">
     <img src="images/logo.avif" alt="株式会社イムノ・プローブ">
-    <span class="header-logo-name">株式会社イムノ・プローブ</span>
+    <span class="header-logo-name" data-i18n="common.header.company">株式会社イムノ・プローブ</span>
   </a>
   <div class="header-right">
     <nav class="header-nav">
-      <a href="index.html">ホーム</a>
-      <a href="about.html">会社概要</a>
-      <a href="technology.html">基盤技術</a>
-      <a href="products.html">製品・サービス</a>
-      <a href="oem.html" class="active">受託開発</a>
-      <a href="faq.html">FAQ</a>
-      <a href="info.html">学術情報</a>
-      <a href="career.html">採用情報</a>
-      <a href="contact.html">お問い合わせ</a>
+      <a href="index.html" data-i18n="common.nav.home">ホーム</a>
+      <a href="about.html" data-i18n="common.nav.about">会社概要</a>
+      <a href="technology.html" data-i18n="common.nav.technology">基盤技術</a>
+      <a href="products.html" data-i18n="common.nav.products">製品・サービス</a>
+      <a href="oem.html" class="active" data-i18n="common.nav.oem">受託開発</a>
+      <a href="faq.html" data-i18n="common.nav.faq">FAQ</a>
+      <a href="info.html" data-i18n="common.nav.info">学術情報</a>
+      <a href="career.html" data-i18n="common.nav.career">採用情報</a>
+      <a href="contact.html" data-i18n="common.nav.contact">お問い合わせ</a>
     </nav>
     <div class="lang-switch">
       <select id="langSelect" onchange="handleLang(this.value)">
@@ -209,15 +209,15 @@ ul{list-style:none}
 </header>
 <div class="mobile-overlay" id="mobileOverlay" onclick="toggleMenu()"></div>
 <nav class="mobile-nav" id="mobileNav">
-  <a href="index.html" onclick="toggleMenu()">ホーム</a>
-  <a href="about.html" onclick="toggleMenu()">会社概要</a>
-  <a href="technology.html" onclick="toggleMenu()">基盤技術</a>
-  <a href="products.html" onclick="toggleMenu()">製品・サービス</a>
-  <a href="oem.html" class="active" onclick="toggleMenu()">受託開発</a>
-  <a href="faq.html" onclick="toggleMenu()">FAQ</a>
-  <a href="info.html" onclick="toggleMenu()">学術情報</a>
-  <a href="career.html" onclick="toggleMenu()">採用情報</a>
-  <a href="contact.html" onclick="toggleMenu()">お問い合わせ</a>
+  <a href="index.html" onclick="toggleMenu()" data-i18n="common.nav.home">ホーム</a>
+  <a href="about.html" onclick="toggleMenu()" data-i18n="common.nav.about">会社概要</a>
+  <a href="technology.html" onclick="toggleMenu()" data-i18n="common.nav.technology">基盤技術</a>
+  <a href="products.html" onclick="toggleMenu()" data-i18n="common.nav.products">製品・サービス</a>
+  <a href="oem.html" class="active" onclick="toggleMenu()" data-i18n="common.nav.oem">受託開発</a>
+  <a href="faq.html" onclick="toggleMenu()" data-i18n="common.nav.faq">FAQ</a>
+  <a href="info.html" onclick="toggleMenu()" data-i18n="common.nav.info">学術情報</a>
+  <a href="career.html" onclick="toggleMenu()" data-i18n="common.nav.career">採用情報</a>
+  <a href="contact.html" onclick="toggleMenu()" data-i18n="common.nav.contact">お問い合わせ</a>
   <div class="mobile-lang">
     <select id="langSelectMobile" onchange="handleLang(this.value)" style="width:100%;padding:10px;border:1px solid #EDE4D8;border-radius:4px;font-size:.88rem;color:#5C3A1A;font-family:'Noto Sans JP',sans-serif;">
       <option value="ja">日本語</option>
@@ -230,14 +230,14 @@ ul{list-style:none}
 
 <section class="page-hero">
   <div class="container">
-    <h1>受託開発・製造</h1>
-    <p class="en">Contract Development &amp; Manufacturing</p>
+    <h1 data-i18n="oem.hero.title">受託開発・製造</h1>
+    <p class="en" data-i18n="oem.hero.en">Contract Development &amp; Manufacturing</p>
   </div>
 </section>
 
 <div class="breadcrumb">
   <div class="container">
-    <a href="index.html">ホーム</a><span>&gt;</span>受託開発・製造
+    <a href="index.html" data-i18n="common.nav.home">ホーム</a><span>&gt;</span><span data-i18n="oem.breadcrumb">受託開発・製造</span>
   </div>
 </div>
 
@@ -245,12 +245,12 @@ ul{list-style:none}
 <section class="section-padding section-bg-light">
   <div class="container">
     <div class="oem-intro fade-in">
-      <h2 class="section-title">研究用試薬・体外診断薬の受託製造</h2>
-      <p class="section-title-en">Contract Manufacturing</p>
-      <p>弊社では、イムノクロマト法キットとELISAキットの開発・製造において、長年の実績と経験があります。製造に必要な機器類も所有しており、管理も自ら行っております。</p>
-      <p style="margin-top:12px;">体外診断用医薬品及び研究用試薬の設計開発から製造まで幅広く対応致します。お客様のご希望に合わせて抗体の作製から製造まで受託する事が可能です。尚、試薬製造の一部のみを受託する事も可能です。</p>
-      <p style="margin-top:12px;">弊社は体外診断用医薬品の製造許可を取得しており、<strong>ISO 13485:2016</strong> の認証も受けています。</p>
-      <p style="margin-top:12px;">受託製造のご要望を頂いた際は、まず初めにヒアリングを行い、お客様のご要望に沿えるようにプランを作成致します。その後、プラン内容に応じて具体的な作業に移っていきます。</p>
+      <h2 class="section-title" data-i18n="oem.intro.title">研究用試薬・体外診断薬の受託製造</h2>
+      <p class="section-title-en" data-i18n="oem.intro.en">Contract Manufacturing</p>
+      <p data-i18n="oem.intro.p1">弊社では、イムノクロマト法キットとELISAキットの開発・製造において、長年の実績と経験があります。製造に必要な機器類も所有しており、管理も自ら行っております。</p>
+      <p style="margin-top:12px;" data-i18n="oem.intro.p2">体外診断用医薬品及び研究用試薬の設計開発から製造まで幅広く対応致します。お客様のご希望に合わせて抗体の作製から製造まで受託する事が可能です。尚、試薬製造の一部のみを受託する事も可能です。</p>
+      <p style="margin-top:12px;" data-i18n="oem.intro.p3">弊社は体外診断用医薬品の製造許可を取得しており、<strong>ISO 13485:2016</strong> の認証も受けています。</p>
+      <p style="margin-top:12px;" data-i18n="oem.intro.p4">受託製造のご要望を頂いた際は、まず初めにヒアリングを行い、お客様のご要望に沿えるようにプランを作成致します。その後、プラン内容に応じて具体的な作業に移っていきます。</p>
     </div>
   </div>
 </section>
@@ -258,28 +258,28 @@ ul{list-style:none}
 <!-- Services -->
 <section class="section-padding section-bg-white">
   <div class="container">
-    <h2 class="section-title fade-in">サービス内容</h2>
-    <p class="section-title-en fade-in">Services</p>
+    <h2 class="section-title fade-in" data-i18n="oem.services.title">サービス内容</h2>
+    <p class="section-title-en fade-in" data-i18n="oem.services.en">Services</p>
     <div class="service-grid">
       <div class="service-card fade-in">
         <div class="service-card-img"><img src="https://images.unsplash.com/photo-1530026405186-ed1f139313f8?w=400&h=250&fit=crop&q=80" alt="モノクローナル抗体受託製造"></div>
         <div class="service-card-body">
-          <h3>モノクローナル抗体<br>受託製造</h3>
-          <p>免疫、細胞融合、スクリーニング、クローニング、大量培養、精製まで一貫して対応。お客様のニーズに最適な抗体を作製します。</p>
+          <h3 data-i18n="oem.services.mono.title">モノクローナル抗体<br>受託製造</h3>
+          <p data-i18n="oem.services.mono.desc">免疫、細胞融合、スクリーニング、クローニング、大量培養、精製まで一貫して対応。お客様のニーズに最適な抗体を作製します。</p>
         </div>
       </div>
       <div class="service-card fade-in">
         <div class="service-card-img"><img src="https://images.unsplash.com/photo-1614935151651-0bea6508db6b?w=400&h=250&fit=crop&q=80" alt="ポリクローナル抗体受託製造"></div>
         <div class="service-card-body">
-          <h3>ポリクローナル抗体<br>受託製造</h3>
-          <p>ウサギ、ヤギ等を用いた抗血清の作製から抗体の精製まで対応。目的に応じた抗血清を安定供給します。</p>
+          <h3 data-i18n="oem.services.poly.title">ポリクローナル抗体<br>受託製造</h3>
+          <p data-i18n="oem.services.poly.desc">ウサギ、ヤギ等を用いた抗血清の作製から抗体の精製まで対応。目的に応じた抗血清を安定供給します。</p>
         </div>
       </div>
       <div class="service-card fade-in">
         <div class="service-card-img"><img src="https://images.unsplash.com/photo-1587854692152-cbe660dbde88?w=400&h=250&fit=crop&q=80" alt="診断薬受託開発"></div>
         <div class="service-card-body">
-          <h3>診断薬<br>受託開発</h3>
-          <p>イムノクロマト法キット・ELISAキットの開発・製造。構想段階からのご相談もお気軽にどうぞ。</p>
+          <h3 data-i18n="oem.services.diag.title">診断薬<br>受託開発</h3>
+          <p data-i18n="oem.services.diag.desc">イムノクロマト法キット・ELISAキットの開発・製造。構想段階からのご相談もお気軽にどうぞ。</p>
         </div>
       </div>
     </div>
@@ -292,30 +292,30 @@ ul{list-style:none}
 
     <!-- Monoclonal -->
     <div style="max-width:860px;margin:0 auto 64px;" class="fade-in">
-      <h3 style="font-family:'Noto Serif JP',serif;font-size:1.3rem;font-weight:600;color:#5C3A1A;margin-bottom:8px;display:flex;align-items:center;gap:10px;"><i class="fas fa-dna" style="color:#AE7B2E;"></i> マウスモノクローナル抗体作製</h3>
+      <h3 style="font-family:'Noto Serif JP',serif;font-size:1.3rem;font-weight:600;color:#5C3A1A;margin-bottom:8px;display:flex;align-items:center;gap:10px;"><i class="fas fa-dna" style="color:#AE7B2E;"></i> <span data-i18n="oem.mono.title">マウスモノクローナル抗体作製</span></h3>
       <div style="background:#fff;border:1px solid #EDE4D8;border-radius:8px;padding:32px;margin-top:16px;">
-        <p style="font-size:.9rem;color:#555;line-height:2;margin-bottom:16px;">弊社は抗体作製メーカーとして創業し、約30年に渡りモノクローナル抗体及びポリクローナル抗体の作製を行ってきました。これまで培ってきた動物飼育管理ノウハウ、動物免疫技術、細胞培養・融合技術を駆使し、高品質な抗体をお客様に提供しております。</p>
-        <p style="font-size:.9rem;color:#555;line-height:2;margin-bottom:20px;">初めにお客様と打合せを行い、作製したい抗体について十分なヒアリングを行います。その後、出来るだけお客様のご希望に沿えるようにプランを作成します。プラン内容にご同意頂ければ、抗体の作製に着手します。</p>
-        <h4 style="font-size:.88rem;font-weight:600;color:#5C3A1A;margin-bottom:12px;">オプション対応</h4>
+        <p style="font-size:.9rem;color:#555;line-height:2;margin-bottom:16px;" data-i18n="oem.mono.desc">弊社は抗体作製メーカーとして創業し、約30年に渡りモノクローナル抗体及びポリクローナル抗体の作製を行ってきました。これまで培ってきた動物飼育管理ノウハウ、動物免疫技術、細胞培養・融合技術を駆使し、高品質な抗体をお客様に提供しております。</p>
+        <p style="font-size:.9rem;color:#555;line-height:2;margin-bottom:20px;" data-i18n="oem.mono.desc2">初めにお客様と打合せを行い、作製したい抗体について十分なヒアリングを行います。その後、出来るだけお客様のご希望に沿えるようにプランを作成します。プラン内容にご同意頂ければ、抗体の作製に着手します。</p>
+        <h4 style="font-size:.88rem;font-weight:600;color:#5C3A1A;margin-bottom:12px;" data-i18n="oem.mono.option">オプション対応</h4>
         <ul style="font-size:.88rem;color:#555;line-height:2;padding-left:0;">
-          <li style="display:flex;align-items:flex-start;gap:8px;padding:4px 0;"><i class="fas fa-check-circle" style="color:#AE7B2E;margin-top:5px;font-size:.75rem;"></i> 腹水化</li>
-          <li style="display:flex;align-items:flex-start;gap:8px;padding:4px 0;"><i class="fas fa-check-circle" style="color:#AE7B2E;margin-top:5px;font-size:.75rem;"></i> 抗体の精製</li>
-          <li style="display:flex;align-items:flex-start;gap:8px;padding:4px 0;"><i class="fas fa-check-circle" style="color:#AE7B2E;margin-top:5px;font-size:.75rem;"></i> 抗体価測定</li>
-          <li style="display:flex;align-items:flex-start;gap:8px;padding:4px 0;"><i class="fas fa-check-circle" style="color:#AE7B2E;margin-top:5px;font-size:.75rem;"></i> サブクラスの同定</li>
+          <li style="display:flex;align-items:flex-start;gap:8px;padding:4px 0;"><i class="fas fa-check-circle" style="color:#AE7B2E;margin-top:5px;font-size:.75rem;"></i> <span data-i18n="oem.mono.opt1">腹水化</span></li>
+          <li style="display:flex;align-items:flex-start;gap:8px;padding:4px 0;"><i class="fas fa-check-circle" style="color:#AE7B2E;margin-top:5px;font-size:.75rem;"></i> <span data-i18n="oem.mono.opt2">抗体の精製</span></li>
+          <li style="display:flex;align-items:flex-start;gap:8px;padding:4px 0;"><i class="fas fa-check-circle" style="color:#AE7B2E;margin-top:5px;font-size:.75rem;"></i> <span data-i18n="oem.mono.opt3">抗体価測定</span></li>
+          <li style="display:flex;align-items:flex-start;gap:8px;padding:4px 0;"><i class="fas fa-check-circle" style="color:#AE7B2E;margin-top:5px;font-size:.75rem;"></i> <span data-i18n="oem.mono.opt4">サブクラスの同定</span></li>
         </ul>
       </div>
     </div>
 
     <!-- Polyclonal -->
     <div style="max-width:860px;margin:0 auto;" class="fade-in">
-      <h3 style="font-family:'Noto Serif JP',serif;font-size:1.3rem;font-weight:600;color:#5C3A1A;margin-bottom:8px;display:flex;align-items:center;gap:10px;"><i class="fas fa-syringe" style="color:#AE7B2E;"></i> ポリクローナル抗体作製</h3>
+      <h3 style="font-family:'Noto Serif JP',serif;font-size:1.3rem;font-weight:600;color:#5C3A1A;margin-bottom:8px;display:flex;align-items:center;gap:10px;"><i class="fas fa-syringe" style="color:#AE7B2E;"></i> <span data-i18n="oem.poly.title">ポリクローナル抗体作製</span></h3>
       <div style="background:#fff;border:1px solid #EDE4D8;border-radius:8px;padding:32px;margin-top:16px;">
-        <p style="font-size:.9rem;color:#555;line-height:2;margin-bottom:20px;">ウサギ、ヤギ等を用いた抗血清の作製から抗体の精製まで行っております。お客様から作製したい抗体について十分なヒアリングを行い、出来るだけお客様のご希望に沿えるようにプランを作成します。プラン内容にご同意頂ければ、抗体の作製に着手します。</p>
-        <h4 style="font-size:.88rem;font-weight:600;color:#5C3A1A;margin-bottom:12px;">精製オプション</h4>
+        <p style="font-size:.9rem;color:#555;line-height:2;margin-bottom:20px;" data-i18n="oem.poly.desc">ウサギ、ヤギ等を用いた抗血清の作製から抗体の精製まで行っております。お客様から作製したい抗体について十分なヒアリングを行い、出来るだけお客様のご希望に沿えるようにプランを作成します。プラン内容にご同意頂ければ、抗体の作製に着手します。</p>
+        <h4 style="font-size:.88rem;font-weight:600;color:#5C3A1A;margin-bottom:12px;" data-i18n="oem.poly.option">精製オプション</h4>
         <ul style="font-size:.88rem;color:#555;line-height:2;padding-left:0;">
-          <li style="display:flex;align-items:flex-start;gap:8px;padding:4px 0;"><i class="fas fa-check-circle" style="color:#9B7F4A;margin-top:5px;font-size:.75rem;"></i> 硫安塩析</li>
-          <li style="display:flex;align-items:flex-start;gap:8px;padding:4px 0;"><i class="fas fa-check-circle" style="color:#9B7F4A;margin-top:5px;font-size:.75rem;"></i> アフィニティー精製</li>
-          <li style="display:flex;align-items:flex-start;gap:8px;padding:4px 0;"><i class="fas fa-check-circle" style="color:#9B7F4A;margin-top:5px;font-size:.75rem;"></i> ゲルろ過</li>
+          <li style="display:flex;align-items:flex-start;gap:8px;padding:4px 0;"><i class="fas fa-check-circle" style="color:#9B7F4A;margin-top:5px;font-size:.75rem;"></i> <span data-i18n="oem.poly.opt1">硫安塩析</span></li>
+          <li style="display:flex;align-items:flex-start;gap:8px;padding:4px 0;"><i class="fas fa-check-circle" style="color:#9B7F4A;margin-top:5px;font-size:.75rem;"></i> <span data-i18n="oem.poly.opt2">アフィニティー精製</span></li>
+          <li style="display:flex;align-items:flex-start;gap:8px;padding:4px 0;"><i class="fas fa-check-circle" style="color:#9B7F4A;margin-top:5px;font-size:.75rem;"></i> <span data-i18n="oem.poly.opt3">ゲルろ過</span></li>
         </ul>
       </div>
     </div>
@@ -326,44 +326,44 @@ ul{list-style:none}
 <!-- Flow -->
 <section class="section-padding section-bg-light">
   <div class="container">
-    <h2 class="section-title fade-in">受託開発の流れ</h2>
-    <p class="section-title-en fade-in">Development Flow</p>
+    <h2 class="section-title fade-in" data-i18n="oem.flow.title">受託開発の流れ</h2>
+    <p class="section-title-en fade-in" data-i18n="oem.flow.en">Development Flow</p>
     <div class="flow-section fade-in">
       <div class="flow-steps">
         <div class="flow-step">
           <div class="flow-step-num">1</div>
-          <div class="flow-step-title">ご相談</div>
-          <div class="flow-step-desc">お電話・メール</div>
+          <div class="flow-step-title" data-i18n="oem.flow.step1">ご相談</div>
+          <div class="flow-step-desc" data-i18n="oem.flow.step1.desc">お電話・メール</div>
         </div>
         <div class="flow-arrow"><i class="fas fa-chevron-right"></i></div>
         <div class="flow-step">
           <div class="flow-step-num">2</div>
-          <div class="flow-step-title">打ち合わせ</div>
-          <div class="flow-step-desc">仕様の確認</div>
+          <div class="flow-step-title" data-i18n="oem.flow.step2">打ち合わせ</div>
+          <div class="flow-step-desc" data-i18n="oem.flow.step2.desc">仕様の確認</div>
         </div>
         <div class="flow-arrow"><i class="fas fa-chevron-right"></i></div>
         <div class="flow-step">
           <div class="flow-step-num">3</div>
-          <div class="flow-step-title">開発</div>
-          <div class="flow-step-desc">設計・試作</div>
+          <div class="flow-step-title" data-i18n="oem.flow.step3">開発</div>
+          <div class="flow-step-desc" data-i18n="oem.flow.step3.desc">設計・試作</div>
         </div>
         <div class="flow-arrow"><i class="fas fa-chevron-right"></i></div>
         <div class="flow-step">
           <div class="flow-step-num">4</div>
-          <div class="flow-step-title">試験</div>
-          <div class="flow-step-desc">品質評価</div>
+          <div class="flow-step-title" data-i18n="oem.flow.step4">試験</div>
+          <div class="flow-step-desc" data-i18n="oem.flow.step4.desc">品質評価</div>
         </div>
         <div class="flow-arrow"><i class="fas fa-chevron-right"></i></div>
         <div class="flow-step">
           <div class="flow-step-num">5</div>
-          <div class="flow-step-title">製造</div>
-          <div class="flow-step-desc">量産体制</div>
+          <div class="flow-step-title" data-i18n="oem.flow.step5">製造</div>
+          <div class="flow-step-desc" data-i18n="oem.flow.step5.desc">量産体制</div>
         </div>
         <div class="flow-arrow"><i class="fas fa-chevron-right"></i></div>
         <div class="flow-step">
           <div class="flow-step-num">6</div>
-          <div class="flow-step-title">納品</div>
-          <div class="flow-step-desc">検品・出荷</div>
+          <div class="flow-step-title" data-i18n="oem.flow.step6">納品</div>
+          <div class="flow-step-desc" data-i18n="oem.flow.step6.desc">検品・出荷</div>
         </div>
       </div>
     </div>
@@ -373,10 +373,10 @@ ul{list-style:none}
 <!-- CTA Section -->
 <section class="section-padding" style="background:linear-gradient(135deg,#B89B78,#96734E);text-align:center;color:#fff;">
   <div class="container">
-    <h2 style="font-family:'Noto Serif JP',serif;font-size:1.8rem;margin-bottom:12px;">受託開発・製造のご相談</h2>
-    <p style="font-size:.92rem;color:rgba(255,255,255,.8);margin-bottom:32px;">共同研究・受託開発に関するご質問やお見積もりなど、お気軽にお問い合わせください。</p>
+    <h2 style="font-family:'Noto Serif JP',serif;font-size:1.8rem;margin-bottom:12px;" data-i18n="oem.cta.title">受託開発・製造のご相談</h2>
+    <p style="font-size:.92rem;color:rgba(255,255,255,.8);margin-bottom:32px;" data-i18n="oem.cta.desc">共同研究・受託開発に関するご質問やお見積もりなど、お気軽にお問い合わせください。</p>
     <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
-      <a href="contact.html" class="btn btn-primary" style="background:#fff;color:#5C3A1A;padding:16px 48px;font-size:1rem;font-weight:600;border-radius:4px;"><i class="fas fa-envelope"></i>&nbsp; お問い合わせはこちら</a>
+      <a href="contact.html" class="btn btn-primary" style="background:#fff;color:#5C3A1A;padding:16px 48px;font-size:1rem;font-weight:600;border-radius:4px;"><i class="fas fa-envelope"></i>&nbsp; <span data-i18n="oem.cta.btn">お問い合わせはこちら</span></a>
       <a href="tel:0120626923" style="display:inline-flex;align-items:center;gap:8px;padding:16px 36px;border:1px solid rgba(255,255,255,.5);border-radius:4px;color:#fff;font-size:.95rem;"><i class="fas fa-phone-volume"></i>&nbsp; 0120-626-923</a>
     </div>
   </div>
@@ -386,42 +386,42 @@ ul{list-style:none}
   <div class="container">
     <div class="footer-inner">
       <div class="footer-col">
-        <div class="footer-logo-text">株式会社イムノ・プローブ</div>
-        <div style="font-size:.78rem;color:rgba(255,255,255,.45);margin:4px 0 2px;">明日の皆の「健康」のために</div>
-        <div class="footer-logo-en">Immuno Probe Co., Ltd.</div>
+        <div class="footer-logo-text" data-i18n="common.footer.company">株式会社イムノ・プローブ</div>
+        <div style="font-size:.78rem;color:rgba(255,255,255,.45);margin:4px 0 2px;" data-i18n="common.footer.tagline">明日の皆の「健康」のために</div>
+        <div class="footer-logo-en" data-i18n="common.footer.company.en">Immuno Probe Co., Ltd.</div>
         <div class="footer-info">
-          <div><i class="fas fa-map-marker-alt"></i> 〒355-0225 埼玉県比企郡嵐山町鎌形1331-3</div>
-          <div><i class="fas fa-phone-volume"></i> フリーダイヤル: 0120-626-923</div>
-          <div><i class="fas fa-phone-alt"></i> TEL: 0493-62-6923</div>
-          <div><i class="fas fa-fax"></i> FAX: 0493-62-9477</div>
-          <div><i class="far fa-clock"></i> 受付時間: 平日 9:00〜17:30</div>
+          <div><i class="fas fa-map-marker-alt"></i> <span data-i18n="common.footer.address">〒355-0225 埼玉県比企郡嵐山町鎌形1331-3</span></div>
+          <div><i class="fas fa-phone-volume"></i> <span data-i18n="common.footer.freedial">フリーダイヤル: 0120-626-923</span></div>
+          <div><i class="fas fa-phone-alt"></i> <span data-i18n="common.footer.tel">TEL: 0493-62-6923</span></div>
+          <div><i class="fas fa-fax"></i> <span data-i18n="common.footer.fax">FAX: 0493-62-9477</span></div>
+          <div><i class="far fa-clock"></i> <span data-i18n="common.footer.hours">受付時間: 平日 9:00〜17:30</span></div>
         </div>
       </div>
       <div class="footer-col">
-        <h4>サイトマップ</h4>
+        <h4 data-i18n="common.footer.sitemap">サイトマップ</h4>
         <div class="footer-nav-list">
-          <a href="index.html"><i class="fas fa-chevron-right"></i>ホーム</a>
-          <a href="technology.html"><i class="fas fa-chevron-right"></i>基盤技術</a>
-          <a href="products.html"><i class="fas fa-chevron-right"></i>製品・サービス</a>
-          <a href="oem.html"><i class="fas fa-chevron-right"></i>受託開発</a>
-          <a href="about.html"><i class="fas fa-chevron-right"></i>会社概要</a>
+          <a href="index.html" data-i18n="common.footer.nav.home"><i class="fas fa-chevron-right"></i>ホーム</a>
+          <a href="technology.html" data-i18n="common.footer.nav.technology"><i class="fas fa-chevron-right"></i>基盤技術</a>
+          <a href="products.html" data-i18n="common.footer.nav.products"><i class="fas fa-chevron-right"></i>製品・サービス</a>
+          <a href="oem.html" data-i18n="common.footer.nav.oem"><i class="fas fa-chevron-right"></i>受託開発</a>
+          <a href="about.html" data-i18n="common.footer.nav.about"><i class="fas fa-chevron-right"></i>会社概要</a>
         </div>
       </div>
       <div class="footer-col">
-        <h4>お役立ち情報</h4>
+        <h4 data-i18n="common.footer.useful">お役立ち情報</h4>
         <div class="footer-nav-list">
-          <a href="info.html"><i class="fas fa-chevron-right"></i>学術情報</a>
-          <a href="faq.html"><i class="fas fa-chevron-right"></i>よくあるご質問（FAQ）</a>
-          <a href="career.html"><i class="fas fa-chevron-right"></i>採用情報</a>
-          <a href="access.html"><i class="fas fa-chevron-right"></i>アクセス</a>
-          <a href="privacy.html"><i class="fas fa-chevron-right"></i>プライバシーポリシー</a>
-          <a href="ethics.html"><i class="fas fa-chevron-right"></i>動物実験方針</a>
-          <a href="contact.html"><i class="fas fa-chevron-right"></i>お問い合わせ</a>
+          <a href="info.html" data-i18n="common.footer.nav.info"><i class="fas fa-chevron-right"></i>学術情報</a>
+          <a href="faq.html" data-i18n="common.footer.nav.faq"><i class="fas fa-chevron-right"></i>よくあるご質問（FAQ）</a>
+          <a href="career.html" data-i18n="common.footer.nav.career"><i class="fas fa-chevron-right"></i>採用情報</a>
+          <a href="access.html" data-i18n="common.footer.nav.access"><i class="fas fa-chevron-right"></i>アクセス</a>
+          <a href="privacy.html" data-i18n="common.footer.nav.privacy"><i class="fas fa-chevron-right"></i>プライバシーポリシー</a>
+          <a href="ethics.html" data-i18n="common.footer.nav.ethics"><i class="fas fa-chevron-right"></i>動物実験方針</a>
+          <a href="contact.html" data-i18n="common.footer.nav.contact"><i class="fas fa-chevron-right"></i>お問い合わせ</a>
         </div>
       </div>
     </div>
     <div class="footer-bottom">
-      <p class="footer-copy">Copyright &copy; 2025 株式会社イムノ・プローブ All Rights Reserved.</p>
+      <p class="footer-copy" data-i18n="common.footer.copyright">Copyright &copy; 2025 株式会社イムノ・プローブ All Rights Reserved.</p>
       <div class="footer-lang">
         <select id="langSelectFooter" onchange="handleLang(this.value)">
           <option value="ja">日本語</option>
@@ -434,6 +434,8 @@ ul{list-style:none}
   </div>
 </footer>
 
+<script src="js/translations.js"></script>
+<script src="js/i18n.js"></script>
 <script>
 const header=document.getElementById('header');
 window.addEventListener('scroll',()=>{header.classList.toggle('scrolled',window.scrollY>10)});
@@ -443,18 +445,6 @@ function toggleMenu(){
   document.getElementById('mobileOverlay').classList.toggle('open');
   document.body.style.overflow=document.getElementById('mobileNav').classList.contains('open')?'hidden':'';
 }
-function handleLang(lang){
-  localStorage.setItem('immunoprobe-lang',lang);
-  syncLangSelects(lang);
-  if(lang!=='ja')alert('多言語対応は現在準備中です');
-}
-function syncLangSelects(lang){
-  document.querySelectorAll('#langSelect,#langSelectMobile,#langSelectFooter').forEach(s=>{if(s)s.value=lang});
-}
-(function(){
-  const saved=localStorage.getItem('immunoprobe-lang')||'ja';
-  syncLangSelects(saved);
-})();
 const obs=new IntersectionObserver(entries=>{
   entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')});
 },{threshold:.12,rootMargin:'0px 0px -40px 0px'});

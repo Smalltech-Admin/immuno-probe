@@ -141,30 +141,30 @@ ul{list-style:none}
 <div class="top-bar">
   <div class="top-bar-inner">
     <div class="top-bar-contact">
-      <span><i class="fas fa-phone"></i> フリーダイヤル: <a href="tel:0120626923" style="color:inherit;"><strong>0120-626-923</strong></a></span>
-      <span><i class="fas fa-phone-alt"></i> TEL: <a href="tel:0493626923" style="color:inherit;">0493-62-6923</a></span>
-      <span><i class="fas fa-fax"></i> FAX: 0493-62-9477</span>
+      <span><i class="fas fa-phone"></i> <span data-i18n="common.freedial">フリーダイヤル:</span> <a href="tel:0120626923" style="color:inherit;"><strong>0120-626-923</strong></a></span>
+      <span><i class="fas fa-phone-alt"></i> <span data-i18n="common.tel">TEL:</span> <a href="tel:0493626923" style="color:inherit;">0493-62-6923</a></span>
+      <span><i class="fas fa-fax"></i> <span data-i18n="common.fax">FAX: 0493-62-9477</span></span>
     </div>
-    <span class="top-bar-hours"><i class="far fa-clock"></i> 受付時間 平日 9:00〜17:30</span>
+    <span class="top-bar-hours"><i class="far fa-clock"></i> <span data-i18n="common.hours">受付時間 平日 9:00〜17:30</span></span>
   </div>
 </div>
 
 <header class="header" id="header">
   <a href="index.html" class="header-logo">
     <img src="images/logo.avif" alt="株式会社イムノ・プローブ">
-    <span class="header-logo-name">株式会社イムノ・プローブ</span>
+    <span class="header-logo-name" data-i18n="common.header.company">株式会社イムノ・プローブ</span>
   </a>
   <div class="header-right">
     <nav class="header-nav">
-      <a href="index.html">ホーム</a>
-      <a href="about.html">会社概要</a>
-      <a href="technology.html">基盤技術</a>
-      <a href="products.html">製品・サービス</a>
-      <a href="oem.html">受託開発</a>
-      <a href="faq.html" class="active">FAQ</a>
-      <a href="info.html">学術情報</a>
-      <a href="career.html">採用情報</a>
-      <a href="contact.html">お問い合わせ</a>
+      <a href="index.html" data-i18n="common.nav.home">ホーム</a>
+      <a href="about.html" data-i18n="common.nav.about">会社概要</a>
+      <a href="technology.html" data-i18n="common.nav.technology">基盤技術</a>
+      <a href="products.html" data-i18n="common.nav.products">製品・サービス</a>
+      <a href="oem.html" data-i18n="common.nav.oem">受託開発</a>
+      <a href="faq.html" class="active" data-i18n="common.nav.faq">FAQ</a>
+      <a href="info.html" data-i18n="common.nav.info">学術情報</a>
+      <a href="career.html" data-i18n="common.nav.career">採用情報</a>
+      <a href="contact.html" data-i18n="common.nav.contact">お問い合わせ</a>
     </nav>
     <div class="lang-switch">
       <select id="langSelect" onchange="handleLang(this.value)">
@@ -181,15 +181,15 @@ ul{list-style:none}
 </header>
 <div class="mobile-overlay" id="mobileOverlay" onclick="toggleMenu()"></div>
 <nav class="mobile-nav" id="mobileNav">
-  <a href="index.html" onclick="toggleMenu()">ホーム</a>
-  <a href="about.html" onclick="toggleMenu()">会社概要</a>
-  <a href="technology.html" onclick="toggleMenu()">基盤技術</a>
-  <a href="products.html" onclick="toggleMenu()">製品・サービス</a>
-  <a href="oem.html" onclick="toggleMenu()">受託開発</a>
-  <a href="faq.html" class="active" onclick="toggleMenu()">FAQ</a>
-  <a href="info.html" onclick="toggleMenu()">学術情報</a>
-  <a href="career.html" onclick="toggleMenu()">採用情報</a>
-  <a href="contact.html" onclick="toggleMenu()">お問い合わせ</a>
+  <a href="index.html" onclick="toggleMenu()" data-i18n="common.nav.home">ホーム</a>
+  <a href="about.html" onclick="toggleMenu()" data-i18n="common.nav.about">会社概要</a>
+  <a href="technology.html" onclick="toggleMenu()" data-i18n="common.nav.technology">基盤技術</a>
+  <a href="products.html" onclick="toggleMenu()" data-i18n="common.nav.products">製品・サービス</a>
+  <a href="oem.html" onclick="toggleMenu()" data-i18n="common.nav.oem">受託開発</a>
+  <a href="faq.html" class="active" onclick="toggleMenu()" data-i18n="common.nav.faq">FAQ</a>
+  <a href="info.html" onclick="toggleMenu()" data-i18n="common.nav.info">学術情報</a>
+  <a href="career.html" onclick="toggleMenu()" data-i18n="common.nav.career">採用情報</a>
+  <a href="contact.html" onclick="toggleMenu()" data-i18n="common.nav.contact">お問い合わせ</a>
   <div class="mobile-lang">
     <select id="langSelectMobile" onchange="handleLang(this.value)" style="width:100%;padding:10px;border:1px solid #EDE4D8;border-radius:4px;font-size:.88rem;color:#5C3A1A;font-family:'Noto Sans JP',sans-serif;">
       <option value="ja">日本語</option>
@@ -202,14 +202,14 @@ ul{list-style:none}
 
 <section class="page-hero">
   <div class="container">
-    <h1>よくあるご質問</h1>
-    <p class="en">FAQ</p>
+    <h1 data-i18n="faq.hero.title">よくあるご質問</h1>
+    <p class="en" data-i18n="faq.hero.en">FAQ</p>
   </div>
 </section>
 
 <div class="breadcrumb">
   <div class="container">
-    <a href="index.html">ホーム</a><span>&gt;</span>よくあるご質問
+    <a href="index.html" data-i18n="common.nav.home">ホーム</a><span>&gt;</span><span data-i18n="faq.breadcrumb">よくあるご質問</span>
   </div>
 </div>
 
@@ -217,13 +217,13 @@ ul{list-style:none}
 <section class="section-padding section-bg-light" id="medicalGate">
   <div class="container">
     <div class="medical-gate fade-in">
-      <div class="medical-gate-header"><i class="fas fa-user-md"></i> FAQ - 医療従事者向け情報</div>
+      <div class="medical-gate-header"><i class="fas fa-user-md"></i> <span data-i18n="faq.gate.header">FAQ - 医療従事者向け情報</span></div>
       <div class="medical-gate-body">
-        <p>当サイトは、医療関係のお客様を対象として、弊社が販売している製品に関連する情報を提供しております。<br>一般の方に対する情報提供を目的としたものではございませんので、ご了承頂きますようお願いいたします。</p>
-        <div class="medical-gate-question">あなたは医療関係者ですか？</div>
+        <p data-i18n="faq.gate.desc">当サイトは、医療関係のお客様を対象として、弊社が販売している製品に関連する情報を提供しております。<br>一般の方に対する情報提供を目的としたものではございませんので、ご了承頂きますようお願いいたします。</p>
+        <div class="medical-gate-question" data-i18n="faq.gate.question">あなたは医療関係者ですか？</div>
         <div class="medical-gate-buttons">
-          <button class="gate-btn" onclick="showFaq()">はい</button>
-          <button class="gate-btn gate-btn-no" onclick="location.href='index.html'">いいえ</button>
+          <button class="gate-btn" onclick="showFaq()" data-i18n="faq.gate.yes">はい</button>
+          <button class="gate-btn gate-btn-no" onclick="location.href='index.html'" data-i18n="faq.gate.no">いいえ</button>
         </div>
       </div>
     </div>
@@ -237,169 +237,169 @@ ul{list-style:none}
 
       <!-- Category Navigation -->
       <div class="faq-nav fade-in" style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:48px;justify-content:center;">
-        <a href="#faq-kit" style="display:inline-flex;align-items:center;gap:6px;padding:8px 16px;border:1px solid #EDE4D8;border-radius:4px;font-size:.82rem;color:#5C3A1A;transition:all .3s;background:#fff;">&#9654; キット</a>
-        <a href="#faq-specimen" style="display:inline-flex;align-items:center;gap:6px;padding:8px 16px;border:1px solid #EDE4D8;border-radius:4px;font-size:.82rem;color:#5C3A1A;transition:all .3s;background:#fff;">&#9654; 検体</a>
-        <a href="#faq-extract" style="display:inline-flex;align-items:center;gap:6px;padding:8px 16px;border:1px solid #EDE4D8;border-radius:4px;font-size:.82rem;color:#5C3A1A;transition:all .3s;background:#fff;">&#9654; 検体抽出液</a>
-        <a href="#faq-swab" style="display:inline-flex;align-items:center;gap:6px;padding:8px 16px;border:1px solid #EDE4D8;border-radius:4px;font-size:.82rem;color:#5C3A1A;transition:all .3s;background:#fff;">&#9654; 綿棒</a>
-        <a href="#faq-judge" style="display:inline-flex;align-items:center;gap:6px;padding:8px 16px;border:1px solid #EDE4D8;border-radius:4px;font-size:.82rem;color:#5C3A1A;transition:all .3s;background:#fff;">&#9654; 判定</a>
-        <a href="#faq-insurance" style="display:inline-flex;align-items:center;gap:6px;padding:8px 16px;border:1px solid #EDE4D8;border-radius:4px;font-size:.82rem;color:#5C3A1A;transition:all .3s;background:#fff;">&#9654; 保険点数・その他</a>
+        <a href="#faq-kit" style="display:inline-flex;align-items:center;gap:6px;padding:8px 16px;border:1px solid #EDE4D8;border-radius:4px;font-size:.82rem;color:#5C3A1A;transition:all .3s;background:#fff;" data-i18n="faq.nav.kit">&#9654; キット</a>
+        <a href="#faq-specimen" style="display:inline-flex;align-items:center;gap:6px;padding:8px 16px;border:1px solid #EDE4D8;border-radius:4px;font-size:.82rem;color:#5C3A1A;transition:all .3s;background:#fff;" data-i18n="faq.nav.specimen">&#9654; 検体</a>
+        <a href="#faq-extract" style="display:inline-flex;align-items:center;gap:6px;padding:8px 16px;border:1px solid #EDE4D8;border-radius:4px;font-size:.82rem;color:#5C3A1A;transition:all .3s;background:#fff;" data-i18n="faq.nav.extract">&#9654; 検体抽出液</a>
+        <a href="#faq-swab" style="display:inline-flex;align-items:center;gap:6px;padding:8px 16px;border:1px solid #EDE4D8;border-radius:4px;font-size:.82rem;color:#5C3A1A;transition:all .3s;background:#fff;" data-i18n="faq.nav.swab">&#9654; 綿棒</a>
+        <a href="#faq-judge" style="display:inline-flex;align-items:center;gap:6px;padding:8px 16px;border:1px solid #EDE4D8;border-radius:4px;font-size:.82rem;color:#5C3A1A;transition:all .3s;background:#fff;" data-i18n="faq.nav.judge">&#9654; 判定</a>
+        <a href="#faq-insurance" style="display:inline-flex;align-items:center;gap:6px;padding:8px 16px;border:1px solid #EDE4D8;border-radius:4px;font-size:.82rem;color:#5C3A1A;transition:all .3s;background:#fff;" data-i18n="faq.nav.insurance">&#9654; 保険点数・その他</a>
       </div>
 
-      <h2 style="font-family:'Noto Serif JP',serif;font-size:1.4rem;font-weight:600;color:#5C3A1A;text-align:center;margin-bottom:48px;background:linear-gradient(135deg,#B89B78,#96734E);color:#fff;padding:16px 24px;border-radius:4px;" class="fade-in">IPライン&reg; デゥオ「ノロ・ロタ」Q&amp;A</h2>
+      <h2 style="font-family:'Noto Serif JP',serif;font-size:1.4rem;font-weight:600;color:#5C3A1A;text-align:center;margin-bottom:48px;background:linear-gradient(135deg,#B89B78,#96734E);color:#fff;padding:16px 24px;border-radius:4px;" class="fade-in" data-i18n="faq.ipline.heading">IPライン&reg; デゥオ「ノロ・ロタ」Q&amp;A</h2>
 
       <!-- ===== キット ===== -->
       <div class="faq-category fade-in" id="faq-kit">
-        <h2 class="faq-category-title"><i class="fas fa-box"></i> キット</h2>
+        <h2 class="faq-category-title"><i class="fas fa-box"></i> <span data-i18n="faq.cat.kit">キット</span></h2>
 
         <div class="faq-item">
           <div class="faq-question" onclick="toggleFaq(this)">
             <span class="q-mark">Q</span>
-            <span class="q-text">キットの貯蔵方法は？</span>
+            <span class="q-text" data-i18n="faq.kit.q1">キットの貯蔵方法は？</span>
             <i class="fas fa-chevron-down q-icon"></i>
           </div>
-          <div class="faq-answer"><div class="faq-answer-inner"><span class="a-mark">A</span><span class="a-text">直射日光を避けて1〜30℃で保存してください。</span></div></div>
+          <div class="faq-answer"><div class="faq-answer-inner"><span class="a-mark">A</span><span class="a-text" data-i18n="faq.kit.a1">直射日光を避けて1〜30℃で保存してください。</span></div></div>
         </div>
 
         <div class="faq-item">
           <div class="faq-question" onclick="toggleFaq(this)">
             <span class="q-mark">Q</span>
-            <span class="q-text">キットの有効期限は？</span>
+            <span class="q-text" data-i18n="faq.kit.q2">キットの有効期限は？</span>
             <i class="fas fa-chevron-down q-icon"></i>
           </div>
-          <div class="faq-answer"><div class="faq-answer-inner"><span class="a-mark">A</span><span class="a-text">製造後2年間です。</span></div></div>
+          <div class="faq-answer"><div class="faq-answer-inner"><span class="a-mark">A</span><span class="a-text" data-i18n="faq.kit.a2">製造後2年間です。</span></div></div>
         </div>
       </div>
 
       <!-- ===== 検体 ===== -->
       <div class="faq-category fade-in" id="faq-specimen">
-        <h2 class="faq-category-title"><i class="fas fa-vial"></i> 検体</h2>
+        <h2 class="faq-category-title"><i class="fas fa-vial"></i> <span data-i18n="faq.cat.specimen">検体</span></h2>
 
         <div class="faq-item">
           <div class="faq-question" onclick="toggleFaq(this)">
             <span class="q-mark">Q</span>
-            <span class="q-text">糞便採取後の保存安定性は？</span>
+            <span class="q-text" data-i18n="faq.specimen.q1">糞便採取後の保存安定性は？</span>
             <i class="fas fa-chevron-down q-icon"></i>
           </div>
-          <div class="faq-answer"><div class="faq-answer-inner"><span class="a-mark">A</span><span class="a-text">検体採取後、すぐに測定できない場合は密閉した採取容器内に保存します。3日以内であれば冷蔵（2〜8℃）で保存し、3日以上の保存が必要な場合は−20℃冷凍保存し、10日以内に測定を行うこと。添付文書の【操作上の注意】をご参照ください。</span></div></div>
+          <div class="faq-answer"><div class="faq-answer-inner"><span class="a-mark">A</span><span class="a-text" data-i18n="faq.specimen.a1">検体採取後、すぐに測定できない場合は密閉した採取容器内に保存します。3日以内であれば冷蔵（2〜8℃）で保存し、3日以上の保存が必要な場合は−20℃冷凍保存し、10日以内に測定を行うこと。添付文書の【操作上の注意】をご参照ください。</span></div></div>
         </div>
 
         <div class="faq-item">
           <div class="faq-question" onclick="toggleFaq(this)">
             <span class="q-mark">Q</span>
-            <span class="q-text">糞便を抽出液に溶かした後の保存安定性は？</span>
+            <span class="q-text" data-i18n="faq.specimen.q2">糞便を抽出液に溶かした後の保存安定性は？</span>
             <i class="fas fa-chevron-down q-icon"></i>
           </div>
-          <div class="faq-answer"><div class="faq-answer-inner"><span class="a-mark">A</span><span class="a-text">検体を調整したら、原則すぐに検査してください。</span></div></div>
+          <div class="faq-answer"><div class="faq-answer-inner"><span class="a-mark">A</span><span class="a-text" data-i18n="faq.specimen.a2">検体を調整したら、原則すぐに検査してください。</span></div></div>
         </div>
 
         <div class="faq-item">
           <div class="faq-question" onclick="toggleFaq(this)">
             <span class="q-mark">Q</span>
-            <span class="q-text">直腸便の検体は使用可能ですか？</span>
+            <span class="q-text" data-i18n="faq.specimen.q3">直腸便の検体は使用可能ですか？</span>
             <i class="fas fa-chevron-down q-icon"></i>
           </div>
-          <div class="faq-answer"><div class="faq-answer-inner"><span class="a-mark">A</span><span class="a-text">使用できます。尚、検体は搬送綿棒で採取して下さい。</span></div></div>
+          <div class="faq-answer"><div class="faq-answer-inner"><span class="a-mark">A</span><span class="a-text" data-i18n="faq.specimen.a3">使用できます。尚、検体は搬送綿棒で採取して下さい。</span></div></div>
         </div>
 
         <div class="faq-item">
           <div class="faq-question" onclick="toggleFaq(this)">
             <span class="q-mark">Q</span>
-            <span class="q-text">糞便以外の検体は使用可能ですか？</span>
+            <span class="q-text" data-i18n="faq.specimen.q4">糞便以外の検体は使用可能ですか？</span>
             <i class="fas fa-chevron-down q-icon"></i>
           </div>
-          <div class="faq-answer"><div class="faq-answer-inner"><span class="a-mark">A</span><span class="a-text">本キットは糞便を対象に開発したものです。糞便以外の検体（嘔吐物、食品等）は使用できません。</span></div></div>
+          <div class="faq-answer"><div class="faq-answer-inner"><span class="a-mark">A</span><span class="a-text" data-i18n="faq.specimen.a4">本キットは糞便を対象に開発したものです。糞便以外の検体（嘔吐物、食品等）は使用できません。</span></div></div>
         </div>
       </div>
 
       <!-- ===== 検体抽出液 ===== -->
       <div class="faq-category fade-in" id="faq-extract">
-        <h2 class="faq-category-title"><i class="fas fa-flask"></i> 検体抽出液</h2>
+        <h2 class="faq-category-title"><i class="fas fa-flask"></i> <span data-i18n="faq.cat.extract">検体抽出液</span></h2>
 
         <div class="faq-item">
           <div class="faq-question" onclick="toggleFaq(this)">
             <span class="q-mark">Q</span>
-            <span class="q-text">キット付属の検体抽出液以外の抽出液を使用することはできますか？</span>
+            <span class="q-text" data-i18n="faq.extract.q1">キット付属の検体抽出液以外の抽出液を使用することはできますか？</span>
             <i class="fas fa-chevron-down q-icon"></i>
           </div>
-          <div class="faq-answer"><div class="faq-answer-inner"><span class="a-mark">A</span><span class="a-text">キット付属以外の検体抽出液を使用しないでください。他の抽出液を使用しますと、測定結果が正しく出ない可能性があります。</span></div></div>
+          <div class="faq-answer"><div class="faq-answer-inner"><span class="a-mark">A</span><span class="a-text" data-i18n="faq.extract.a1">キット付属以外の検体抽出液を使用しないでください。他の抽出液を使用しますと、測定結果が正しく出ない可能性があります。</span></div></div>
         </div>
       </div>
 
       <!-- ===== 綿棒 ===== -->
       <div class="faq-category fade-in" id="faq-swab">
-        <h2 class="faq-category-title"><i class="fas fa-pen"></i> 綿棒</h2>
+        <h2 class="faq-category-title"><i class="fas fa-pen"></i> <span data-i18n="faq.cat.swab">綿棒</span></h2>
 
         <div class="faq-item">
           <div class="faq-question" onclick="toggleFaq(this)">
             <span class="q-mark">Q</span>
-            <span class="q-text">糞便採取に付属品以外の綿棒は使用可能ですか？</span>
+            <span class="q-text" data-i18n="faq.swab.q1">糞便採取に付属品以外の綿棒は使用可能ですか？</span>
             <i class="fas fa-chevron-down q-icon"></i>
           </div>
-          <div class="faq-answer"><div class="faq-answer-inner"><span class="a-mark">A</span><span class="a-text">付属品以外の綿棒は使用しないでください。別売の綿棒（直腸使用）もありますので、必要な場合はお問い合わせください。</span></div></div>
+          <div class="faq-answer"><div class="faq-answer-inner"><span class="a-mark">A</span><span class="a-text" data-i18n="faq.swab.a1">付属品以外の綿棒は使用しないでください。別売の綿棒（直腸使用）もありますので、必要な場合はお問い合わせください。</span></div></div>
         </div>
 
         <div class="faq-item">
           <div class="faq-question" onclick="toggleFaq(this)">
             <span class="q-mark">Q</span>
-            <span class="q-text">直腸使用の綿棒は異なりますか？</span>
+            <span class="q-text" data-i18n="faq.swab.q2">直腸使用の綿棒は異なりますか？</span>
             <i class="fas fa-chevron-down q-icon"></i>
           </div>
-          <div class="faq-answer"><div class="faq-answer-inner"><span class="a-mark">A</span><span class="a-text">直腸用の綿棒とは異なります。綿球と材質の違うフロックスワブを推奨していますので、お問い合わせください。</span></div></div>
+          <div class="faq-answer"><div class="faq-answer-inner"><span class="a-mark">A</span><span class="a-text" data-i18n="faq.swab.a2">直腸用の綿棒とは異なります。綿球と材質の違うフロックスワブを推奨していますので、お問い合わせください。</span></div></div>
         </div>
       </div>
 
       <!-- ===== 判定 ===== -->
       <div class="faq-category fade-in" id="faq-judge">
-        <h2 class="faq-category-title"><i class="fas fa-clipboard-check"></i> 判定</h2>
+        <h2 class="faq-category-title"><i class="fas fa-clipboard-check"></i> <span data-i18n="faq.cat.judge">判定</span></h2>
 
         <div class="faq-item">
           <div class="faq-question" onclick="toggleFaq(this)">
             <span class="q-mark">Q</span>
-            <span class="q-text">ノロウイルステストラインとロタウイルステストラインが出現した場合、どちらかが偽陽性の可能性はありますか？</span>
+            <span class="q-text" data-i18n="faq.judge.q1">ノロウイルステストラインとロタウイルステストラインが出現した場合、どちらかが偽陽性の可能性はありますか？</span>
             <i class="fas fa-chevron-down q-icon"></i>
           </div>
-          <div class="faq-answer"><div class="faq-answer-inner"><span class="a-mark">A</span><span class="a-text">添付文書に従って検査を行った場合、まれに重複感染ということもあります。しかし、既定検体量、滴下量、検体抽出液、判定時間などを所定外で検査を行った場合はその限りではありません。</span></div></div>
+          <div class="faq-answer"><div class="faq-answer-inner"><span class="a-mark">A</span><span class="a-text" data-i18n="faq.judge.a1">添付文書に従って検査を行った場合、まれに重複感染ということもあります。しかし、既定検体量、滴下量、検体抽出液、判定時間などを所定外で検査を行った場合はその限りではありません。</span></div></div>
         </div>
 
         <div class="faq-item">
           <div class="faq-question" onclick="toggleFaq(this)">
             <span class="q-mark">Q</span>
-            <span class="q-text">コントロールラインが非常に薄い場合はどのように判定すればよいですか？</span>
+            <span class="q-text" data-i18n="faq.judge.q2">コントロールラインが非常に薄い場合はどのように判定すればよいですか？</span>
             <i class="fas fa-chevron-down q-icon"></i>
           </div>
-          <div class="faq-answer"><div class="faq-answer-inner"><span class="a-mark">A</span><span class="a-text">コントロールラインが15分判定結果でラインが薄くても目視確認できれば陽性です。添付文書に従って判定を行ってください。</span></div></div>
+          <div class="faq-answer"><div class="faq-answer-inner"><span class="a-mark">A</span><span class="a-text" data-i18n="faq.judge.a2">コントロールラインが15分判定結果でラインが薄くても目視確認できれば陽性です。添付文書に従って判定を行ってください。</span></div></div>
         </div>
 
         <div class="faq-item">
           <div class="faq-question" onclick="toggleFaq(this)">
             <span class="q-mark">Q</span>
-            <span class="q-text">判定時間15分以降にラインが出現した場合、どのように判断したらよいですか？</span>
+            <span class="q-text" data-i18n="faq.judge.q3">判定時間15分以降にラインが出現した場合、どのように判断したらよいですか？</span>
             <i class="fas fa-chevron-down q-icon"></i>
           </div>
-          <div class="faq-answer"><div class="faq-answer-inner"><span class="a-mark">A</span><span class="a-text">原則、15分以降は判定しないでください。ラインが出現したとしても、判定には使用しないでください。</span></div></div>
+          <div class="faq-answer"><div class="faq-answer-inner"><span class="a-mark">A</span><span class="a-text" data-i18n="faq.judge.a3">原則、15分以降は判定しないでください。ラインが出現したとしても、判定には使用しないでください。</span></div></div>
         </div>
 
         <div class="faq-item">
           <div class="faq-question" onclick="toggleFaq(this)">
             <span class="q-mark">Q</span>
-            <span class="q-text">判定時間15分後にラインが消失した場合、どのように判断したらよいですか？</span>
+            <span class="q-text" data-i18n="faq.judge.q4">判定時間15分後にラインが消失した場合、どのように判断したらよいですか？</span>
             <i class="fas fa-chevron-down q-icon"></i>
           </div>
-          <div class="faq-answer"><div class="faq-answer-inner"><span class="a-mark">A</span><span class="a-text">原則、15分以降は判定しないでください。ラインが消失したとしても、判定には使用しないでください。</span></div></div>
+          <div class="faq-answer"><div class="faq-answer-inner"><span class="a-mark">A</span><span class="a-text" data-i18n="faq.judge.a4">原則、15分以降は判定しないでください。ラインが消失したとしても、判定には使用しないでください。</span></div></div>
         </div>
       </div>
 
       <!-- ===== 保険点数・その他 ===== -->
       <div class="faq-category fade-in" id="faq-insurance">
-        <h2 class="faq-category-title"><i class="fas fa-file-medical-alt"></i> 保険点数・その他</h2>
+        <h2 class="faq-category-title"><i class="fas fa-file-medical-alt"></i> <span data-i18n="faq.cat.insurance">保険点数・その他</span></h2>
 
         <div class="faq-item">
           <div class="faq-question" onclick="toggleFaq(this)">
             <span class="q-mark">Q</span>
-            <span class="q-text">ＩＰライン デゥオ「ノロ・ロタ」を使用した場合の保険点数は何点ですか？</span>
+            <span class="q-text" data-i18n="faq.insurance.q1">ＩＰライン デゥオ「ノロ・ロタ」を使用した場合の保険点数は何点ですか？</span>
             <i class="fas fa-chevron-down q-icon"></i>
           </div>
-          <div class="faq-answer"><div class="faq-answer-inner"><span class="a-mark">A</span><span class="a-text">
+          <div class="faq-answer"><div class="faq-answer-inner"><span class="a-mark">A</span><span class="a-text" data-i18n="faq.insurance.a1">
             感染症免疫学的検査<br><br>
             ・ノロウイルス抗原定性 150点 [区分番号 D012-26]<br>
             &emsp;※以下のいずれかに該当する患者について、当該ウイルス感染症が疑われる場合に算定する。<br>
@@ -417,10 +417,10 @@ ul{list-style:none}
         <div class="faq-item">
           <div class="faq-question" onclick="toggleFaq(this)">
             <span class="q-mark">Q</span>
-            <span class="q-text">イムノクロマト検査で残った試料を用いてPCR検査ができますか。</span>
+            <span class="q-text" data-i18n="faq.insurance.q2">イムノクロマト検査で残った試料を用いてPCR検査ができますか。</span>
             <i class="fas fa-chevron-down q-icon"></i>
           </div>
-          <div class="faq-answer"><div class="faq-answer-inner"><span class="a-mark">A</span><span class="a-text">糞便を検体抽出液に溶かした陽性試料をPCRで測定した場合、陰性に出ることがありますので、推奨しません。</span></div></div>
+          <div class="faq-answer"><div class="faq-answer-inner"><span class="a-mark">A</span><span class="a-text" data-i18n="faq.insurance.a2">糞便を検体抽出液に溶かした陽性試料をPCRで測定した場合、陰性に出ることがありますので、推奨しません。</span></div></div>
         </div>
       </div>
 
@@ -432,42 +432,42 @@ ul{list-style:none}
   <div class="container">
     <div class="footer-inner">
       <div class="footer-col">
-        <div class="footer-logo-text">株式会社イムノ・プローブ</div>
-        <div style="font-size:.78rem;color:rgba(255,255,255,.45);margin:4px 0 2px;">明日の皆の「健康」のために</div>
-        <div class="footer-logo-en">Immuno Probe Co., Ltd.</div>
+        <div class="footer-logo-text" data-i18n="common.footer.company">株式会社イムノ・プローブ</div>
+        <div style="font-size:.78rem;color:rgba(255,255,255,.45);margin:4px 0 2px;" data-i18n="common.footer.tagline">明日の皆の「健康」のために</div>
+        <div class="footer-logo-en" data-i18n="common.footer.company.en">Immuno Probe Co., Ltd.</div>
         <div class="footer-info">
-          <div><i class="fas fa-map-marker-alt"></i> 〒355-0225 埼玉県比企郡嵐山町鎌形1331-3</div>
-          <div><i class="fas fa-phone-volume"></i> フリーダイヤル: 0120-626-923</div>
-          <div><i class="fas fa-phone-alt"></i> TEL: 0493-62-6923</div>
-          <div><i class="fas fa-fax"></i> FAX: 0493-62-9477</div>
-          <div><i class="far fa-clock"></i> 受付時間: 平日 9:00〜17:30</div>
+          <div><i class="fas fa-map-marker-alt"></i> <span data-i18n="common.footer.address">〒355-0225 埼玉県比企郡嵐山町鎌形1331-3</span></div>
+          <div><i class="fas fa-phone-volume"></i> <span data-i18n="common.footer.freedial">フリーダイヤル: 0120-626-923</span></div>
+          <div><i class="fas fa-phone-alt"></i> <span data-i18n="common.footer.tel">TEL: 0493-62-6923</span></div>
+          <div><i class="fas fa-fax"></i> <span data-i18n="common.footer.fax">FAX: 0493-62-9477</span></div>
+          <div><i class="far fa-clock"></i> <span data-i18n="common.footer.hours">受付時間: 平日 9:00〜17:30</span></div>
         </div>
       </div>
       <div class="footer-col">
-        <h4>サイトマップ</h4>
+        <h4 data-i18n="common.footer.sitemap">サイトマップ</h4>
         <div class="footer-nav-list">
-          <a href="index.html"><i class="fas fa-chevron-right"></i>ホーム</a>
-          <a href="technology.html"><i class="fas fa-chevron-right"></i>基盤技術</a>
-          <a href="products.html"><i class="fas fa-chevron-right"></i>製品・サービス</a>
-          <a href="oem.html"><i class="fas fa-chevron-right"></i>受託開発</a>
-          <a href="about.html"><i class="fas fa-chevron-right"></i>会社概要</a>
+          <a href="index.html" data-i18n="common.footer.nav.home"><i class="fas fa-chevron-right"></i>ホーム</a>
+          <a href="technology.html" data-i18n="common.footer.nav.technology"><i class="fas fa-chevron-right"></i>基盤技術</a>
+          <a href="products.html" data-i18n="common.footer.nav.products"><i class="fas fa-chevron-right"></i>製品・サービス</a>
+          <a href="oem.html" data-i18n="common.footer.nav.oem"><i class="fas fa-chevron-right"></i>受託開発</a>
+          <a href="about.html" data-i18n="common.footer.nav.about"><i class="fas fa-chevron-right"></i>会社概要</a>
         </div>
       </div>
       <div class="footer-col">
-        <h4>お役立ち情報</h4>
+        <h4 data-i18n="common.footer.useful">お役立ち情報</h4>
         <div class="footer-nav-list">
-          <a href="info.html"><i class="fas fa-chevron-right"></i>学術情報</a>
-          <a href="faq.html"><i class="fas fa-chevron-right"></i>よくあるご質問（FAQ）</a>
-          <a href="career.html"><i class="fas fa-chevron-right"></i>採用情報</a>
-          <a href="access.html"><i class="fas fa-chevron-right"></i>アクセス</a>
-          <a href="privacy.html"><i class="fas fa-chevron-right"></i>プライバシーポリシー</a>
-          <a href="ethics.html"><i class="fas fa-chevron-right"></i>動物実験方針</a>
-          <a href="contact.html"><i class="fas fa-chevron-right"></i>お問い合わせ</a>
+          <a href="info.html" data-i18n="common.footer.nav.info"><i class="fas fa-chevron-right"></i>学術情報</a>
+          <a href="faq.html" data-i18n="common.footer.nav.faq"><i class="fas fa-chevron-right"></i>よくあるご質問（FAQ）</a>
+          <a href="career.html" data-i18n="common.footer.nav.career"><i class="fas fa-chevron-right"></i>採用情報</a>
+          <a href="access.html" data-i18n="common.footer.nav.access"><i class="fas fa-chevron-right"></i>アクセス</a>
+          <a href="privacy.html" data-i18n="common.footer.nav.privacy"><i class="fas fa-chevron-right"></i>プライバシーポリシー</a>
+          <a href="ethics.html" data-i18n="common.footer.nav.ethics"><i class="fas fa-chevron-right"></i>動物実験方針</a>
+          <a href="contact.html" data-i18n="common.footer.nav.contact"><i class="fas fa-chevron-right"></i>お問い合わせ</a>
         </div>
       </div>
     </div>
     <div class="footer-bottom">
-      <p class="footer-copy">Copyright &copy; 2025 株式会社イムノ・プローブ All Rights Reserved.</p>
+      <p class="footer-copy" data-i18n="common.footer.copyright">Copyright &copy; 2025 株式会社イムノ・プローブ All Rights Reserved.</p>
       <div class="footer-lang">
         <select id="langSelectFooter" onchange="handleLang(this.value)">
           <option value="ja">日本語</option>
@@ -480,6 +480,8 @@ ul{list-style:none}
   </div>
 </footer>
 
+<script src="js/translations.js"></script>
+<script src="js/i18n.js"></script>
 <script>
 const header=document.getElementById('header');
 window.addEventListener('scroll',()=>{header.classList.toggle('scrolled',window.scrollY>10)});
@@ -489,18 +491,6 @@ function toggleMenu(){
   document.getElementById('mobileOverlay').classList.toggle('open');
   document.body.style.overflow=document.getElementById('mobileNav').classList.contains('open')?'hidden':'';
 }
-function handleLang(lang){
-  localStorage.setItem('immunoprobe-lang',lang);
-  syncLangSelects(lang);
-  if(lang!=='ja')alert('多言語対応は現在準備中です');
-}
-function syncLangSelects(lang){
-  document.querySelectorAll('#langSelect,#langSelectMobile,#langSelectFooter').forEach(s=>{if(s)s.value=lang});
-}
-(function(){
-  const saved=localStorage.getItem('immunoprobe-lang')||'ja';
-  syncLangSelects(saved);
-})();
 function showFaq(){
   document.getElementById('medicalGate').style.display='none';
   document.getElementById('faqContent').style.display='block';

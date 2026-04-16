@@ -141,30 +141,30 @@ ul{list-style:none}
 <div class="top-bar">
   <div class="top-bar-inner">
     <div class="top-bar-contact">
-      <span><i class="fas fa-phone"></i> フリーダイヤル: <a href="tel:0120626923" style="color:inherit;"><strong>0120-626-923</strong></a></span>
-      <span><i class="fas fa-phone-alt"></i> TEL: <a href="tel:0493626923" style="color:inherit;">0493-62-6923</a></span>
-      <span><i class="fas fa-fax"></i> FAX: 0493-62-9477</span>
+      <span><i class="fas fa-phone"></i> <span data-i18n="common.freedial">フリーダイヤル:</span> <a href="tel:0120626923" style="color:inherit;"><strong>0120-626-923</strong></a></span>
+      <span><i class="fas fa-phone-alt"></i> <span data-i18n="common.tel">TEL:</span> <a href="tel:0493626923" style="color:inherit;">0493-62-6923</a></span>
+      <span><i class="fas fa-fax"></i> <span data-i18n="common.fax">FAX: 0493-62-9477</span></span>
     </div>
-    <span class="top-bar-hours"><i class="far fa-clock"></i> 受付時間 平日 9:00〜17:30</span>
+    <span class="top-bar-hours"><i class="far fa-clock"></i> <span data-i18n="common.hours">受付時間 平日 9:00〜17:30</span></span>
   </div>
 </div>
 
 <header class="header" id="header">
   <a href="index.html" class="header-logo">
     <img src="images/logo.avif" alt="株式会社イムノ・プローブ">
-    <span class="header-logo-name">株式会社イムノ・プローブ</span>
+    <span class="header-logo-name" data-i18n="common.header.company">株式会社イムノ・プローブ</span>
   </a>
   <div class="header-right">
     <nav class="header-nav">
-      <a href="index.html">ホーム</a>
-      <a href="about.html">会社概要</a>
-      <a href="technology.html">基盤技術</a>
-      <a href="products.html">製品・サービス</a>
-      <a href="oem.html">受託開発</a>
-      <a href="faq.html">FAQ</a>
-      <a href="info.html">学術情報</a>
-      <a href="career.html" class="active">採用情報</a>
-      <a href="contact.html">お問い合わせ</a>
+      <a href="index.html" data-i18n="common.nav.home">ホーム</a>
+      <a href="about.html" data-i18n="common.nav.about">会社概要</a>
+      <a href="technology.html" data-i18n="common.nav.technology">基盤技術</a>
+      <a href="products.html" data-i18n="common.nav.products">製品・サービス</a>
+      <a href="oem.html" data-i18n="common.nav.oem">受託開発</a>
+      <a href="faq.html" data-i18n="common.nav.faq">FAQ</a>
+      <a href="info.html" data-i18n="common.nav.info">学術情報</a>
+      <a href="career.html" class="active" data-i18n="common.nav.career">採用情報</a>
+      <a href="contact.html" data-i18n="common.nav.contact">お問い合わせ</a>
     </nav>
     <div class="lang-switch">
       <select id="langSelect" onchange="handleLang(this.value)">
@@ -181,15 +181,15 @@ ul{list-style:none}
 </header>
 <div class="mobile-overlay" id="mobileOverlay" onclick="toggleMenu()"></div>
 <nav class="mobile-nav" id="mobileNav">
-  <a href="index.html" onclick="toggleMenu()">ホーム</a>
-  <a href="about.html" onclick="toggleMenu()">会社概要</a>
-  <a href="technology.html" onclick="toggleMenu()">基盤技術</a>
-  <a href="products.html" onclick="toggleMenu()">製品・サービス</a>
-  <a href="oem.html" onclick="toggleMenu()">受託開発</a>
-  <a href="faq.html" onclick="toggleMenu()">FAQ</a>
-  <a href="info.html" onclick="toggleMenu()">学術情報</a>
-  <a href="career.html" class="active" onclick="toggleMenu()">採用情報</a>
-  <a href="contact.html" onclick="toggleMenu()">お問い合わせ</a>
+  <a href="index.html" onclick="toggleMenu()" data-i18n="common.nav.home">ホーム</a>
+  <a href="about.html" onclick="toggleMenu()" data-i18n="common.nav.about">会社概要</a>
+  <a href="technology.html" onclick="toggleMenu()" data-i18n="common.nav.technology">基盤技術</a>
+  <a href="products.html" onclick="toggleMenu()" data-i18n="common.nav.products">製品・サービス</a>
+  <a href="oem.html" onclick="toggleMenu()" data-i18n="common.nav.oem">受託開発</a>
+  <a href="faq.html" onclick="toggleMenu()" data-i18n="common.nav.faq">FAQ</a>
+  <a href="info.html" onclick="toggleMenu()" data-i18n="common.nav.info">学術情報</a>
+  <a href="career.html" class="active" onclick="toggleMenu()" data-i18n="common.nav.career">採用情報</a>
+  <a href="contact.html" onclick="toggleMenu()" data-i18n="common.nav.contact">お問い合わせ</a>
   <div class="mobile-lang">
     <select id="langSelectMobile" onchange="handleLang(this.value)" style="width:100%;padding:10px;border:1px solid #EDE4D8;border-radius:4px;font-size:.88rem;color:#5C3A1A;font-family:'Noto Sans JP',sans-serif;">
       <option value="ja">日本語</option>
@@ -202,25 +202,25 @@ ul{list-style:none}
 
 <section class="page-hero">
   <div class="container">
-    <h1>採用情報</h1>
-    <p class="en">Recruit</p>
+    <h1 data-i18n="career.hero.title">採用情報</h1>
+    <p class="en" data-i18n="career.hero.en">Recruit</p>
   </div>
 </section>
 
 <div class="breadcrumb">
   <div class="container">
-    <a href="index.html">ホーム</a><span>&gt;</span>採用情報
+    <a href="index.html" data-i18n="common.nav.home">ホーム</a><span>&gt;</span><span data-i18n="career.breadcrumb">採用情報</span>
   </div>
 </div>
 
 <!-- Message -->
 <section class="section-padding section-bg-light">
   <div class="container">
-    <h2 class="section-title fade-in">共に未来を創る仲間を求めています</h2>
-    <p class="section-title-en fade-in">Join Our Team</p>
+    <h2 class="section-title fade-in" data-i18n="career.message.title">共に未来を創る仲間を求めています</h2>
+    <p class="section-title-en fade-in" data-i18n="career.message.en">Join Our Team</p>
     <div class="career-message fade-in">
-      <p>株式会社イムノ・プローブは、「原料から診断薬まで」をモットーに、抗体・医薬品・体外診断用医薬品の設計開発、製造、販売から試験の受託サービスまで、一貫して手がけるバイオテクノロジー企業です。</p>
-      <p style="margin-top:16px;font-family:'Noto Serif JP',serif;font-size:1rem;color:#5C3A1A;font-weight:600;">「明日の皆の健康のために」— 私たちと一緒に、新しい検査薬を創りませんか。</p>
+      <p data-i18n="career.message.p1">株式会社イムノ・プローブは、「原料から診断薬まで」をモットーに、抗体・医薬品・体外診断用医薬品の設計開発、製造、販売から試験の受託サービスまで、一貫して手がけるバイオテクノロジー企業です。</p>
+      <p style="margin-top:16px;font-family:'Noto Serif JP',serif;font-size:1rem;color:#5C3A1A;font-weight:600;" data-i18n="career.message.p2">「明日の皆の健康のために」— 私たちと一緒に、新しい検査薬を創りませんか。</p>
     </div>
   </div>
 </section>
@@ -228,23 +228,23 @@ ul{list-style:none}
 <!-- Appeal -->
 <section class="section-padding section-bg-white">
   <div class="container">
-    <h2 class="section-title fade-in">仕事の魅力</h2>
-    <p class="section-title-en fade-in">Appeal</p>
+    <h2 class="section-title fade-in" data-i18n="career.appeal.title">仕事の魅力</h2>
+    <p class="section-title-en fade-in" data-i18n="career.appeal.en">Appeal</p>
     <div class="appeal-grid">
       <div class="appeal-card fade-in">
         <div class="appeal-icon"><i class="fas fa-microscope"></i></div>
-        <h3>技術力を磨ける</h3>
-        <p>抗体作製、細胞培養、イムノクロマト法など、バイオテクノロジーの最前線で専門技術を習得・向上させることができます。</p>
+        <h3 data-i18n="career.appeal.tech.title">技術力を磨ける</h3>
+        <p data-i18n="career.appeal.tech.desc">抗体作製、細胞培養、イムノクロマト法など、バイオテクノロジーの最前線で専門技術を習得・向上させることができます。</p>
       </div>
       <div class="appeal-card fade-in">
         <div class="appeal-icon"><i class="fas fa-cogs"></i></div>
-        <h3>一貫したものづくり</h3>
-        <p>原料調達から製品完成まで、すべての工程に携わることができます。自分が関わった製品が医療現場で使われるやりがいがあります。</p>
+        <h3 data-i18n="career.appeal.mono.title">一貫したものづくり</h3>
+        <p data-i18n="career.appeal.mono.desc">原料調達から製品完成まで、すべての工程に携わることができます。自分が関わった製品が医療現場で使われるやりがいがあります。</p>
       </div>
       <div class="appeal-card fade-in">
         <div class="appeal-icon"><i class="fas fa-users"></i></div>
-        <h3>アットホームな社風</h3>
-        <p>少数精鋭のチームで、風通しの良い職場環境です。経験豊富な先輩から直接指導を受けながら成長できます。</p>
+        <h3 data-i18n="career.appeal.team.title">アットホームな社風</h3>
+        <p data-i18n="career.appeal.team.desc">少数精鋭のチームで、風通しの良い職場環境です。経験豊富な先輩から直接指導を受けながら成長できます。</p>
       </div>
     </div>
   </div>
@@ -253,12 +253,12 @@ ul{list-style:none}
 <!-- Job Overview -->
 <section class="section-padding section-bg-light">
   <div class="container">
-    <h2 class="section-title fade-in">仕事概要</h2>
-    <p class="section-title-en fade-in">Job Overview</p>
+    <h2 class="section-title fade-in" data-i18n="career.overview.title">仕事概要</h2>
+    <p class="section-title-en fade-in" data-i18n="career.overview.en">Job Overview</p>
     <div class="recruit-table fade-in">
       <table>
-        <tr><th>雇用形態</th><td>正社員</td></tr>
-        <tr><th>職種</th><td>実験サポートスタッフ</td></tr>
+        <tr><th data-i18n="career.overview.type.label">雇用形態</th><td data-i18n="career.overview.type.value">正社員</td></tr>
+        <tr><th data-i18n="career.overview.position.label">職種</th><td data-i18n="career.overview.position.value">実験サポートスタッフ</td></tr>
         <tr>
           <th>仕事内容</th>
           <td>
@@ -282,11 +282,11 @@ ul{list-style:none}
 <!-- 会社紹介 -->
 <section class="section-padding section-bg-white">
   <div class="container">
-    <h2 class="section-title fade-in">会社紹介</h2>
-    <p class="section-title-en fade-in">About Us</p>
+    <h2 class="section-title fade-in" data-i18n="career.company.title">会社紹介</h2>
+    <p class="section-title-en fade-in" data-i18n="career.company.en">About Us</p>
     <div class="career-message fade-in">
-      <p>創業より30年以上、「原料から診断薬まで」をコンセプトに、診断薬メーカー様へ抗原や抗体を供給し、お客様のご要望に応えるべく安全性試験・薬理試験を行ってきました。</p>
-      <p style="margin-top:12px;">今後も抗体製造受託メーカーとして社会に貢献できるよう、より良い製品づくりと研究開発に注力していきます。</p>
+      <p data-i18n="career.company.p1">創業より30年以上、「原料から診断薬まで」をコンセプトに、診断薬メーカー様へ抗原や抗体を供給し、お客様のご要望に応えるべく安全性試験・薬理試験を行ってきました。</p>
+      <p style="margin-top:12px;" data-i18n="career.company.p2">今後も抗体製造受託メーカーとして社会に貢献できるよう、より良い製品づくりと研究開発に注力していきます。</p>
     </div>
   </div>
 </section>
@@ -294,8 +294,8 @@ ul{list-style:none}
 <!-- 求めている人材 -->
 <section class="section-padding section-bg-light">
   <div class="container">
-    <h2 class="section-title fade-in">求めている人材</h2>
-    <p class="section-title-en fade-in">Ideal Candidate</p>
+    <h2 class="section-title fade-in" data-i18n="career.ideal.title">求めている人材</h2>
+    <p class="section-title-en fade-in" data-i18n="career.ideal.en">Ideal Candidate</p>
     <div class="recruit-table fade-in">
       <table>
         <tr>
@@ -327,8 +327,8 @@ ul{list-style:none}
 <!-- 募集要項 -->
 <section class="section-padding section-bg-white">
   <div class="container">
-    <h2 class="section-title fade-in">募集要項</h2>
-    <p class="section-title-en fade-in">Requirements</p>
+    <h2 class="section-title fade-in" data-i18n="career.requirements.title">募集要項</h2>
+    <p class="section-title-en fade-in" data-i18n="career.requirements.en">Requirements</p>
     <div class="recruit-table fade-in">
       <table>
         <tr><th>勤務地</th>
@@ -388,23 +388,23 @@ ul{list-style:none}
 <!-- 仕事の特徴 -->
 <section class="section-padding section-bg-light">
   <div class="container">
-    <h2 class="section-title fade-in">仕事の特徴</h2>
-    <p class="section-title-en fade-in">Features</p>
+    <h2 class="section-title fade-in" data-i18n="career.features.title">仕事の特徴</h2>
+    <p class="section-title-en fade-in" data-i18n="career.features.en">Features</p>
     <div class="appeal-grid">
       <div class="appeal-card fade-in">
         <div class="appeal-icon"><i class="fas fa-graduation-cap"></i></div>
-        <h3>未経験からスタート</h3>
-        <p>業界知識は不要。丁寧な指導体制で、経験がなくても安心してスタートできます。</p>
+        <h3 data-i18n="career.features.start.title">未経験からスタート</h3>
+        <p data-i18n="career.features.start.desc">業界知識は不要。丁寧な指導体制で、経験がなくても安心してスタートできます。</p>
       </div>
       <div class="appeal-card fade-in">
         <div class="appeal-icon"><i class="fas fa-calendar-check"></i></div>
-        <h3>年間休日120日</h3>
-        <p>完全週休2日制（土日祝）。残業も月平均7.5時間と少なく、ワークライフバランスを大切にできます。</p>
+        <h3 data-i18n="career.features.holiday.title">年間休日120日</h3>
+        <p data-i18n="career.features.holiday.desc">完全週休2日制（土日祝）。残業も月平均7.5時間と少なく、ワークライフバランスを大切にできます。</p>
       </div>
       <div class="appeal-card fade-in">
         <div class="appeal-icon"><i class="fas fa-train"></i></div>
-        <h3>交通費全額支給</h3>
-        <p>通勤にかかる交通費は全額支給。UIターンも歓迎しています。</p>
+        <h3 data-i18n="career.features.transport.title">交通費全額支給</h3>
+        <p data-i18n="career.features.transport.desc">通勤にかかる交通費は全額支給。UIターンも歓迎しています。</p>
       </div>
     </div>
   </div>
@@ -414,13 +414,13 @@ ul{list-style:none}
 <section class="section-padding section-bg-white">
   <div class="container">
     <div class="apply-section fade-in">
-      <h3>応募方法</h3>
-      <p>ご応募・ご質問は、お問い合わせフォームまたはお電話にてお気軽にご連絡ください。<br>履歴書（写真貼付）をご用意の上、ご応募いただけます。</p>
+      <h3 data-i18n="career.apply.title">応募方法</h3>
+      <p data-i18n="career.apply.desc">ご応募・ご質問は、お問い合わせフォームまたはお電話にてお気軽にご連絡ください。<br>履歴書（写真貼付）をご用意の上、ご応募いただけます。</p>
       <div class="apply-btns">
-        <a href="contact.html" class="btn-primary"><i class="fas fa-envelope"></i> お問い合わせフォーム</a>
+        <a href="contact.html" class="btn-primary"><i class="fas fa-envelope"></i data-i18n="career.apply.form"> お問い合わせフォーム</a>
         <a href="tel:0120626923" class="btn-tel"><i class="fas fa-phone"></i> 0120-626-923</a>
       </div>
-      <p style="font-size:.8rem;color:#888;margin-top:20px;">選考プロセス: ご応募 → 面接（1〜2回）→ 内定</p>
+      <p style="font-size:.8rem;color:#888;margin-top:20px;" data-i18n="career.apply.process">選考プロセス: ご応募 → 面接（1〜2回）→ 内定</p>
     </div>
   </div>
 </section>
@@ -429,42 +429,42 @@ ul{list-style:none}
   <div class="container">
     <div class="footer-inner">
       <div class="footer-col">
-        <div class="footer-logo-text">株式会社イムノ・プローブ</div>
-        <div style="font-size:.78rem;color:rgba(255,255,255,.45);margin:4px 0 2px;">明日の皆の「健康」のために</div>
-        <div class="footer-logo-en">Immuno Probe Co., Ltd.</div>
+        <div class="footer-logo-text" data-i18n="common.footer.company">株式会社イムノ・プローブ</div>
+        <div style="font-size:.78rem;color:rgba(255,255,255,.45);margin:4px 0 2px;" data-i18n="common.footer.tagline">明日の皆の「健康」のために</div>
+        <div class="footer-logo-en" data-i18n="common.footer.company.en">Immuno Probe Co., Ltd.</div>
         <div class="footer-info">
-          <div><i class="fas fa-map-marker-alt"></i> 〒355-0225 埼玉県比企郡嵐山町鎌形1331-3</div>
-          <div><i class="fas fa-phone-volume"></i> フリーダイヤル: 0120-626-923</div>
-          <div><i class="fas fa-phone-alt"></i> TEL: 0493-62-6923</div>
-          <div><i class="fas fa-fax"></i> FAX: 0493-62-9477</div>
-          <div><i class="far fa-clock"></i> 受付時間: 平日 9:00〜17:30</div>
+          <div><i class="fas fa-map-marker-alt"></i> <span data-i18n="common.footer.address">〒355-0225 埼玉県比企郡嵐山町鎌形1331-3</span></div>
+          <div><i class="fas fa-phone-volume"></i> <span data-i18n="common.footer.freedial">フリーダイヤル: 0120-626-923</span></div>
+          <div><i class="fas fa-phone-alt"></i> <span data-i18n="common.footer.tel">TEL: 0493-62-6923</span></div>
+          <div><i class="fas fa-fax"></i> <span data-i18n="common.footer.fax">FAX: 0493-62-9477</span></div>
+          <div><i class="far fa-clock"></i> <span data-i18n="common.footer.hours">受付時間: 平日 9:00〜17:30</span></div>
         </div>
       </div>
       <div class="footer-col">
-        <h4>サイトマップ</h4>
+        <h4 data-i18n="common.footer.sitemap">サイトマップ</h4>
         <div class="footer-nav-list">
-          <a href="index.html"><i class="fas fa-chevron-right"></i>ホーム</a>
-          <a href="technology.html"><i class="fas fa-chevron-right"></i>基盤技術</a>
-          <a href="products.html"><i class="fas fa-chevron-right"></i>製品・サービス</a>
-          <a href="oem.html"><i class="fas fa-chevron-right"></i>受託開発</a>
-          <a href="about.html"><i class="fas fa-chevron-right"></i>会社概要</a>
+          <a href="index.html" data-i18n="common.footer.nav.home"><i class="fas fa-chevron-right"></i>ホーム</a>
+          <a href="technology.html" data-i18n="common.footer.nav.technology"><i class="fas fa-chevron-right"></i>基盤技術</a>
+          <a href="products.html" data-i18n="common.footer.nav.products"><i class="fas fa-chevron-right"></i>製品・サービス</a>
+          <a href="oem.html" data-i18n="common.footer.nav.oem"><i class="fas fa-chevron-right"></i>受託開発</a>
+          <a href="about.html" data-i18n="common.footer.nav.about"><i class="fas fa-chevron-right"></i>会社概要</a>
         </div>
       </div>
       <div class="footer-col">
-        <h4>お役立ち情報</h4>
+        <h4 data-i18n="common.footer.useful">お役立ち情報</h4>
         <div class="footer-nav-list">
-          <a href="info.html"><i class="fas fa-chevron-right"></i>学術情報</a>
-          <a href="faq.html"><i class="fas fa-chevron-right"></i>よくあるご質問（FAQ）</a>
-          <a href="career.html"><i class="fas fa-chevron-right"></i>採用情報</a>
-          <a href="access.html"><i class="fas fa-chevron-right"></i>アクセス</a>
-          <a href="privacy.html"><i class="fas fa-chevron-right"></i>プライバシーポリシー</a>
-          <a href="ethics.html"><i class="fas fa-chevron-right"></i>動物実験方針</a>
-          <a href="contact.html"><i class="fas fa-chevron-right"></i>お問い合わせ</a>
+          <a href="info.html" data-i18n="common.footer.nav.info"><i class="fas fa-chevron-right"></i>学術情報</a>
+          <a href="faq.html" data-i18n="common.footer.nav.faq"><i class="fas fa-chevron-right"></i>よくあるご質問（FAQ）</a>
+          <a href="career.html" data-i18n="common.footer.nav.career"><i class="fas fa-chevron-right"></i>採用情報</a>
+          <a href="access.html" data-i18n="common.footer.nav.access"><i class="fas fa-chevron-right"></i>アクセス</a>
+          <a href="privacy.html" data-i18n="common.footer.nav.privacy"><i class="fas fa-chevron-right"></i>プライバシーポリシー</a>
+          <a href="ethics.html" data-i18n="common.footer.nav.ethics"><i class="fas fa-chevron-right"></i>動物実験方針</a>
+          <a href="contact.html" data-i18n="common.footer.nav.contact"><i class="fas fa-chevron-right"></i>お問い合わせ</a>
         </div>
       </div>
     </div>
     <div class="footer-bottom">
-      <p class="footer-copy">Copyright &copy; 2025 株式会社イムノ・プローブ All Rights Reserved.</p>
+      <p class="footer-copy" data-i18n="common.footer.copyright">Copyright &copy; 2025 株式会社イムノ・プローブ All Rights Reserved.</p>
       <div class="footer-lang">
         <select id="langSelectFooter" onchange="handleLang(this.value)">
           <option value="ja">日本語</option>
@@ -477,6 +477,8 @@ ul{list-style:none}
   </div>
 </footer>
 
+<script src="js/translations.js"></script>
+<script src="js/i18n.js"></script>
 <script>
 const header=document.getElementById('header');
 window.addEventListener('scroll',()=>{header.classList.toggle('scrolled',window.scrollY>10)});
@@ -486,18 +488,6 @@ function toggleMenu(){
   document.getElementById('mobileOverlay').classList.toggle('open');
   document.body.style.overflow=document.getElementById('mobileNav').classList.contains('open')?'hidden':'';
 }
-function handleLang(lang){
-  localStorage.setItem('immunoprobe-lang',lang);
-  syncLangSelects(lang);
-  if(lang!=='ja')alert('多言語対応は現在準備中です');
-}
-function syncLangSelects(lang){
-  document.querySelectorAll('#langSelect,#langSelectMobile,#langSelectFooter').forEach(s=>{if(s)s.value=lang});
-}
-(function(){
-  const saved=localStorage.getItem('immunoprobe-lang')||'ja';
-  syncLangSelects(saved);
-})();
 const obs=new IntersectionObserver(entries=>{
   entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')});
 },{threshold:.12,rootMargin:'0px 0px -40px 0px'});

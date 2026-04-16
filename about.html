@@ -175,11 +175,11 @@ ul{list-style:none}
 <div class="top-bar">
   <div class="top-bar-inner">
     <div class="top-bar-contact">
-      <span><i class="fas fa-phone"></i> フリーダイヤル: <a href="tel:0120626923" style="color:inherit;"><strong>0120-626-923</strong></a></span>
-      <span><i class="fas fa-phone-alt"></i> TEL: <a href="tel:0493626923" style="color:inherit;">0493-62-6923</a></span>
-      <span><i class="fas fa-fax"></i> FAX: 0493-62-9477</span>
+      <span><i class="fas fa-phone"></i> <span data-i18n="common.freedial">フリーダイヤル:</span> <a href="tel:0120626923" style="color:inherit;"><strong>0120-626-923</strong></a></span>
+      <span><i class="fas fa-phone-alt"></i> <span data-i18n="common.tel">TEL:</span> <a href="tel:0493626923" style="color:inherit;">0493-62-6923</a></span>
+      <span><i class="fas fa-fax"></i> <span data-i18n="common.fax">FAX: 0493-62-9477</span></span>
     </div>
-    <span class="top-bar-hours"><i class="far fa-clock"></i> 受付時間 平日 9:00〜17:30</span>
+    <span class="top-bar-hours"><i class="far fa-clock"></i> <span data-i18n="common.hours">受付時間 平日 9:00〜17:30</span></span>
   </div>
 </div>
 
@@ -187,19 +187,19 @@ ul{list-style:none}
 <header class="header" id="header">
   <a href="index.html" class="header-logo">
     <img src="images/logo.avif" alt="株式会社イムノ・プローブ">
-    <span class="header-logo-name">株式会社イムノ・プローブ</span>
+    <span class="header-logo-name" data-i18n="common.header.company">株式会社イムノ・プローブ</span>
   </a>
   <div class="header-right">
     <nav class="header-nav">
-      <a href="index.html">ホーム</a>
-      <a href="about.html" class="active">会社概要</a>
-      <a href="technology.html">基盤技術</a>
-      <a href="products.html">製品・サービス</a>
-      <a href="oem.html">受託開発</a>
-      <a href="faq.html">FAQ</a>
-      <a href="info.html">学術情報</a>
-      <a href="career.html">採用情報</a>
-      <a href="contact.html">お問い合わせ</a>
+      <a href="index.html" data-i18n="common.nav.home">ホーム</a>
+      <a href="about.html" class="active" data-i18n="common.nav.about">会社概要</a>
+      <a href="technology.html" data-i18n="common.nav.technology">基盤技術</a>
+      <a href="products.html" data-i18n="common.nav.products">製品・サービス</a>
+      <a href="oem.html" data-i18n="common.nav.oem">受託開発</a>
+      <a href="faq.html" data-i18n="common.nav.faq">FAQ</a>
+      <a href="info.html" data-i18n="common.nav.info">学術情報</a>
+      <a href="career.html" data-i18n="common.nav.career">採用情報</a>
+      <a href="contact.html" data-i18n="common.nav.contact">お問い合わせ</a>
     </nav>
     <div class="lang-switch">
       <select id="langSelect" onchange="handleLang(this.value)">
@@ -216,15 +216,15 @@ ul{list-style:none}
 </header>
 <div class="mobile-overlay" id="mobileOverlay" onclick="toggleMenu()"></div>
 <nav class="mobile-nav" id="mobileNav">
-  <a href="index.html" onclick="toggleMenu()">ホーム</a>
-  <a href="about.html" class="active" onclick="toggleMenu()">会社概要</a>
-  <a href="technology.html" onclick="toggleMenu()">基盤技術</a>
-  <a href="products.html" onclick="toggleMenu()">製品・サービス</a>
-  <a href="oem.html" onclick="toggleMenu()">受託開発</a>
-  <a href="faq.html" onclick="toggleMenu()">FAQ</a>
-  <a href="info.html" onclick="toggleMenu()">学術情報</a>
-  <a href="career.html" onclick="toggleMenu()">採用情報</a>
-  <a href="contact.html" onclick="toggleMenu()">お問い合わせ</a>
+  <a href="index.html" onclick="toggleMenu()" data-i18n="common.nav.home">ホーム</a>
+  <a href="about.html" class="active" onclick="toggleMenu()" data-i18n="common.nav.about">会社概要</a>
+  <a href="technology.html" onclick="toggleMenu()" data-i18n="common.nav.technology">基盤技術</a>
+  <a href="products.html" onclick="toggleMenu()" data-i18n="common.nav.products">製品・サービス</a>
+  <a href="oem.html" onclick="toggleMenu()" data-i18n="common.nav.oem">受託開発</a>
+  <a href="faq.html" onclick="toggleMenu()" data-i18n="common.nav.faq">FAQ</a>
+  <a href="info.html" onclick="toggleMenu()" data-i18n="common.nav.info">学術情報</a>
+  <a href="career.html" onclick="toggleMenu()" data-i18n="common.nav.career">採用情報</a>
+  <a href="contact.html" onclick="toggleMenu()" data-i18n="common.nav.contact">お問い合わせ</a>
   <div class="mobile-lang">
     <select id="langSelectMobile" onchange="handleLang(this.value)" style="width:100%;padding:10px;border:1px solid #EDE4D8;border-radius:4px;font-size:.88rem;color:#5C3A1A;font-family:'Noto Sans JP',sans-serif;">
       <option value="ja">日本語</option>
@@ -238,29 +238,29 @@ ul{list-style:none}
 <!-- Page Hero -->
 <section class="page-hero">
   <div class="container">
-    <h1>会社概要</h1>
-    <p class="en">About Us</p>
+    <h1 data-i18n="about.hero.title">会社概要</h1>
+    <p class="en" data-i18n="about.hero.en">About Us</p>
   </div>
 </section>
 
 <!-- Breadcrumb -->
 <div class="breadcrumb">
   <div class="container">
-    <a href="index.html">ホーム</a><span>&gt;</span>会社概要
+    <a href="index.html" data-i18n="common.nav.home">ホーム</a><span>&gt;</span><span data-i18n="about.breadcrumb">会社概要</span>
   </div>
 </div>
 
 <!-- Top Message -->
 <section class="section-padding section-bg-light">
   <div class="container">
-    <h2 class="section-title fade-in">トップメッセージ</h2>
-    <p class="section-title-en fade-in">Message</p>
+    <h2 class="section-title fade-in" data-i18n="about.message.title">トップメッセージ</h2>
+    <p class="section-title-en fade-in" data-i18n="about.message.en">Message</p>
     <div class="message-section fade-in">
-      <h3>「原料から診断薬まで」を実現する企業であり続けるために</h3>
-      <p>私たちは「明日の皆の健康のために」という理念のもと、30年以上にわたり抗体・診断薬の開発に携わってまいりました。「原料から診断薬まで」の一貫した体制で、お客様の研究開発パートナーとして、確かな品質と信頼をお届けします。</p>
-      <p>近年、感染症診断や再生医療分野において、迅速かつ正確な検査の重要性はますます高まっています。私たちは、独自の抗体作製技術とイムノクロマト法開発技術を駆使し、POCT（臨床現場即時検査）に適した診断薬の開発を通じて、医療の発展に貢献してまいります。今後も「お客様のパートナー」として、共同研究・受託開発を通じて新たな価値を創出し続けます。</p>
+      <h3 data-i18n="about.message.heading">「原料から診断薬まで」を実現する企業であり続けるために</h3>
+      <p data-i18n="about.message.p1">私たちは「明日の皆の健康のために」という理念のもと、30年以上にわたり抗体・診断薬の開発に携わってまいりました。「原料から診断薬まで」の一貫した体制で、お客様の研究開発パートナーとして、確かな品質と信頼をお届けします。</p>
+      <p data-i18n="about.message.p2">近年、感染症診断や再生医療分野において、迅速かつ正確な検査の重要性はますます高まっています。私たちは、独自の抗体作製技術とイムノクロマト法開発技術を駆使し、POCT（臨床現場即時検査）に適した診断薬の開発を通じて、医療の発展に貢献してまいります。今後も「お客様のパートナー」として、共同研究・受託開発を通じて新たな価値を創出し続けます。</p>
       <div class="message-sign">
-        株式会社イムノ・プローブ<br>代表取締役
+        <span data-i18n="about.message.sign">株式会社イムノ・プローブ<br>代表取締役</span>
       </div>
     </div>
   </div>
@@ -269,20 +269,20 @@ ul{list-style:none}
 <!-- Company Profile Table -->
 <section class="section-padding section-bg-white">
   <div class="container">
-    <h2 class="section-title fade-in">会社概要</h2>
-    <p class="section-title-en fade-in">Company Profile</p>
+    <h2 class="section-title fade-in" data-i18n="about.profile.title">会社概要</h2>
+    <p class="section-title-en fade-in" data-i18n="about.profile.en">Company Profile</p>
     <div class="company-table fade-in">
       <table>
-        <tr><th>会社名</th><td>株式会社イムノ・プローブ</td></tr>
-        <tr><th>英語名</th><td>Immuno Probe Co., Ltd.</td></tr>
-        <tr><th>所在地</th><td>〒355-0225 埼玉県比企郡嵐山町鎌形1331-3</td></tr>
-        <tr><th>TEL</th><td>0493-62-6923</td></tr>
-        <tr><th>FAX</th><td>0493-62-9477</td></tr>
-        <tr><th>フリーダイヤル</th><td>0120-626-923</td></tr>
-        <tr><th>受付時間</th><td>平日 9:00〜17:30</td></tr>
-        <tr><th>事業内容</th><td>抗体・医薬品・体外診断用医薬品の設計開発、製造、販売、試験受託サービス</td></tr>
-        <tr><th>許認可</th><td>体外診断用医薬品製造販売業許可（11E1X80008）<br>体外診断用医薬品製造業登録（11EZ280059）</td></tr>
-        <tr><th>認証</th><td>ISO 13485:2016（品質マネジメントシステム国際規格）</td></tr>
+        <tr><th data-i18n="about.profile.name.label">会社名</th><td data-i18n="about.profile.name.value">株式会社イムノ・プローブ</td></tr>
+        <tr><th data-i18n="about.profile.ename.label">英語名</th><td data-i18n="about.profile.ename.value">Immuno Probe Co., Ltd.</td></tr>
+        <tr><th data-i18n="about.profile.address.label">所在地</th><td data-i18n="about.profile.address.value">〒355-0225 埼玉県比企郡嵐山町鎌形1331-3</td></tr>
+        <tr><th data-i18n="about.profile.tel.label">TEL</th><td>0493-62-6923</td></tr>
+        <tr><th data-i18n="about.profile.fax.label">FAX</th><td>0493-62-9477</td></tr>
+        <tr><th data-i18n="about.profile.freedial.label">フリーダイヤル</th><td>0120-626-923</td></tr>
+        <tr><th data-i18n="about.profile.hours.label">受付時間</th><td data-i18n="about.profile.hours.value">平日 9:00〜17:30</td></tr>
+        <tr><th data-i18n="about.profile.business.label">事業内容</th><td data-i18n="about.profile.business.value">抗体・医薬品・体外診断用医薬品の設計開発、製造、販売、試験受託サービス</td></tr>
+        <tr><th data-i18n="about.profile.license.label">許認可</th><td data-i18n="about.profile.license.value">体外診断用医薬品製造販売業許可（11E1X80008）<br>体外診断用医薬品製造業登録（11EZ280059）</td></tr>
+        <tr><th data-i18n="about.profile.cert.label">認証</th><td data-i18n="about.profile.cert.value">ISO 13485:2016（品質マネジメントシステム国際規格）</td></tr>
       </table>
     </div>
   </div>
@@ -291,40 +291,40 @@ ul{list-style:none}
 <!-- History -->
 <section class="section-padding section-bg-light">
   <div class="container">
-    <h2 class="section-title fade-in">会社沿革</h2>
-    <p class="section-title-en fade-in">History</p>
+    <h2 class="section-title fade-in" data-i18n="about.history.title">会社沿革</h2>
+    <p class="section-title-en fade-in" data-i18n="about.history.en">History</p>
     <div class="timeline fade-in">
       <div class="timeline-item">
         <div class="timeline-year">1990</div>
-        <div class="timeline-text">埼玉県比企郡嵐山町にて株式会社イムノ・プローブ設立。抗体受託製造事業を開始。</div>
+        <div class="timeline-text" data-i18n="about.history.1990">埼玉県比企郡嵐山町にて株式会社イムノ・プローブ設立。抗体受託製造事業を開始。</div>
       </div>
       <div class="timeline-item">
         <div class="timeline-year">1995</div>
-        <div class="timeline-text">モノクローナル抗体の大量培養技術を確立。研究用試薬の販売を開始。</div>
+        <div class="timeline-text" data-i18n="about.history.1995">モノクローナル抗体の大量培養技術を確立。研究用試薬の販売を開始。</div>
       </div>
       <div class="timeline-item">
         <div class="timeline-year">2000</div>
-        <div class="timeline-text">体外診断用医薬品製造業許可を取得。イムノクロマト法検査薬の開発に着手。</div>
+        <div class="timeline-text" data-i18n="about.history.2000">体外診断用医薬品製造業許可を取得。イムノクロマト法検査薬の開発に着手。</div>
       </div>
       <div class="timeline-item">
         <div class="timeline-year">2005</div>
-        <div class="timeline-text">クリーンルーム設備を増設。無菌操作技術の向上に取り組む。</div>
+        <div class="timeline-text" data-i18n="about.history.2005">クリーンルーム設備を増設。無菌操作技術の向上に取り組む。</div>
       </div>
       <div class="timeline-item">
         <div class="timeline-year">2010</div>
-        <div class="timeline-text">ISO 13485認証を取得。品質マネジメントシステムの国際規格に準拠した体制を構築。</div>
+        <div class="timeline-text" data-i18n="about.history.2010">ISO 13485認証を取得。品質マネジメントシステムの国際規格に準拠した体制を構築。</div>
       </div>
       <div class="timeline-item">
         <div class="timeline-year">2015</div>
-        <div class="timeline-text">IPライン&reg; デゥオ「ノロ・ロタ」を発売。ノロウイルスとロタウイルスの同時検出が可能な迅速検査薬として注目される。</div>
+        <div class="timeline-text" data-i18n="about.history.2015">IPライン&reg; デゥオ「ノロ・ロタ」を発売。ノロウイルスとロタウイルスの同時検出が可能な迅速検査薬として注目される。</div>
       </div>
       <div class="timeline-item">
         <div class="timeline-year">2020</div>
-        <div class="timeline-text">再生医療関連製品（ビトロネクチン、ファイブロネクチン等）の製造・販売を開始。事業領域を拡大。</div>
+        <div class="timeline-text" data-i18n="about.history.2020">再生医療関連製品（ビトロネクチン、ファイブロネクチン等）の製造・販売を開始。事業領域を拡大。</div>
       </div>
       <div class="timeline-item">
         <div class="timeline-year">2024</div>
-        <div class="timeline-text">ISO 13485:2016 定期審査を完了。多言語対応を含むグローバル展開を加速。</div>
+        <div class="timeline-text" data-i18n="about.history.2024">ISO 13485:2016 定期審査を完了。多言語対応を含むグローバル展開を加速。</div>
       </div>
     </div>
   </div>
@@ -333,17 +333,17 @@ ul{list-style:none}
 <!-- Quality Policy -->
 <section class="section-padding section-bg-white">
   <div class="container">
-    <h2 class="section-title fade-in">品質方針</h2>
-    <p class="section-title-en fade-in">Quality Policy</p>
+    <h2 class="section-title fade-in" data-i18n="about.quality.title">品質方針</h2>
+    <p class="section-title-en fade-in" data-i18n="about.quality.en">Quality Policy</p>
     <div class="quality-box fade-in">
-      <h3>ISO 13485:2016 に基づく品質方針</h3>
-      <p>株式会社イムノ・プローブは、体外診断用医薬品及び研究用試薬の設計開発・製造・販売において、国際規格 ISO 13485:2016 に基づく品質マネジメントシステムを運用し、以下の方針のもと、お客様に安全で高品質な製品を提供いたします。</p>
+      <h3 data-i18n="about.quality.heading">ISO 13485:2016 に基づく品質方針</h3>
+      <p data-i18n="about.quality.desc">株式会社イムノ・プローブは、体外診断用医薬品及び研究用試薬の設計開発・製造・販売において、国際規格 ISO 13485:2016 に基づく品質マネジメントシステムを運用し、以下の方針のもと、お客様に安全で高品質な製品を提供いたします。</p>
       <ul>
-        <li><i class="fas fa-check-circle"></i> 法令・規制要求事項を遵守し、安全性と有効性を確保した製品を提供する</li>
-        <li><i class="fas fa-check-circle"></i> 品質マネジメントシステムの有効性を継続的に改善する</li>
-        <li><i class="fas fa-check-circle"></i> お客様のニーズと期待を的確に把握し、満足度の向上に努める</li>
-        <li><i class="fas fa-check-circle"></i> 全従業員が品質方針を理解し、品質目標の達成に向けて取り組む</li>
-        <li><i class="fas fa-check-circle"></i> 製造工程における品質管理を徹底し、不適合品の発生を防止する</li>
+        <li><i class="fas fa-check-circle"></i> <span data-i18n="about.quality.item1">法令・規制要求事項を遵守し、安全性と有効性を確保した製品を提供する</span></li>
+        <li><i class="fas fa-check-circle"></i> <span data-i18n="about.quality.item2">品質マネジメントシステムの有効性を継続的に改善する</span></li>
+        <li><i class="fas fa-check-circle"></i> <span data-i18n="about.quality.item3">お客様のニーズと期待を的確に把握し、満足度の向上に努める</span></li>
+        <li><i class="fas fa-check-circle"></i> <span data-i18n="about.quality.item4">全従業員が品質方針を理解し、品質目標の達成に向けて取り組む</span></li>
+        <li><i class="fas fa-check-circle"></i> <span data-i18n="about.quality.item5">製造工程における品質管理を徹底し、不適合品の発生を防止する</span></li>
       </ul>
     </div>
   </div>
@@ -352,8 +352,8 @@ ul{list-style:none}
 <!-- Access -->
 <section class="section-padding section-bg-light">
   <div class="container">
-    <h2 class="section-title fade-in">アクセス</h2>
-    <p class="section-title-en fade-in">Access</p>
+    <h2 class="section-title fade-in" data-i18n="about.access.title">アクセス</h2>
+    <p class="section-title-en fade-in" data-i18n="about.access.en">Access</p>
     <div class="map-section fade-in">
       <p class="address"><i class="fas fa-map-marker-alt"></i> 〒355-0225 埼玉県比企郡嵐山町鎌形1331-3</p>
       <div class="map-container">
@@ -367,8 +367,8 @@ ul{list-style:none}
 <section class="section-padding section-bg-white">
   <div class="container">
     <div class="page-links fade-in">
-      <a href="privacy.html"><i class="fas fa-shield-alt"></i> プライバシーポリシー</a>
-      <a href="ethics.html"><i class="fas fa-paw"></i> 動物実験に関する基本方針</a>
+      <a href="privacy.html"><i class="fas fa-shield-alt"></i> <span data-i18n="about.links.privacy">プライバシーポリシー</span></a>
+      <a href="ethics.html"><i class="fas fa-paw"></i> <span data-i18n="about.links.ethics">動物実験に関する基本方針</span></a>
     </div>
   </div>
 </section>
@@ -378,42 +378,42 @@ ul{list-style:none}
   <div class="container">
     <div class="footer-inner">
       <div class="footer-col">
-        <div class="footer-logo-text">株式会社イムノ・プローブ</div>
-        <div style="font-size:.78rem;color:rgba(255,255,255,.45);margin:4px 0 2px;">明日の皆の「健康」のために</div>
-        <div class="footer-logo-en">Immuno Probe Co., Ltd.</div>
+        <div class="footer-logo-text" data-i18n="common.footer.company">株式会社イムノ・プローブ</div>
+        <div style="font-size:.78rem;color:rgba(255,255,255,.45);margin:4px 0 2px;" data-i18n="common.footer.tagline">明日の皆の「健康」のために</div>
+        <div class="footer-logo-en" data-i18n="common.footer.company.en">Immuno Probe Co., Ltd.</div>
         <div class="footer-info">
-          <div><i class="fas fa-map-marker-alt"></i> 〒355-0225 埼玉県比企郡嵐山町鎌形1331-3</div>
-          <div><i class="fas fa-phone-volume"></i> フリーダイヤル: 0120-626-923</div>
-          <div><i class="fas fa-phone-alt"></i> TEL: 0493-62-6923</div>
-          <div><i class="fas fa-fax"></i> FAX: 0493-62-9477</div>
-          <div><i class="far fa-clock"></i> 受付時間: 平日 9:00〜17:30</div>
+          <div><i class="fas fa-map-marker-alt"></i> <span data-i18n="common.footer.address">〒355-0225 埼玉県比企郡嵐山町鎌形1331-3</span></div>
+          <div><i class="fas fa-phone-volume"></i> <span data-i18n="common.footer.freedial">フリーダイヤル: 0120-626-923</span></div>
+          <div><i class="fas fa-phone-alt"></i> <span data-i18n="common.footer.tel">TEL: 0493-62-6923</span></div>
+          <div><i class="fas fa-fax"></i> <span data-i18n="common.footer.fax">FAX: 0493-62-9477</span></div>
+          <div><i class="far fa-clock"></i> <span data-i18n="common.footer.hours">受付時間: 平日 9:00〜17:30</span></div>
         </div>
       </div>
       <div class="footer-col">
-        <h4>サイトマップ</h4>
+        <h4 data-i18n="common.footer.sitemap">サイトマップ</h4>
         <div class="footer-nav-list">
-          <a href="index.html"><i class="fas fa-chevron-right"></i>ホーム</a>
-          <a href="technology.html"><i class="fas fa-chevron-right"></i>基盤技術</a>
-          <a href="products.html"><i class="fas fa-chevron-right"></i>製品・サービス</a>
-          <a href="oem.html"><i class="fas fa-chevron-right"></i>受託開発</a>
-          <a href="about.html"><i class="fas fa-chevron-right"></i>会社概要</a>
+          <a href="index.html" data-i18n="common.footer.nav.home"><i class="fas fa-chevron-right"></i>ホーム</a>
+          <a href="technology.html" data-i18n="common.footer.nav.technology"><i class="fas fa-chevron-right"></i>基盤技術</a>
+          <a href="products.html" data-i18n="common.footer.nav.products"><i class="fas fa-chevron-right"></i>製品・サービス</a>
+          <a href="oem.html" data-i18n="common.footer.nav.oem"><i class="fas fa-chevron-right"></i>受託開発</a>
+          <a href="about.html" data-i18n="common.footer.nav.about"><i class="fas fa-chevron-right"></i>会社概要</a>
         </div>
       </div>
       <div class="footer-col">
-        <h4>お役立ち情報</h4>
+        <h4 data-i18n="common.footer.useful">お役立ち情報</h4>
         <div class="footer-nav-list">
-          <a href="info.html"><i class="fas fa-chevron-right"></i>学術情報</a>
-          <a href="faq.html"><i class="fas fa-chevron-right"></i>よくあるご質問（FAQ）</a>
-          <a href="career.html"><i class="fas fa-chevron-right"></i>採用情報</a>
-          <a href="access.html"><i class="fas fa-chevron-right"></i>アクセス</a>
-          <a href="privacy.html"><i class="fas fa-chevron-right"></i>プライバシーポリシー</a>
-          <a href="ethics.html"><i class="fas fa-chevron-right"></i>動物実験方針</a>
-          <a href="contact.html"><i class="fas fa-chevron-right"></i>お問い合わせ</a>
+          <a href="info.html" data-i18n="common.footer.nav.info"><i class="fas fa-chevron-right"></i>学術情報</a>
+          <a href="faq.html" data-i18n="common.footer.nav.faq"><i class="fas fa-chevron-right"></i>よくあるご質問（FAQ）</a>
+          <a href="career.html" data-i18n="common.footer.nav.career"><i class="fas fa-chevron-right"></i>採用情報</a>
+          <a href="access.html" data-i18n="common.footer.nav.access"><i class="fas fa-chevron-right"></i>アクセス</a>
+          <a href="privacy.html" data-i18n="common.footer.nav.privacy"><i class="fas fa-chevron-right"></i>プライバシーポリシー</a>
+          <a href="ethics.html" data-i18n="common.footer.nav.ethics"><i class="fas fa-chevron-right"></i>動物実験方針</a>
+          <a href="contact.html" data-i18n="common.footer.nav.contact"><i class="fas fa-chevron-right"></i>お問い合わせ</a>
         </div>
       </div>
     </div>
     <div class="footer-bottom">
-      <p class="footer-copy">Copyright &copy; 2025 株式会社イムノ・プローブ All Rights Reserved.</p>
+      <p class="footer-copy" data-i18n="common.footer.copyright">Copyright &copy; 2025 株式会社イムノ・プローブ All Rights Reserved.</p>
       <div class="footer-lang">
         <select id="langSelectFooter" onchange="handleLang(this.value)">
           <option value="ja">日本語</option>
@@ -426,6 +426,8 @@ ul{list-style:none}
   </div>
 </footer>
 
+<script src="js/translations.js"></script>
+<script src="js/i18n.js"></script>
 <script>
 const header=document.getElementById('header');
 window.addEventListener('scroll',()=>{header.classList.toggle('scrolled',window.scrollY>10)});
@@ -435,18 +437,6 @@ function toggleMenu(){
   document.getElementById('mobileOverlay').classList.toggle('open');
   document.body.style.overflow=document.getElementById('mobileNav').classList.contains('open')?'hidden':'';
 }
-function handleLang(lang){
-  localStorage.setItem('immunoprobe-lang',lang);
-  syncLangSelects(lang);
-  if(lang!=='ja')alert('多言語対応は現在準備中です');
-}
-function syncLangSelects(lang){
-  document.querySelectorAll('#langSelect,#langSelectMobile,#langSelectFooter').forEach(s=>{if(s)s.value=lang});
-}
-(function(){
-  const saved=localStorage.getItem('immunoprobe-lang')||'ja';
-  syncLangSelects(saved);
-})();
 const obs=new IntersectionObserver(entries=>{
   entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')});
 },{threshold:.12,rootMargin:'0px 0px -40px 0px'});

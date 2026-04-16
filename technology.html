@@ -133,30 +133,30 @@ ul{list-style:none}
 <div class="top-bar">
   <div class="top-bar-inner">
     <div class="top-bar-contact">
-      <span><i class="fas fa-phone"></i> フリーダイヤル: <a href="tel:0120626923" style="color:inherit;"><strong>0120-626-923</strong></a></span>
-      <span><i class="fas fa-phone-alt"></i> TEL: <a href="tel:0493626923" style="color:inherit;">0493-62-6923</a></span>
-      <span><i class="fas fa-fax"></i> FAX: 0493-62-9477</span>
+      <span><i class="fas fa-phone"></i> <span data-i18n="common.freedial">フリーダイヤル:</span> <a href="tel:0120626923" style="color:inherit;"><strong>0120-626-923</strong></a></span>
+      <span><i class="fas fa-phone-alt"></i> <span data-i18n="common.tel">TEL:</span> <a href="tel:0493626923" style="color:inherit;">0493-62-6923</a></span>
+      <span><i class="fas fa-fax"></i> <span data-i18n="common.fax">FAX: 0493-62-9477</span></span>
     </div>
-    <span class="top-bar-hours"><i class="far fa-clock"></i> 受付時間 平日 9:00〜17:30</span>
+    <span class="top-bar-hours"><i class="far fa-clock"></i> <span data-i18n="common.hours">受付時間 平日 9:00〜17:30</span></span>
   </div>
 </div>
 
 <header class="header" id="header">
   <a href="index.html" class="header-logo">
     <img src="images/logo.avif" alt="株式会社イムノ・プローブ">
-    <span class="header-logo-name">株式会社イムノ・プローブ</span>
+    <span class="header-logo-name" data-i18n="common.header.company">株式会社イムノ・プローブ</span>
   </a>
   <div class="header-right">
     <nav class="header-nav">
-      <a href="index.html">ホーム</a>
-      <a href="about.html">会社概要</a>
-      <a href="technology.html" class="active">基盤技術</a>
-      <a href="products.html">製品・サービス</a>
-      <a href="oem.html">受託開発</a>
-      <a href="faq.html">FAQ</a>
-      <a href="info.html">学術情報</a>
-      <a href="career.html">採用情報</a>
-      <a href="contact.html">お問い合わせ</a>
+      <a href="index.html" data-i18n="common.nav.home">ホーム</a>
+      <a href="about.html" data-i18n="common.nav.about">会社概要</a>
+      <a href="technology.html" class="active" data-i18n="common.nav.technology">基盤技術</a>
+      <a href="products.html" data-i18n="common.nav.products">製品・サービス</a>
+      <a href="oem.html" data-i18n="common.nav.oem">受託開発</a>
+      <a href="faq.html" data-i18n="common.nav.faq">FAQ</a>
+      <a href="info.html" data-i18n="common.nav.info">学術情報</a>
+      <a href="career.html" data-i18n="common.nav.career">採用情報</a>
+      <a href="contact.html" data-i18n="common.nav.contact">お問い合わせ</a>
     </nav>
     <div class="lang-switch">
       <select id="langSelect" onchange="handleLang(this.value)">
@@ -173,15 +173,15 @@ ul{list-style:none}
 </header>
 <div class="mobile-overlay" id="mobileOverlay" onclick="toggleMenu()"></div>
 <nav class="mobile-nav" id="mobileNav">
-  <a href="index.html" onclick="toggleMenu()">ホーム</a>
-  <a href="about.html" onclick="toggleMenu()">会社概要</a>
-  <a href="technology.html" class="active" onclick="toggleMenu()">基盤技術</a>
-  <a href="products.html" onclick="toggleMenu()">製品・サービス</a>
-  <a href="oem.html" onclick="toggleMenu()">受託開発</a>
-  <a href="faq.html" onclick="toggleMenu()">FAQ</a>
-  <a href="info.html" onclick="toggleMenu()">学術情報</a>
-  <a href="career.html" onclick="toggleMenu()">採用情報</a>
-  <a href="contact.html" onclick="toggleMenu()">お問い合わせ</a>
+  <a href="index.html" onclick="toggleMenu()" data-i18n="common.nav.home">ホーム</a>
+  <a href="about.html" onclick="toggleMenu()" data-i18n="common.nav.about">会社概要</a>
+  <a href="technology.html" class="active" onclick="toggleMenu()" data-i18n="common.nav.technology">基盤技術</a>
+  <a href="products.html" onclick="toggleMenu()" data-i18n="common.nav.products">製品・サービス</a>
+  <a href="oem.html" onclick="toggleMenu()" data-i18n="common.nav.oem">受託開発</a>
+  <a href="faq.html" onclick="toggleMenu()" data-i18n="common.nav.faq">FAQ</a>
+  <a href="info.html" onclick="toggleMenu()" data-i18n="common.nav.info">学術情報</a>
+  <a href="career.html" onclick="toggleMenu()" data-i18n="common.nav.career">採用情報</a>
+  <a href="contact.html" onclick="toggleMenu()" data-i18n="common.nav.contact">お問い合わせ</a>
   <div class="mobile-lang">
     <select id="langSelectMobile" onchange="handleLang(this.value)" style="width:100%;padding:10px;border:1px solid #EDE4D8;border-radius:4px;font-size:.88rem;color:#5C3A1A;font-family:'Noto Sans JP',sans-serif;">
       <option value="ja">日本語</option>
@@ -194,14 +194,14 @@ ul{list-style:none}
 
 <section class="page-hero">
   <div class="container">
-    <h1>イムノ・プローブの基盤技術</h1>
-    <p class="en">Core Technology</p>
+    <h1 data-i18n="technology.hero.title">イムノ・プローブの基盤技術</h1>
+    <p class="en" data-i18n="technology.hero.en">Core Technology</p>
   </div>
 </section>
 
 <div class="breadcrumb">
   <div class="container">
-    <a href="index.html">ホーム</a><span>&gt;</span>基盤技術
+    <a href="index.html" data-i18n="common.nav.home">ホーム</a><span>&gt;</span><span data-i18n="technology.breadcrumb">基盤技術</span>
   </div>
 </div>
 
@@ -212,48 +212,48 @@ ul{list-style:none}
         <div class="tech-block-img grad1"><i class="fas fa-dna"></i></div>
         <div class="tech-block-body">
           <div class="tech-block-num">01</div>
-          <h3>モノクローナル抗体作製技術</h3>
-          <p>ハイブリドーマ法を用いて、特異性と親和性に優れたモノクローナル抗体を作製しています。免疫動物の選定から抗原の調製、細胞融合、スクリーニング、クローニングまでの全工程を自社で実施。長年の経験に基づく高度な技術により、目的に適合した高品質な抗体を安定して供給します。診断薬開発の根幹を支える重要な基盤技術です。</p>
+          <h3><span data-i18n="technology.tech1.title">モノクローナル抗体作製技術</span></h3>
+          <p data-i18n="technology.tech1.desc">ハイブリドーマ法を用いて、特異性と親和性に優れたモノクローナル抗体を作製しています。免疫動物の選定から抗原の調製、細胞融合、スクリーニング、クローニングまでの全工程を自社で実施。長年の経験に基づく高度な技術により、目的に適合した高品質な抗体を安定して供給します。診断薬開発の根幹を支える重要な基盤技術です。</p>
         </div>
       </div>
       <div class="tech-block fade-in">
         <div class="tech-block-img grad2"><i class="fas fa-virus"></i></div>
         <div class="tech-block-body">
           <div class="tech-block-num">02</div>
-          <h3>ウイルス培養・抗原精製技術</h3>
-          <p>各種ウイルスの培養から高純度抗原の精製まで、診断薬開発に不可欠な原料を自社で製造しています。培養条件の最適化や精製プロセスの改良を継続的に行い、高い純度と安定性を実現。ノロウイルス、ロタウイルスをはじめとする各種ウイルス抗原の調製において豊富な実績を有しています。</p>
+          <h3><span data-i18n="technology.tech2.title">ウイルス培養・抗原精製技術</span></h3>
+          <p data-i18n="technology.tech2.desc">各種ウイルスの培養から高純度抗原の精製まで、診断薬開発に不可欠な原料を自社で製造しています。培養条件の最適化や精製プロセスの改良を継続的に行い、高い純度と安定性を実現。ノロウイルス、ロタウイルスをはじめとする各種ウイルス抗原の調製において豊富な実績を有しています。</p>
         </div>
       </div>
       <div class="tech-block fade-in">
         <div class="tech-block-img grad3"><i class="fas fa-bacteria"></i></div>
         <div class="tech-block-body">
           <div class="tech-block-num">03</div>
-          <h3>細胞培養・融合技術</h3>
-          <p>安定した品質のハイブリドーマを効率的に作製するための細胞培養・融合技術を保有しています。最適な培養条件の設定、フィーダー細胞の管理、融合効率の向上など、長年の研究で蓄積したノウハウにより、高い融合効率と安定したクローン取得を実現しています。</p>
+          <h3><span data-i18n="technology.tech3.title">細胞培養・融合技術</span></h3>
+          <p data-i18n="technology.tech3.desc">安定した品質のハイブリドーマを効率的に作製するための細胞培養・融合技術を保有しています。最適な培養条件の設定、フィーダー細胞の管理、融合効率の向上など、長年の研究で蓄積したノウハウにより、高い融合効率と安定したクローン取得を実現しています。</p>
         </div>
       </div>
       <div class="tech-block fade-in">
         <div class="tech-block-img grad4"><i class="fas fa-vials"></i></div>
         <div class="tech-block-body">
           <div class="tech-block-num">04</div>
-          <h3>イムノクロマト法開発技術</h3>
-          <p>迅速・簡便・高感度なPOCT（臨床現場即時検査）検査薬を開発するための技術です。金コロイド標識抗体の調製、メンブレンへの抗体固定化、検体処理液の最適化など、各工程において独自のノウハウを蓄積。IPライン&reg;シリーズの開発を通じて、臨床現場で求められる信頼性の高い検査薬を提供しています。</p>
+          <h3><span data-i18n="technology.tech4.title">イムノクロマト法開発技術</span></h3>
+          <p data-i18n="technology.tech4.desc">迅速・簡便・高感度なPOCT（臨床現場即時検査）検査薬を開発するための技術です。金コロイド標識抗体の調製、メンブレンへの抗体固定化、検体処理液の最適化など、各工程において独自のノウハウを蓄積。IPライン&reg;シリーズの開発を通じて、臨床現場で求められる信頼性の高い検査薬を提供しています。</p>
         </div>
       </div>
       <div class="tech-block fade-in">
         <div class="tech-block-img grad5"><i class="fas fa-shield-virus"></i></div>
         <div class="tech-block-body">
           <div class="tech-block-num">05</div>
-          <h3>無菌操作技術</h3>
-          <p>クリーンルーム環境下での無菌操作技術により、コンタミネーションのない高品質な製品を実現します。ISO 13485に基づく厳格な環境管理のもと、細胞培養から製品製造に至るまで、すべての工程で無菌条件を維持。製品の安全性と品質を確保するための重要な基盤です。</p>
+          <h3><span data-i18n="technology.tech5.title">無菌操作技術</span></h3>
+          <p data-i18n="technology.tech5.desc">クリーンルーム環境下での無菌操作技術により、コンタミネーションのない高品質な製品を実現します。ISO 13485に基づく厳格な環境管理のもと、細胞培養から製品製造に至るまで、すべての工程で無菌条件を維持。製品の安全性と品質を確保するための重要な基盤です。</p>
         </div>
       </div>
       <div class="tech-block fade-in">
         <div class="tech-block-img grad6"><i class="fas fa-syringe"></i></div>
         <div class="tech-block-body">
           <div class="tech-block-num">06</div>
-          <h3>ポリクローナル抗体作製技術</h3>
-          <p>ウサギ、マウス、ラット、ヤギなど各種動物を用いた免疫技術を駆使し、多様な用途に対応するポリクローナル抗体を作製しています。動物飼育管理のノウハウと免疫プロトコルの最適化により、高力価かつ特異性の高い抗血清を安定的に取得。精製工程も含めた一貫した対応が可能です。</p>
+          <h3><span data-i18n="technology.tech6.title">ポリクローナル抗体作製技術</span></h3>
+          <p data-i18n="technology.tech6.desc">ウサギ、マウス、ラット、ヤギなど各種動物を用いた免疫技術を駆使し、多様な用途に対応するポリクローナル抗体を作製しています。動物飼育管理のノウハウと免疫プロトコルの最適化により、高力価かつ特異性の高い抗血清を安定的に取得。精製工程も含めた一貫した対応が可能です。</p>
         </div>
       </div>
     </div>
@@ -264,42 +264,42 @@ ul{list-style:none}
   <div class="container">
     <div class="footer-inner">
       <div class="footer-col">
-        <div class="footer-logo-text">株式会社イムノ・プローブ</div>
-        <div style="font-size:.78rem;color:rgba(255,255,255,.45);margin:4px 0 2px;">明日の皆の「健康」のために</div>
-        <div class="footer-logo-en">Immuno Probe Co., Ltd.</div>
+        <div class="footer-logo-text" data-i18n="common.footer.company">株式会社イムノ・プローブ</div>
+        <div style="font-size:.78rem;color:rgba(255,255,255,.45);margin:4px 0 2px;" data-i18n="common.footer.tagline">明日の皆の「健康」のために</div>
+        <div class="footer-logo-en" data-i18n="common.footer.company.en">Immuno Probe Co., Ltd.</div>
         <div class="footer-info">
-          <div><i class="fas fa-map-marker-alt"></i> 〒355-0225 埼玉県比企郡嵐山町鎌形1331-3</div>
-          <div><i class="fas fa-phone-volume"></i> フリーダイヤル: 0120-626-923</div>
-          <div><i class="fas fa-phone-alt"></i> TEL: 0493-62-6923</div>
-          <div><i class="fas fa-fax"></i> FAX: 0493-62-9477</div>
-          <div><i class="far fa-clock"></i> 受付時間: 平日 9:00〜17:30</div>
+          <div><i class="fas fa-map-marker-alt"></i> <span data-i18n="common.footer.address">〒355-0225 埼玉県比企郡嵐山町鎌形1331-3</span></div>
+          <div><i class="fas fa-phone-volume"></i> <span data-i18n="common.footer.freedial">フリーダイヤル: 0120-626-923</span></div>
+          <div><i class="fas fa-phone-alt"></i> <span data-i18n="common.footer.tel">TEL: 0493-62-6923</span></div>
+          <div><i class="fas fa-fax"></i> <span data-i18n="common.footer.fax">FAX: 0493-62-9477</span></div>
+          <div><i class="far fa-clock"></i> <span data-i18n="common.footer.hours">受付時間: 平日 9:00〜17:30</span></div>
         </div>
       </div>
       <div class="footer-col">
-        <h4>サイトマップ</h4>
+        <h4 data-i18n="common.footer.sitemap">サイトマップ</h4>
         <div class="footer-nav-list">
-          <a href="index.html"><i class="fas fa-chevron-right"></i>ホーム</a>
-          <a href="technology.html"><i class="fas fa-chevron-right"></i>基盤技術</a>
-          <a href="products.html"><i class="fas fa-chevron-right"></i>製品・サービス</a>
-          <a href="oem.html"><i class="fas fa-chevron-right"></i>受託開発</a>
-          <a href="about.html"><i class="fas fa-chevron-right"></i>会社概要</a>
+          <a href="index.html" data-i18n="common.footer.nav.home"><i class="fas fa-chevron-right"></i>ホーム</a>
+          <a href="technology.html" data-i18n="common.footer.nav.technology"><i class="fas fa-chevron-right"></i>基盤技術</a>
+          <a href="products.html" data-i18n="common.footer.nav.products"><i class="fas fa-chevron-right"></i>製品・サービス</a>
+          <a href="oem.html" data-i18n="common.footer.nav.oem"><i class="fas fa-chevron-right"></i>受託開発</a>
+          <a href="about.html" data-i18n="common.footer.nav.about"><i class="fas fa-chevron-right"></i>会社概要</a>
         </div>
       </div>
       <div class="footer-col">
-        <h4>お役立ち情報</h4>
+        <h4 data-i18n="common.footer.useful">お役立ち情報</h4>
         <div class="footer-nav-list">
-          <a href="info.html"><i class="fas fa-chevron-right"></i>学術情報</a>
-          <a href="faq.html"><i class="fas fa-chevron-right"></i>よくあるご質問（FAQ）</a>
-          <a href="career.html"><i class="fas fa-chevron-right"></i>採用情報</a>
-          <a href="access.html"><i class="fas fa-chevron-right"></i>アクセス</a>
-          <a href="privacy.html"><i class="fas fa-chevron-right"></i>プライバシーポリシー</a>
-          <a href="ethics.html"><i class="fas fa-chevron-right"></i>動物実験方針</a>
-          <a href="contact.html"><i class="fas fa-chevron-right"></i>お問い合わせ</a>
+          <a href="info.html" data-i18n="common.footer.nav.info"><i class="fas fa-chevron-right"></i>学術情報</a>
+          <a href="faq.html" data-i18n="common.footer.nav.faq"><i class="fas fa-chevron-right"></i>よくあるご質問（FAQ）</a>
+          <a href="career.html" data-i18n="common.footer.nav.career"><i class="fas fa-chevron-right"></i>採用情報</a>
+          <a href="access.html" data-i18n="common.footer.nav.access"><i class="fas fa-chevron-right"></i>アクセス</a>
+          <a href="privacy.html" data-i18n="common.footer.nav.privacy"><i class="fas fa-chevron-right"></i>プライバシーポリシー</a>
+          <a href="ethics.html" data-i18n="common.footer.nav.ethics"><i class="fas fa-chevron-right"></i>動物実験方針</a>
+          <a href="contact.html" data-i18n="common.footer.nav.contact"><i class="fas fa-chevron-right"></i>お問い合わせ</a>
         </div>
       </div>
     </div>
     <div class="footer-bottom">
-      <p class="footer-copy">Copyright &copy; 2025 株式会社イムノ・プローブ All Rights Reserved.</p>
+      <p class="footer-copy" data-i18n="common.footer.copyright">Copyright &copy; 2025 株式会社イムノ・プローブ All Rights Reserved.</p>
       <div class="footer-lang">
         <select id="langSelectFooter" onchange="handleLang(this.value)">
           <option value="ja">日本語</option>
@@ -312,6 +312,8 @@ ul{list-style:none}
   </div>
 </footer>
 
+<script src="js/translations.js"></script>
+<script src="js/i18n.js"></script>
 <script>
 const header=document.getElementById('header');
 window.addEventListener('scroll',()=>{header.classList.toggle('scrolled',window.scrollY>10)});
@@ -321,18 +323,6 @@ function toggleMenu(){
   document.getElementById('mobileOverlay').classList.toggle('open');
   document.body.style.overflow=document.getElementById('mobileNav').classList.contains('open')?'hidden':'';
 }
-function handleLang(lang){
-  localStorage.setItem('immunoprobe-lang',lang);
-  syncLangSelects(lang);
-  if(lang!=='ja')alert('多言語対応は現在準備中です');
-}
-function syncLangSelects(lang){
-  document.querySelectorAll('#langSelect,#langSelectMobile,#langSelectFooter').forEach(s=>{if(s)s.value=lang});
-}
-(function(){
-  const saved=localStorage.getItem('immunoprobe-lang')||'ja';
-  syncLangSelects(saved);
-})();
 const obs=new IntersectionObserver(entries=>{
   entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')});
 },{threshold:.12,rootMargin:'0px 0px -40px 0px'});
