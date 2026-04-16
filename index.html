@@ -39,8 +39,9 @@ ul{list-style:none}
 /* ===== Header ===== */
 .header{position:sticky;top:0;left:0;width:100%;z-index:1000;padding:0 40px;height:76px;display:flex;align-items:center;justify-content:space-between;background:#fff;transition:box-shadow .4s ease;border-bottom:1px solid #f3eee8}
 .header.scrolled{box-shadow:0 2px 16px rgba(0,0,0,.08)}
-.header-logo{display:flex;align-items:center}
+.header-logo{display:flex;align-items:center;gap:12px}
 .header-logo img{height:48px;width:auto}
+.header-logo-name{font-family:'Noto Serif JP',serif;font-size:.85rem;font-weight:600;color:#5C3A1A;letter-spacing:.06em;white-space:nowrap}
 .header-right{display:flex;align-items:center;gap:28px}
 .header-nav{display:flex;gap:24px}
 .header-nav a{font-size:.82rem;font-weight:500;color:#5C3A1A;position:relative;transition:color .3s;padding:4px 0}
@@ -49,10 +50,9 @@ ul{list-style:none}
 .header-nav a:hover::after{width:100%}
 .header-nav a.active{color:#AE7B2E}
 .header-nav a.active::after{width:100%}
-.lang-switch{display:flex;gap:4px}
-.lang-switch button{background:none;border:1px solid #EDE4D8;border-radius:3px;padding:3px 7px;font-size:.68rem;font-weight:500;color:#5C3A1A;cursor:pointer;transition:all .3s}
-.lang-switch button.active{background:#5C3A1A;color:#fff;border-color:#5C3A1A}
-.lang-switch button:hover{border-color:#AE7B2E;color:#AE7B2E}
+.lang-switch select{appearance:none;-webkit-appearance:none;background:#fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%235C3A1A'/%3E%3C/svg%3E") no-repeat right 8px center;border:1px solid #EDE4D8;border-radius:4px;padding:5px 28px 5px 10px;font-size:.75rem;font-weight:500;color:#5C3A1A;cursor:pointer;transition:all .3s;font-family:'Noto Sans JP',sans-serif}
+.lang-switch select:hover{border-color:#AE7B2E}
+.lang-switch select:focus{outline:none;border-color:#AE7B2E}
 .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;z-index:1100}
 .hamburger span{display:block;width:24px;height:2px;background:#5C3A1A;transition:all .3s}
 .hamburger.open span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
@@ -214,9 +214,10 @@ ul{list-style:none}
 .footer-nav-list a i{width:16px;display:inline-block;text-align:center;margin-right:6px;font-size:.7rem}
 .footer-bottom{border-top:1px solid rgba(255,255,255,.08);padding-top:20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
 .footer-copy{font-size:.72rem;color:rgba(255,255,255,.35)}
-.footer-lang{display:flex;gap:6px}
-.footer-lang button{background:none;border:1px solid rgba(255,255,255,.15);border-radius:3px;padding:3px 8px;font-size:.65rem;color:rgba(255,255,255,.4);cursor:pointer;transition:all .3s}
-.footer-lang button:hover{border-color:rgba(255,255,255,.4);color:#fff}
+.footer-lang select{appearance:none;-webkit-appearance:none;background:transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='rgba(255,255,255,0.5)'/%3E%3C/svg%3E") no-repeat right 8px center;border:1px solid rgba(255,255,255,.2);border-radius:4px;padding:5px 28px 5px 10px;font-size:.72rem;color:rgba(255,255,255,.7);cursor:pointer;transition:all .3s;font-family:'Noto Sans JP',sans-serif}
+.footer-lang select:hover{border-color:rgba(255,255,255,.5)}
+.footer-lang select:focus{outline:none;border-color:rgba(255,255,255,.5)}
+.footer-lang select option{color:#2C2C2C;background:#fff}
 
 /* ===== Responsive ===== */
 @media(max-width:960px){
@@ -263,11 +264,11 @@ ul{list-style:none}
 <div class="top-bar">
   <div class="top-bar-inner">
     <div class="top-bar-contact">
-      <span><i class="fas fa-phone"></i> フリーダイヤル: <a href="tel:0120626923" style="color:inherit;"><strong>0120-626-923</strong></a></span>
-      <span><i class="fas fa-phone-alt"></i> TEL: <a href="tel:0493626923" style="color:inherit;">0493-62-6923</a></span>
-      <span><i class="fas fa-fax"></i> FAX: 0493-62-9477</span>
+      <span><i class="fas fa-phone"></i> <span data-i18n="common.freedial">フリーダイヤル:</span> <a href="tel:0120626923" style="color:inherit;"><strong>0120-626-923</strong></a></span>
+      <span><i class="fas fa-phone-alt"></i> <span data-i18n="common.tel">TEL:</span> <a href="tel:0493626923" style="color:inherit;">0493-62-6923</a></span>
+      <span><i class="fas fa-fax"></i> <span data-i18n="common.fax">FAX: 0493-62-9477</span></span>
     </div>
-    <span class="top-bar-hours"><i class="far fa-clock"></i> 受付時間 平日 9:00〜17:30</span>
+    <span class="top-bar-hours"><i class="far fa-clock"></i> <span data-i18n="common.hours">受付時間 平日 9:00〜17:30</span></span>
   </div>
 </div>
 
@@ -275,24 +276,27 @@ ul{list-style:none}
 <header class="header" id="header">
   <a href="index.html" class="header-logo">
     <img src="images/logo.avif" alt="株式会社イムノ・プローブ">
+    <span class="header-logo-name" data-i18n="common.header.company">株式会社イムノ・プローブ</span>
   </a>
   <div class="header-right">
     <nav class="header-nav">
-      <a href="index.html" class="active">ホーム</a>
-      <a href="about.html">会社概要</a>
-      <a href="technology.html">基盤技術</a>
-      <a href="products.html">製品・サービス</a>
-      <a href="oem.html">受託開発</a>
-      <a href="faq.html">FAQ</a>
-      <a href="info.html">学術情報</a>
-      <a href="career.html">採用情報</a>
-      <a href="contact.html">お問い合わせ</a>
+      <a href="index.html" class="active" data-i18n="common.nav.home">ホーム</a>
+      <a href="about.html" data-i18n="common.nav.about">会社概要</a>
+      <a href="technology.html" data-i18n="common.nav.technology">基盤技術</a>
+      <a href="products.html" data-i18n="common.nav.products">製品・サービス</a>
+      <a href="oem.html" data-i18n="common.nav.oem">受託開発</a>
+      <a href="faq.html" data-i18n="common.nav.faq">FAQ</a>
+      <a href="info.html" data-i18n="common.nav.info">学術情報</a>
+      <a href="career.html" data-i18n="common.nav.career">採用情報</a>
+      <a href="contact.html" data-i18n="common.nav.contact">お問い合わせ</a>
     </nav>
     <div class="lang-switch">
-      <button class="active" onclick="handleLang('JP')">JP</button>
-      <button onclick="handleLang('EN')">EN</button>
-      <button onclick="handleLang('CN')">CN</button>
-      <button onclick="handleLang('IN')">IN</button>
+      <select id="langSelect" onchange="handleLang(this.value)">
+        <option value="ja">日本語</option>
+        <option value="en">English</option>
+        <option value="zh">中文</option>
+        <option value="hi">हिन्दी</option>
+      </select>
     </div>
     <div class="hamburger" id="hamburger" onclick="toggleMenu()">
       <span></span><span></span><span></span>
@@ -303,20 +307,22 @@ ul{list-style:none}
 <!-- Mobile Nav -->
 <div class="mobile-overlay" id="mobileOverlay" onclick="toggleMenu()"></div>
 <nav class="mobile-nav" id="mobileNav">
-  <a href="index.html" class="active" onclick="toggleMenu()">ホーム</a>
-  <a href="about.html" onclick="toggleMenu()">会社概要</a>
-  <a href="technology.html" onclick="toggleMenu()">基盤技術</a>
-  <a href="products.html" onclick="toggleMenu()">製品・サービス</a>
-  <a href="oem.html" onclick="toggleMenu()">受託開発</a>
-  <a href="faq.html" onclick="toggleMenu()">FAQ</a>
-  <a href="info.html" onclick="toggleMenu()">学術情報</a>
-  <a href="career.html" onclick="toggleMenu()">採用情報</a>
-  <a href="contact.html" onclick="toggleMenu()">お問い合わせ</a>
+  <a href="index.html" class="active" onclick="toggleMenu()" data-i18n="common.nav.home">ホーム</a>
+  <a href="about.html" onclick="toggleMenu()" data-i18n="common.nav.about">会社概要</a>
+  <a href="technology.html" onclick="toggleMenu()" data-i18n="common.nav.technology">基盤技術</a>
+  <a href="products.html" onclick="toggleMenu()" data-i18n="common.nav.products">製品・サービス</a>
+  <a href="oem.html" onclick="toggleMenu()" data-i18n="common.nav.oem">受託開発</a>
+  <a href="faq.html" onclick="toggleMenu()" data-i18n="common.nav.faq">FAQ</a>
+  <a href="info.html" onclick="toggleMenu()" data-i18n="common.nav.info">学術情報</a>
+  <a href="career.html" onclick="toggleMenu()" data-i18n="common.nav.career">採用情報</a>
+  <a href="contact.html" onclick="toggleMenu()" data-i18n="common.nav.contact">お問い合わせ</a>
   <div class="mobile-lang">
-    <button class="active" onclick="handleLang('JP')">JP</button>
-    <button onclick="handleLang('EN')">EN</button>
-    <button onclick="handleLang('CN')">CN</button>
-    <button onclick="handleLang('IN')">IN</button>
+    <select id="langSelectMobile" onchange="handleLang(this.value)" style="width:100%;padding:10px;border:1px solid #EDE4D8;border-radius:4px;font-size:.88rem;color:#5C3A1A;font-family:'Noto Sans JP',sans-serif;">
+      <option value="ja">日本語</option>
+      <option value="en">English</option>
+      <option value="zh">中文</option>
+      <option value="hi">हिन्दी</option>
+    </select>
   </div>
 </nav>
 
@@ -334,11 +340,11 @@ ul{list-style:none}
   </div>
   <!-- Slide 1 Content: 赤ちゃん -->
   <div class="hero-content-1 active">
-    <p>明日の皆の「健康」のために</p>
+    <p data-i18n="index.hero.tagline">明日の皆の「健康」のために</p>
   </div>
   <!-- Slide 2 Content: ラボ -->
   <div class="hero-content-2">
-    <h1>原料から診断薬まで<br>新しい検査薬を創ります</h1>
+    <h1 data-i18n="index.hero.copy">原料から診断薬まで<br>新しい検査薬を創ります</h1>
   </div>
   <!-- Slide Indicators -->
   <div class="hero-indicators">
@@ -352,13 +358,13 @@ ul{list-style:none}
   <div class="cert-inner">
     <img src="iso_logo.avif" alt="ISO 13485:2016 MD501189 BSI UKAS認証ロゴ" class="cert-logo-img">
     <div class="cert-text-block">
-      <div class="cert-desc">
+      <div class="cert-desc" data-i18n="index.cert.desc">
         株式会社イムノ・プローブは、<br>
         品質システムの国際規格 <strong>ISO 13485</strong> を取得しています
       </div>
       <div class="cert-licenses">
-        <span>体外診断用医薬品製造販売業許可（許可番号：11E1X80008）</span>
-        <span>体外診断用医薬品製造業登録（登録番号：11EZ280059）</span>
+        <span data-i18n="index.cert.license1">体外診断用医薬品製造販売業許可（許可番号：11E1X80008）</span>
+        <span data-i18n="index.cert.license2">体外診断用医薬品製造業登録（登録番号：11EZ280059）</span>
       </div>
     </div>
   </div>
@@ -367,28 +373,28 @@ ul{list-style:none}
 <!-- ===== Purpose Navigation ===== -->
 <section style="background:#fff;padding:64px 0;border-bottom:1px solid #EDE4D8;" id="purpose-nav">
   <div class="container">
-    <h2 class="section-title fade-in">目的から探す</h2>
-    <p class="section-title-en fade-in">Find What You Need</p>
+    <h2 class="section-title fade-in" data-i18n="index.purpose.title">目的から探す</h2>
+    <p class="section-title-en fade-in" data-i18n="index.purpose.en">Find What You Need</p>
     <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:20px;max-width:960px;margin:0 auto;" class="purpose-grid">
       <a href="products.html" class="fade-in" style="display:flex;flex-direction:column;align-items:center;text-align:center;padding:32px 16px;border:1px solid #EDE4D8;border-radius:8px;transition:all .3s;background:#fff;">
         <div style="width:56px;height:56px;background:linear-gradient(135deg,#FDF4E8,#F2ECE0);border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:16px;font-size:1.3rem;color:#5C3A1A;"><i class="fas fa-flask"></i></div>
-        <div style="font-family:'Noto Serif JP',serif;font-size:.95rem;font-weight:600;color:#5C3A1A;margin-bottom:8px;">製品をお探しの方</div>
-        <div style="font-size:.78rem;color:#888;">研究機関・医療関係者向け</div>
+        <div style="font-family:'Noto Serif JP',serif;font-size:.95rem;font-weight:600;color:#5C3A1A;margin-bottom:8px;" data-i18n="index.purpose.products">製品をお探しの方</div>
+        <div style="font-size:.78rem;color:#888;" data-i18n="index.purpose.products.desc">研究機関・医療関係者向け</div>
       </a>
       <a href="oem.html" class="fade-in" style="display:flex;flex-direction:column;align-items:center;text-align:center;padding:32px 16px;border:1px solid #EDE4D8;border-radius:8px;transition:all .3s;background:#fff;">
         <div style="width:56px;height:56px;background:linear-gradient(135deg,#FDF4E8,#F2ECE0);border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:16px;font-size:1.3rem;color:#5C3A1A;"><i class="fas fa-handshake"></i></div>
-        <div style="font-family:'Noto Serif JP',serif;font-size:.95rem;font-weight:600;color:#5C3A1A;margin-bottom:8px;">受託開発をご検討の方</div>
-        <div style="font-size:.78rem;color:#888;">共同研究・受託先向け</div>
+        <div style="font-family:'Noto Serif JP',serif;font-size:.95rem;font-weight:600;color:#5C3A1A;margin-bottom:8px;" data-i18n="index.purpose.oem">受託開発をご検討の方</div>
+        <div style="font-size:.78rem;color:#888;" data-i18n="index.purpose.oem.desc">共同研究・受託先向け</div>
       </a>
       <a href="about.html" class="fade-in" style="display:flex;flex-direction:column;align-items:center;text-align:center;padding:32px 16px;border:1px solid #EDE4D8;border-radius:8px;transition:all .3s;background:#fff;">
         <div style="width:56px;height:56px;background:linear-gradient(135deg,#FDF4E8,#F2ECE0);border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:16px;font-size:1.3rem;color:#5C3A1A;"><i class="fas fa-building"></i></div>
-        <div style="font-family:'Noto Serif JP',serif;font-size:.95rem;font-weight:600;color:#5C3A1A;margin-bottom:8px;">企業情報を知りたい方</div>
-        <div style="font-size:.78rem;color:#888;">銀行・行政・一般の方向け</div>
+        <div style="font-family:'Noto Serif JP',serif;font-size:.95rem;font-weight:600;color:#5C3A1A;margin-bottom:8px;" data-i18n="index.purpose.about">企業情報を知りたい方</div>
+        <div style="font-size:.78rem;color:#888;" data-i18n="index.purpose.about.desc">銀行・行政・一般の方向け</div>
       </a>
       <a href="career.html" class="fade-in" style="display:flex;flex-direction:column;align-items:center;text-align:center;padding:32px 16px;border:1px solid #EDE4D8;border-radius:8px;transition:all .3s;background:#fff;">
         <div style="width:56px;height:56px;background:linear-gradient(135deg,#FDF4E8,#F2ECE0);border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:16px;font-size:1.3rem;color:#5C3A1A;"><i class="fas fa-user-plus"></i></div>
-        <div style="font-family:'Noto Serif JP',serif;font-size:.95rem;font-weight:600;color:#5C3A1A;margin-bottom:8px;">採用情報をお探しの方</div>
-        <div style="font-size:.78rem;color:#888;">就職希望者向け</div>
+        <div style="font-family:'Noto Serif JP',serif;font-size:.95rem;font-weight:600;color:#5C3A1A;margin-bottom:8px;" data-i18n="index.purpose.career">採用情報をお探しの方</div>
+        <div style="font-size:.78rem;color:#888;" data-i18n="index.purpose.career.desc">就職希望者向け</div>
       </a>
     </div>
   </div>
@@ -397,27 +403,27 @@ ul{list-style:none}
 <!-- ===== Concept ===== -->
 <section class="section-padding section-bg-light" id="concept">
   <div class="container">
-    <h2 class="section-title fade-in">私たちが目指すもの</h2>
-    <p class="section-title-en fade-in">Our Vision</p>
-    <p style="text-align:center;font-size:1rem;color:#555;margin-bottom:48px;margin-top:-32px;">「明日の皆の「健康」のために」— それが私たちの原動力です。</p>
+    <h2 class="section-title fade-in" data-i18n="index.concept.title">私たちが目指すもの</h2>
+    <p class="section-title-en fade-in" data-i18n="index.concept.en">Our Vision</p>
+    <p style="text-align:center;font-size:1rem;color:#555;margin-bottom:48px;margin-top:-32px;" data-i18n="index.concept.subtitle">「明日の皆の「健康」のために」— それが私たちの原動力です。</p>
     <div class="concept-grid">
       <div class="concept-card fade-in">
         <div class="concept-icon"><i class="fas fa-microscope"></i></div>
-        <h3>一貫した技術力</h3>
-        <p>原料調達から診断薬の製造まで、自社一貫対応。30年以上にわたる技術の蓄積で、高品質な製品を安定供給します。</p>
-        <a href="technology.html" class="concept-link">詳しくはこちら <i class="fas fa-arrow-right"></i></a>
+        <h3 data-i18n="index.concept.tech.title">一貫した技術力</h3>
+        <p data-i18n="index.concept.tech.desc">原料調達から診断薬の製造まで、自社一貫対応。30年以上にわたる技術の蓄積で、高品質な製品を安定供給します。</p>
+        <a href="technology.html" class="concept-link" data-i18n="index.concept.more">詳しくはこちら <i class="fas fa-arrow-right"></i></a>
       </div>
       <div class="concept-card fade-in">
         <div class="concept-icon"><i class="fas fa-handshake"></i></div>
-        <h3>パートナーシップ</h3>
-        <p>「一緒に薬品を開発する」をモットーに、共同研究・受託開発を通じてお客様の研究開発を力強くサポートします。</p>
-        <a href="oem.html" class="concept-link">詳しくはこちら <i class="fas fa-arrow-right"></i></a>
+        <h3 data-i18n="index.concept.partner.title">パートナーシップ</h3>
+        <p data-i18n="index.concept.partner.desc">「一緒に薬品を開発する」をモットーに、共同研究・受託開発を通じてお客様の研究開発を力強くサポートします。</p>
+        <a href="oem.html" class="concept-link" data-i18n="index.concept.more">詳しくはこちら <i class="fas fa-arrow-right"></i></a>
       </div>
       <div class="concept-card fade-in">
         <div class="concept-icon"><i class="fas fa-award"></i></div>
-        <h3>品質の信頼性</h3>
-        <p>ISO 13485:2016認証を取得し、国際水準の品質マネジメントシステムのもとで製品を製造・管理しています。</p>
-        <a href="about.html" class="concept-link">詳しくはこちら <i class="fas fa-arrow-right"></i></a>
+        <h3 data-i18n="index.concept.quality.title">品質の信頼性</h3>
+        <p data-i18n="index.concept.quality.desc">ISO 13485:2016認証を取得し、国際水準の品質マネジメントシステムのもとで製品を製造・管理しています。</p>
+        <a href="about.html" class="concept-link" data-i18n="index.concept.more">詳しくはこちら <i class="fas fa-arrow-right"></i></a>
       </div>
     </div>
   </div>
@@ -426,17 +432,17 @@ ul{list-style:none}
 <!-- ===== Products ===== -->
 <section class="section-padding section-bg-light" id="products">
   <div class="container">
-    <h2 class="section-title fade-in">製品・サービス</h2>
-    <p class="section-title-en fade-in">Products &amp; Services</p>
+    <h2 class="section-title fade-in" data-i18n="index.products.title">製品・サービス</h2>
+    <p class="section-title-en fade-in" data-i18n="index.products.en">Products &amp; Services</p>
     <div class="products-grid">
       <div class="product-card fade-in">
         <div class="product-card-img">
           <img src="https://images.unsplash.com/photo-1582719471384-894fbb16e074?w=400&h=250&fit=crop&q=80" alt="体外診断用医薬品" onerror="this.style.display='none'">
         </div>
         <div class="product-card-body">
-          <h3>体外診断用医薬品（POCT）</h3>
-          <p>ノロウイルス・ロタウイルス検出キット等、イムノクロマト法を活用した迅速検査薬を開発・製造しています。</p>
-          <a href="products.html" class="product-link">詳しく見る <i class="fas fa-arrow-right"></i></a>
+          <h3 data-i18n="index.products.poct.title">体外診断用医薬品（POCT）</h3>
+          <p data-i18n="index.products.poct.desc">ノロウイルス・ロタウイルス検出キット等、イムノクロマト法を活用した迅速検査薬を開発・製造しています。</p>
+          <a href="products.html" class="product-link" data-i18n="index.products.more">詳しく見る <i class="fas fa-arrow-right"></i></a>
         </div>
       </div>
       <div class="product-card fade-in">
@@ -444,9 +450,9 @@ ul{list-style:none}
           <img src="https://images.unsplash.com/photo-1576086213369-97a306d36557?w=400&h=250&fit=crop&q=80" alt="研究用試薬" onerror="this.style.display='none'">
         </div>
         <div class="product-card-body">
-          <h3>研究用試薬</h3>
-          <p>高純度モノクローナル抗体・ポリクローナル抗体・精製抗原を提供。多様な研究ニーズに対応します。</p>
-          <a href="products.html" class="product-link">詳しく見る <i class="fas fa-arrow-right"></i></a>
+          <h3 data-i18n="index.products.reagent.title">研究用試薬</h3>
+          <p data-i18n="index.products.reagent.desc">高純度モノクローナル抗体・ポリクローナル抗体・精製抗原を提供。多様な研究ニーズに対応します。</p>
+          <a href="products.html" class="product-link" data-i18n="index.products.more">詳しく見る <i class="fas fa-arrow-right"></i></a>
         </div>
       </div>
       <div class="product-card fade-in">
@@ -454,9 +460,9 @@ ul{list-style:none}
           <img src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=400&h=250&fit=crop&q=80" alt="受託開発・製造" onerror="this.style.display='none'">
         </div>
         <div class="product-card-body">
-          <h3>受託開発・製造</h3>
-          <p>抗体受託製造・診断薬受託開発・試験受託サービス。お客様の開発をワンストップでサポートします。</p>
-          <a href="oem.html" class="product-link">詳しく見る <i class="fas fa-arrow-right"></i></a>
+          <h3 data-i18n="index.products.oem.title">受託開発・製造</h3>
+          <p data-i18n="index.products.oem.desc">抗体受託製造・診断薬受託開発・試験受託サービス。お客様の開発をワンストップでサポートします。</p>
+          <a href="oem.html" class="product-link" data-i18n="index.products.more">詳しく見る <i class="fas fa-arrow-right"></i></a>
         </div>
       </div>
     </div>
@@ -467,13 +473,13 @@ ul{list-style:none}
         <img src="https://static.wixstatic.com/media/da0d79_c70293bd48054f80b6cab054e7dbafe8~mv2.jpg/v1/fill/w_431,h_268,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/da0d79_c70293bd48054f80b6cab054e7dbafe8~mv2.jpg" alt="IPライン デゥオ ノロ・ロタ">
       </div>
       <div class="featured-product-body">
-        <span class="featured-product-badge">注目製品</span>
-        <h3>IPライン&reg; デゥオ「ノロ・ロタ」</h3>
-        <p>1ステップのイムノクロマト法で、15分で判定。遺伝子検査法との一致率も高く、糞便中のノロウイルス抗原及びロタウイルスを2項目同時検出できる迅速診断検査試薬です。</p>
+        <span class="featured-product-badge" data-i18n="index.featured.badge">注目製品</span>
+        <h3 data-i18n="index.featured.title">IPライン&reg; デゥオ「ノロ・ロタ」</h3>
+        <p data-i18n="index.featured.desc">1ステップのイムノクロマト法で、15分で判定。遺伝子検査法との一致率も高く、糞便中のノロウイルス抗原及びロタウイルスを2項目同時検出できる迅速診断検査試薬です。</p>
         <ul class="featured-product-list">
-          <li><i class="fas fa-check-circle"></i> ノロウイルスとロタウイルスを同時に検出</li>
-          <li><i class="fas fa-check-circle"></i> 反応時間は15分（陽性は5分から検出可能）</li>
-          <li><i class="fas fa-check-circle"></i> 直腸から採取された便が測定可能</li>
+          <li><i class="fas fa-check-circle"></i> <span data-i18n="index.featured.feat1">ノロウイルスとロタウイルスを同時に検出</span></li>
+          <li><i class="fas fa-check-circle"></i> <span data-i18n="index.featured.feat2">反応時間は15分（陽性は5分から検出可能）</span></li>
+          <li><i class="fas fa-check-circle"></i> <span data-i18n="index.featured.feat3">直腸から採取された便が測定可能</span></li>
         </ul>
       </div>
     </div>
@@ -483,13 +489,13 @@ ul{list-style:none}
 <!-- ===== News ===== -->
 <section class="section-padding section-bg-light" id="news">
   <div class="container">
-    <h2 class="section-title fade-in">お知らせ</h2>
-    <p class="section-title-en fade-in">News &amp; Information</p>
+    <h2 class="section-title fade-in" data-i18n="index.news.title">お知らせ</h2>
+    <p class="section-title-en fade-in" data-i18n="index.news.en">News &amp; Information</p>
     <div class="news-list fade-in">
       <div class="news-item">
         <span class="news-date">2026.05.01</span>
-        <span class="news-cat">お知らせ</span>
-        <span class="news-title"><a href="news-001.html">ホームページをリニューアルしました。</a></span>
+        <span class="news-cat" data-i18n="index.news.cat.info">お知らせ</span>
+        <span class="news-title"><a href="news-001.html" data-i18n="index.news.001.title">ホームページをリニューアルしました。</a></span>
       </div>
     </div>
   </div>
@@ -498,23 +504,23 @@ ul{list-style:none}
 <!-- ===== Recruit Banner ===== -->
 <section class="recruit-banner" id="recruit">
   <div class="container fade-in">
-    <h2>採用情報</h2>
-    <p class="en">Recruit</p>
-    <p>イムノ・プローブでは、抗体製造・診断薬開発に情熱を持つ仲間を募集しています。<br>「原料から診断薬まで」を共に実現しませんか。</p>
-    <a href="career.html" class="btn-recruit"><i class="fas fa-user-plus"></i> 採用情報を見る</a>
+    <h2 data-i18n="index.recruit.title">採用情報</h2>
+    <p class="en" data-i18n="index.recruit.en">Recruit</p>
+    <p data-i18n="index.recruit.desc">イムノ・プローブでは、抗体製造・診断薬開発に情熱を持つ仲間を募集しています。<br>「原料から診断薬まで」を共に実現しませんか。</p>
+    <a href="career.html" class="btn-recruit" data-i18n="index.recruit.btn"><i class="fas fa-user-plus"></i> 採用情報を見る</a>
   </div>
 </section>
 
 <!-- ===== Contact ===== -->
 <section class="contact section-padding" id="contact">
   <div class="container">
-    <h2 class="section-title fade-in">お気軽にお問い合わせください</h2>
-    <p class="section-title-en fade-in">Contact Us</p>
-    <p class="contact-sub fade-in">共同研究・受託開発のご相談、製品に関するお問い合わせを承ります。</p>
+    <h2 class="section-title fade-in" data-i18n="index.contact.title">お気軽にお問い合わせください</h2>
+    <p class="section-title-en fade-in" data-i18n="index.contact.en">Contact Us</p>
+    <p class="contact-sub fade-in" data-i18n="index.contact.sub">共同研究・受託開発のご相談、製品に関するお問い合わせを承ります。</p>
     <div class="contact-methods fade-in">
       <div class="contact-method">
         <i class="fas fa-phone-volume"></i>
-        <div class="label">フリーダイヤル</div>
+        <div class="label" data-i18n="index.contact.freedial.label">フリーダイヤル</div>
         <div class="value">0120-626-923</div>
       </div>
       <div class="contact-method">
@@ -529,7 +535,7 @@ ul{list-style:none}
       </div>
     </div>
     <div class="contact-cta-btn fade-in">
-      <a href="contact.html"><i class="fas fa-paper-plane"></i> お問い合わせフォームへ</a>
+      <a href="contact.html" data-i18n="index.contact.btn"><i class="fas fa-paper-plane"></i> お問い合わせフォームへ</a>
     </div>
   </div>
 </section>
@@ -539,52 +545,56 @@ ul{list-style:none}
   <div class="container">
     <div class="footer-inner">
       <div class="footer-col">
-        <div class="footer-logo-text">株式会社イムノ・プローブ</div>
-        <div style="font-size:.78rem;color:rgba(255,255,255,.45);margin:4px 0 2px;">明日の皆の「健康」のために</div>
-        <div class="footer-logo-en">Immuno Probe Co., Ltd.</div>
+        <div class="footer-logo-text" data-i18n="common.footer.company">株式会社イムノ・プローブ</div>
+        <div style="font-size:.78rem;color:rgba(255,255,255,.45);margin:4px 0 2px;" data-i18n="common.footer.tagline">明日の皆の「健康」のために</div>
+        <div class="footer-logo-en" data-i18n="common.footer.company.en">Immuno Probe Co., Ltd.</div>
         <div class="footer-info">
-          <div><i class="fas fa-map-marker-alt"></i> 〒355-0225 埼玉県比企郡嵐山町鎌形1331-3</div>
-          <div><i class="fas fa-phone-volume"></i> フリーダイヤル: 0120-626-923</div>
-          <div><i class="fas fa-phone-alt"></i> TEL: 0493-62-6923</div>
-          <div><i class="fas fa-fax"></i> FAX: 0493-62-9477</div>
-          <div><i class="far fa-clock"></i> 受付時間: 平日 9:00〜17:30</div>
+          <div><i class="fas fa-map-marker-alt"></i> <span data-i18n="common.footer.address">〒355-0225 埼玉県比企郡嵐山町鎌形1331-3</span></div>
+          <div><i class="fas fa-phone-volume"></i> <span data-i18n="common.footer.freedial">フリーダイヤル: 0120-626-923</span></div>
+          <div><i class="fas fa-phone-alt"></i> <span data-i18n="common.footer.tel">TEL: 0493-62-6923</span></div>
+          <div><i class="fas fa-fax"></i> <span data-i18n="common.footer.fax">FAX: 0493-62-9477</span></div>
+          <div><i class="far fa-clock"></i> <span data-i18n="common.footer.hours">受付時間: 平日 9:00〜17:30</span></div>
         </div>
       </div>
       <div class="footer-col">
-        <h4>サイトマップ</h4>
+        <h4 data-i18n="common.footer.sitemap">サイトマップ</h4>
         <div class="footer-nav-list">
-          <a href="index.html"><i class="fas fa-chevron-right"></i>ホーム</a>
-          <a href="technology.html"><i class="fas fa-chevron-right"></i>基盤技術</a>
-          <a href="products.html"><i class="fas fa-chevron-right"></i>製品・サービス</a>
-          <a href="oem.html"><i class="fas fa-chevron-right"></i>受託開発</a>
-          <a href="about.html"><i class="fas fa-chevron-right"></i>会社概要</a>
+          <a href="index.html" data-i18n="common.footer.nav.home"><i class="fas fa-chevron-right"></i>ホーム</a>
+          <a href="technology.html" data-i18n="common.footer.nav.technology"><i class="fas fa-chevron-right"></i>基盤技術</a>
+          <a href="products.html" data-i18n="common.footer.nav.products"><i class="fas fa-chevron-right"></i>製品・サービス</a>
+          <a href="oem.html" data-i18n="common.footer.nav.oem"><i class="fas fa-chevron-right"></i>受託開発</a>
+          <a href="about.html" data-i18n="common.footer.nav.about"><i class="fas fa-chevron-right"></i>会社概要</a>
         </div>
       </div>
       <div class="footer-col">
-        <h4>お役立ち情報</h4>
+        <h4 data-i18n="common.footer.useful">お役立ち情報</h4>
         <div class="footer-nav-list">
-          <a href="info.html"><i class="fas fa-chevron-right"></i>学術情報</a>
-          <a href="faq.html"><i class="fas fa-chevron-right"></i>よくあるご質問（FAQ）</a>
-          <a href="career.html"><i class="fas fa-chevron-right"></i>採用情報</a>
-          <a href="access.html"><i class="fas fa-chevron-right"></i>アクセス</a>
-          <a href="privacy.html"><i class="fas fa-chevron-right"></i>プライバシーポリシー</a>
-          <a href="ethics.html"><i class="fas fa-chevron-right"></i>動物実験方針</a>
-          <a href="contact.html"><i class="fas fa-chevron-right"></i>お問い合わせ</a>
+          <a href="info.html" data-i18n="common.footer.nav.info"><i class="fas fa-chevron-right"></i>学術情報</a>
+          <a href="faq.html" data-i18n="common.footer.nav.faq"><i class="fas fa-chevron-right"></i>よくあるご質問（FAQ）</a>
+          <a href="career.html" data-i18n="common.footer.nav.career"><i class="fas fa-chevron-right"></i>採用情報</a>
+          <a href="access.html" data-i18n="common.footer.nav.access"><i class="fas fa-chevron-right"></i>アクセス</a>
+          <a href="privacy.html" data-i18n="common.footer.nav.privacy"><i class="fas fa-chevron-right"></i>プライバシーポリシー</a>
+          <a href="ethics.html" data-i18n="common.footer.nav.ethics"><i class="fas fa-chevron-right"></i>動物実験方針</a>
+          <a href="contact.html" data-i18n="common.footer.nav.contact"><i class="fas fa-chevron-right"></i>お問い合わせ</a>
         </div>
       </div>
     </div>
     <div class="footer-bottom">
-      <p class="footer-copy">Copyright &copy; 2025 株式会社イムノ・プローブ All Rights Reserved.</p>
+      <p class="footer-copy" data-i18n="common.footer.copyright">Copyright &copy; 2025 株式会社イムノ・プローブ All Rights Reserved.</p>
       <div class="footer-lang">
-        <button onclick="handleLang('JP')">JP</button>
-        <button onclick="handleLang('EN')">EN</button>
-        <button onclick="handleLang('CN')">CN</button>
-        <button onclick="handleLang('IN')">IN</button>
+        <select id="langSelectFooter" onchange="handleLang(this.value)">
+          <option value="ja">日本語</option>
+          <option value="en">English</option>
+          <option value="zh">中文</option>
+          <option value="hi">हिन्दी</option>
+        </select>
       </div>
     </div>
   </div>
 </footer>
 
+<script src="js/translations.js"></script>
+<script src="js/i18n.js"></script>
 <script>
 const header=document.getElementById('header');
 window.addEventListener('scroll',()=>{header.classList.toggle('scrolled',window.scrollY>10)});
@@ -594,7 +604,6 @@ function toggleMenu(){
   document.getElementById('mobileOverlay').classList.toggle('open');
   document.body.style.overflow=document.getElementById('mobileNav').classList.contains('open')?'hidden':'';
 }
-function handleLang(l){if(l!=='JP')alert('多言語対応は現在開発中です');}
 
 // Hero Slideshow
 let currentSlide=0;

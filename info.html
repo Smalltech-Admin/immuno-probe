@@ -32,8 +32,9 @@ ul{list-style:none}
 .top-bar-hours{opacity:.7}
 .header{position:sticky;top:0;left:0;width:100%;z-index:1000;padding:0 40px;height:76px;display:flex;align-items:center;justify-content:space-between;background:#fff;transition:box-shadow .4s ease;border-bottom:1px solid #f3eee8}
 .header.scrolled{box-shadow:0 2px 16px rgba(0,0,0,.08)}
-.header-logo{display:flex;align-items:center}
+.header-logo{display:flex;align-items:center;gap:12px}
 .header-logo img{height:48px;width:auto}
+.header-logo-name{font-family:'Noto Serif JP',serif;font-size:.85rem;font-weight:600;color:#5C3A1A;letter-spacing:.06em;white-space:nowrap}
 .header-right{display:flex;align-items:center;gap:28px}
 .header-nav{display:flex;gap:24px}
 .header-nav a{font-size:.82rem;font-weight:500;color:#5C3A1A;position:relative;transition:color .3s;padding:4px 0}
@@ -42,10 +43,9 @@ ul{list-style:none}
 .header-nav a:hover::after{width:100%}
 .header-nav a.active{color:#AE7B2E}
 .header-nav a.active::after{width:100%}
-.lang-switch{display:flex;gap:4px}
-.lang-switch button{background:none;border:1px solid #EDE4D8;border-radius:3px;padding:3px 7px;font-size:.68rem;font-weight:500;color:#5C3A1A;cursor:pointer;transition:all .3s}
-.lang-switch button.active{background:#5C3A1A;color:#fff;border-color:#5C3A1A}
-.lang-switch button:hover{border-color:#AE7B2E;color:#AE7B2E}
+.lang-switch select{appearance:none;-webkit-appearance:none;background:#fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%235C3A1A'/%3E%3C/svg%3E") no-repeat right 8px center;border:1px solid #EDE4D8;border-radius:4px;padding:5px 28px 5px 10px;font-size:.75rem;font-weight:500;color:#5C3A1A;cursor:pointer;transition:all .3s;font-family:'Noto Sans JP',sans-serif}
+.lang-switch select:hover{border-color:#AE7B2E}
+.lang-switch select:focus{outline:none;border-color:#AE7B2E}
 .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;z-index:1100}
 .hamburger span{display:block;width:24px;height:2px;background:#5C3A1A;transition:all .3s}
 .hamburger.open span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
@@ -96,9 +96,10 @@ ul{list-style:none}
 .footer-nav-list a i{width:16px;display:inline-block;text-align:center;margin-right:6px;font-size:.7rem}
 .footer-bottom{border-top:1px solid rgba(255,255,255,.08);padding-top:20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
 .footer-copy{font-size:.72rem;color:rgba(255,255,255,.35)}
-.footer-lang{display:flex;gap:6px}
-.footer-lang button{background:none;border:1px solid rgba(255,255,255,.15);border-radius:3px;padding:3px 8px;font-size:.65rem;color:rgba(255,255,255,.4);cursor:pointer;transition:all .3s}
-.footer-lang button:hover{border-color:rgba(255,255,255,.4);color:#fff}
+.footer-lang select{appearance:none;-webkit-appearance:none;background:transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='rgba(255,255,255,0.5)'/%3E%3C/svg%3E") no-repeat right 8px center;border:1px solid rgba(255,255,255,.2);border-radius:4px;padding:5px 28px 5px 10px;font-size:.72rem;color:rgba(255,255,255,.7);cursor:pointer;transition:all .3s;font-family:'Noto Sans JP',sans-serif}
+.footer-lang select:hover{border-color:rgba(255,255,255,.5)}
+.footer-lang select:focus{outline:none;border-color:rgba(255,255,255,.5)}
+.footer-lang select option{color:#2C2C2C;background:#fff}
 @media(max-width:960px){
   .top-bar-inner{flex-direction:column;gap:4px;text-align:center}
   .header{padding:0 20px}
@@ -135,6 +136,7 @@ ul{list-style:none}
 <header class="header" id="header">
   <a href="index.html" class="header-logo">
     <img src="images/logo.avif" alt="株式会社イムノ・プローブ">
+    <span class="header-logo-name">株式会社イムノ・プローブ</span>
   </a>
   <div class="header-right">
     <nav class="header-nav">
@@ -149,10 +151,12 @@ ul{list-style:none}
       <a href="contact.html">お問い合わせ</a>
     </nav>
     <div class="lang-switch">
-      <button class="active" onclick="handleLang('JP')">JP</button>
-      <button onclick="handleLang('EN')">EN</button>
-      <button onclick="handleLang('CN')">CN</button>
-      <button onclick="handleLang('IN')">IN</button>
+      <select id="langSelect" onchange="handleLang(this.value)">
+        <option value="ja">日本語</option>
+        <option value="en">English</option>
+        <option value="zh">中文</option>
+        <option value="hi">हिन्दी</option>
+      </select>
     </div>
     <div class="hamburger" id="hamburger" onclick="toggleMenu()">
       <span></span><span></span><span></span>
@@ -171,10 +175,12 @@ ul{list-style:none}
   <a href="career.html" onclick="toggleMenu()">採用情報</a>
   <a href="contact.html" onclick="toggleMenu()">お問い合わせ</a>
   <div class="mobile-lang">
-    <button class="active" onclick="handleLang('JP')">JP</button>
-    <button onclick="handleLang('EN')">EN</button>
-    <button onclick="handleLang('CN')">CN</button>
-    <button onclick="handleLang('IN')">IN</button>
+    <select id="langSelectMobile" onchange="handleLang(this.value)" style="width:100%;padding:10px;border:1px solid #EDE4D8;border-radius:4px;font-size:.88rem;color:#5C3A1A;font-family:'Noto Sans JP',sans-serif;">
+      <option value="ja">日本語</option>
+      <option value="en">English</option>
+      <option value="zh">中文</option>
+      <option value="hi">हिन्दी</option>
+    </select>
   </div>
 </nav>
 
@@ -261,10 +267,12 @@ ul{list-style:none}
     <div class="footer-bottom">
       <p class="footer-copy">Copyright &copy; 2025 株式会社イムノ・プローブ All Rights Reserved.</p>
       <div class="footer-lang">
-        <button onclick="handleLang('JP')">JP</button>
-        <button onclick="handleLang('EN')">EN</button>
-        <button onclick="handleLang('CN')">CN</button>
-        <button onclick="handleLang('IN')">IN</button>
+        <select id="langSelectFooter" onchange="handleLang(this.value)">
+          <option value="ja">日本語</option>
+          <option value="en">English</option>
+          <option value="zh">中文</option>
+          <option value="hi">हिन्दी</option>
+        </select>
       </div>
     </div>
   </div>
@@ -279,7 +287,18 @@ function toggleMenu(){
   document.getElementById('mobileOverlay').classList.toggle('open');
   document.body.style.overflow=document.getElementById('mobileNav').classList.contains('open')?'hidden':'';
 }
-function handleLang(l){if(l!=='JP')alert('多言語対応は現在開発中です');}
+function handleLang(lang){
+  localStorage.setItem('immunoprobe-lang',lang);
+  syncLangSelects(lang);
+  if(lang!=='ja')alert('多言語対応は現在準備中です');
+}
+function syncLangSelects(lang){
+  document.querySelectorAll('#langSelect,#langSelectMobile,#langSelectFooter').forEach(s=>{if(s)s.value=lang});
+}
+(function(){
+  const saved=localStorage.getItem('immunoprobe-lang')||'ja';
+  syncLangSelects(saved);
+})();
 const obs=new IntersectionObserver(entries=>{
   entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')});
 },{threshold:.12,rootMargin:'0px 0px -40px 0px'});
